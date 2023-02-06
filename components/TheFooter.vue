@@ -1,5 +1,6 @@
 <script setup>
 const localePath = useLocalePath();
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const localePath = useLocalePath();
         <nuxt-link :to="localePath('/')">
           <img src="https://place-hold.it/200x80/666" alt="" />
         </nuxt-link>
-        <p class="mt-6 text-gray-300 text-sm max-w-sm">
+        <p class="mt-6 text-sm max-w-sm">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum odio
           dignissimos, amet quod nihil cumque magni aliquid cum quo suscipit non laborum
           sed, provident autem, iste aut itaque impedit.
@@ -70,7 +71,7 @@ const localePath = useLocalePath();
               <Icon name="mdi:facebook" class="text-xl mr-2"></Icon> Facebook
             </a>
           </div>
-          <div class="mt-4">
+          <div class="mt-1">
             <a href="#" class="flex items-center" target="_blank">
               <Icon name="mdi:instagram" class="text-xl mr-2"></Icon> Instagram
             </a>
@@ -78,8 +79,12 @@ const localePath = useLocalePath();
         </div>
       </div>
     </VSection>
-    <section class="px-6 py-4 flex justify-between border-t border-gray-500">
-      <p class="text-sm text-gray-500">© 2022 Eleven spectacles - All rights reserved.</p>
+    <section
+      class="flex flex-col-reverse md:flex-row text-center md:justify-between mx-auto px-6 py-6 border-t"
+    >
+      <p class="text-xs lg:text-sm leading-6">
+        &#169; {{ currentYear }} Eleven spectacles - All rights reserved.
+      </p>
       <div>
         <img src="/images/cards.png" alt="" class="footer__cards-img" />
       </div>
@@ -88,21 +93,15 @@ const localePath = useLocalePath();
 </template>
 
 <style scoped lang="postcss">
-.footer {
-  background-color: #14213d;
-
-  @apply border-t  text-white;
-}
-
 .footer h3 {
-  @apply text-gray-300 font-bold;
+  @apply mb-6;
 }
 
-.footer li + li {
-  @apply mt-3;
+.footer ul {
+  @apply text-xs lg:text-sm flex flex-col space-y-1;
 }
 .footer a {
-  @apply text-gray-400  no-underline text-base hover:text-white;
+  @apply transition-colors duration-200 hover:text-black;
 }
 
 .footer__cards-img {

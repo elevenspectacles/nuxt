@@ -1,10 +1,15 @@
 <template>
-  <VSection class="p-6 text-center border-t-2">
-    <h2>Join our newsletter</h2>
-    <p class="max-w-lg mx-auto">
-      Receive exclusive content and information on our new releases
-    </p>
+  <VSection>
+    <div
+      class="px-5 sm:px-8 md:px-16 2xl:px-24 relative overflow-hidden flex flex-col sm:items-center lg:items-start rounded-md bg-gray-100 py-8 md:py-12 lg:py-16"
+    >
+      <h3>Join our newsletter</h3>
+      <p class="max-w-lg text-sm font-thin text-body mb-8">
+        Subscribe to our newsletter and stay updated. Receive exclusive content and
+        information on our new releases
+      </p>
 
-    <VButton class="button--primary">submit</VButton>
+      <TheSubscribeForm />
+    </div>
   </VSection>
 </template>

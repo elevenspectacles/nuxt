@@ -1,5 +1,4 @@
 <script setup>
-const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 </script>
 
@@ -7,8 +6,7 @@ const localePath = useLocalePath();
   <header class="header">
     <section class="flex justify-between items-center px-6 py-2">
       <div>
-        <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
-        <NuxtLink :to="switchLocalePath('bg')">Български</NuxtLink>
+        <LanguageSelect />
       </div>
       <div>
         <nuxt-link :to="localePath('/')">
