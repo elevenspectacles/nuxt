@@ -1,3 +1,6 @@
+// Tailwind.config.js for Nuxt
+const formKitTailwind = require("@formkit/themes/tailwindcss");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,9 +10,10 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
+    "./formkit.config.ts"
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  // theme: {
+  //   extend: {},
+  // },
+  plugins: [formKitTailwind],
 }
