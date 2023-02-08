@@ -1,3 +1,5 @@
 <template>
-  <div>shopping cart</div>
+  <VSection>
+    <h1>shopping cart</h1>
+  </VSection>
 </template>

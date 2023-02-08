@@ -10,10 +10,17 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
-    "./formkit.config.ts"
+    "./formkit.config.ts",
   ],
-  // theme: {
-  //   extend: {},
-  // },
+  theme: {
+    extend: {
+      colors: {
+        accent: "#13005A",
+        "accent-secondary": "#00337C",
+        "c-black": "rgba(0,0,0,0.87)",
+        "c-gray": "rgba(0,0,0,0.63)",
+      },
+    },
+  },
   plugins: [formKitTailwind],
-}
+};

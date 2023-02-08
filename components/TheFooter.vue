@@ -101,7 +101,7 @@ const currentYear = new Date().getFullYear();
   @apply text-xs lg:text-sm flex flex-col space-y-1;
 }
 .footer a {
-  @apply transition-colors duration-200 hover:text-black;
+  @apply transition-colors duration-200 text-c-gray hover:text-black;
 }
 
 .footer__cards-img {

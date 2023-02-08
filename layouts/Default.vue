@@ -1,7 +1,7 @@
 <script setup>
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
-const { y, directions, isScrolling } = useScroll(pageWrapper);
+const { y, directions } = useScroll(pageWrapper);
 
 watch(y, () => {
   if (y.value < 350 || directions.top) {

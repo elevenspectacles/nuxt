@@ -1,8 +1,7 @@
 <script setup></script>
 
 <template>
-  <section>
-    shop
-    <VCard></VCard>
-  </section>
+  <VSection>
+    <h1>Store</h1>
+  </VSection>
 </template>

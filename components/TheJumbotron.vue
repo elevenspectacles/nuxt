@@ -1,21 +1,36 @@
+<script setup>
+const localePath = useLocalePath();
+</script>
+
 <template>
   <section class="jumbotron">
+    <div class="jumbotron__overlay">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p class="mb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, asperiores ipsum
+        laborum corporis qui facere iste aspernatur similique alias ab sit cupiditate
+        ratione eius a minus hic illo, beatae voluptate.
+      </p>
+      <nuxt-link class="button button--primary" :to="localePath('shop')">
+        Shop now
+      </nuxt-link>
+    </div>
     <picture class="jumbotron__image">
       <source
         srcset="
-          https://www.longines.com/uploads/img/1600/90/home/ecommerce/1-1/hydro-1600x640.jpg
+          https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 1200px)"
       />
       <source
         srcset="
-          https://www.longines.com/uploads/home/ecommerce/1-1/tablet/hydro-1600x640.jpg
+          https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 640px)"
       />
       <source
         srcset="
-          https://www.longines.com/uploads/home/ecommerce/1-1/mobile/hydro-650x650.jpg
+          https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 1px)"
       />
@@ -28,11 +43,20 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 .jumbotron {
-  @apply relative;
-  height: calc(100vh - 146px);
+  @apply relative bg-c-black flex items-center;
+  height: calc(100vh - 96px);
 }
+
+.jumbotron__overlay {
+  @apply relative max-w-xl text-c-black px-6 py-10  mx-6 z-20;
+}
+
+/* .jumbotron__overlay::before {
+  content: "";
+  @apply top-0 right-0 bottom-0 left-0 absolute block bg-c-black opacity-60 -z-10 rounded-md;
+} */
 
 .jumbotron__image {
   position: absolute;

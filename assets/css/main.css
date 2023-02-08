@@ -1,12 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
-    sans-serif;
+    sans-serif; */
   font-family: "Roboto", sans-serif;
   /* font-family: "Roboto Serif", serif; */
   line-height: 1.5;
@@ -14,6 +12,7 @@ body {
   color: rgb(33 33 33);
   background: #fff;
   text-rendering: optimizeLegibility;
+  font-weight: 400;
 }
 
 /* Global Typography */
@@ -34,7 +33,7 @@ h6,
 
 h1,
 .h1 {
-  @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  @apply md:text-2xl lg:text-5xl font-bold;
 }
 
 h2,
@@ -48,7 +47,7 @@ h3,
 }
 
 p {
-  @apply text-sm leading-7 lg:text-base lg:leading-loose;
+  @apply text-xl leading-7 lg:text-base lg:leading-loose;
 }
 
 p + p,
@@ -59,9 +58,8 @@ p + ol {
 
 hr {
   border: none;
-  border-top: 1px solid #dbdbdb;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+  @apply border-t mt-4 mb-4;
 }
 
 img,
@@ -70,19 +68,12 @@ video {
   height: auto;
 }
 
-.text-body {
-  color: rgb(90 90 90);
-}
-
 a {
-  color: rgb(90 90 90);
-  text-decoration: none;
-
-  @apply text-sm leading-7 lg:text-base lg:leading-loose;
+  @apply text-sm leading-7 lg:text-base lg:leading-loose text-accent no-underline;
 }
 
 a:hover {
-  @apply transition-colors duration-200 hover:text-black;
+  @apply transition-colors duration-200 text-accent-secondary;
 }
 
 /* Placeholder */

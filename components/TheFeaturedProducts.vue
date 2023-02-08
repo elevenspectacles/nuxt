@@ -1,6 +1,6 @@
 <template>
   <VSection>
-    <h1>Featured Products</h1>
+    <h2>Featured Products</h2>
     <p class="w-[750px]">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magnam laborum libero
       exercitationem, harum sit assumenda laboriosam! Quasi veritatis repudiandae iusto

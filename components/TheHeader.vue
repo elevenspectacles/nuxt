@@ -6,22 +6,22 @@ const localePath = useLocalePath();
   <header class="header">
     <section class="flex justify-between items-center px-6 py-2">
       <div>
-        <LanguageSelect />
-      </div>
-      <div>
         <nuxt-link :to="localePath('/')">
           <img src="https://place-hold.it/200x80/666" alt="" />
         </nuxt-link>
       </div>
       <div>
+        <TheNavbar />
+      </div>
+      <div class="flex items-center">
+        <LanguageSelect />
         <!-- <Icon name="ic:round-search"></Icon> -->
-        <nuxt-link :to="localePath('cart')" class="cart-icon">
-          <Icon name="ic:outline-shopping-bag"></Icon>
+        <nuxt-link :to="localePath('cart')" class="cart">
+          <Icon name="ic:outline-shopping-bag" class="cart__icon"></Icon>
+          <span class="cart__count">0</span>
         </nuxt-link>
       </div>
     </section>
-
-    <TheNavbar />
   </header>
 </template>
 
@@ -29,13 +29,37 @@ const localePath = useLocalePath();
 .header {
   position: sticky;
   top: 0;
-  @apply bg-white z-40 transition-all duration-500;
+  @apply bg-white z-40 transition-all duration-500 shadow;
 }
 
 .header--hide {
   @apply -translate-y-full;
 }
-.cart-icon {
-  @apply p-4 text-2xl text-gray-500 hover:text-gray-800;
+
+.cart {
+  @apply p-4 relative;
+}
+
+.cart:hover .cart__icon {
+  @apply text-c-black;
+}
+.cart__icon {
+  font-size: 26px;
+  line-height: 1;
+  @apply text-c-gray;
+}
+
+.cart__count {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0px;
+  border-radius: 20px;
+  font-size: 9px;
+  line-height: 1;
+  top: 13px;
+  right: 7px;
+  font-weight: 500;
+  @apply flex items-center justify-center text-white absolute rounded-full
+    bg-accent;
 }
 </style>

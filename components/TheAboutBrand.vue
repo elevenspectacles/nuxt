@@ -1,5 +1,5 @@
 <template>
   <VSection>
-    <h1>About Us</h1>
+    <h2>About the brand</h2>
   </VSection>
 </template>

@@ -27,4 +27,5 @@ const formData = ref({
       ></FormKit>
     </FormKit>
   </VSection>
+  <TheSubscribe />
 </template>

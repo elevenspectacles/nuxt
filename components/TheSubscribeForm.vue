@@ -1,6 +1,8 @@
 <template>
   <form action="" @submit.prevent="" class="flex items-center">
-    <VInput placeholder="Write your email here..." type="text" class="w-[350px]" />
-    <VButton type="submit" class="button--primary ml-4">Subscribe</VButton>
+    <div class="w-[350px]">
+      <FormKit type="text" placeholder="Write your email here..." />
+    </div>
+    <VButton type="submit" class="button--primary ml-2">Subscribe</VButton>
   </form>
 </template>

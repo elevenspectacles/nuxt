@@ -1,7 +1,6 @@
 <script setup>
 import { faker } from "@faker-js/faker";
 
-const image = faker.image.city();
 const items = 6;
 </script>
 
@@ -10,13 +9,13 @@ const items = 6;
     <a
       v-for="item in items"
       :key="item"
-      class="group flex justify-center text-center relative h-52"
+      class="group flex justify-center text-center relative h-52 rounded overflow-hidden"
       href="/#"
       target="_blank"
     >
       <img
         alt=""
-        :src="image"
+        :src="faker.image.city(600, 480, true)"
         decoding="async"
         data-nimg="intrinsic"
         class="bg-gray-300 object-cover h-full w-full"

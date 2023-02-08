@@ -1,14 +1,15 @@
 <script setup>
 const switchLocalePath = useSwitchLocalePath();
+
+// console.log($i18n.locales.filter((i) => i.code !== this.$i18n.locale));
 </script>
 
 <template>
-  <VSelect>
-    <option>
-      <NuxtLink :to="switchLocalePath('bg')">Български</NuxtLink>
-    </option>
-    <option>
-      <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
-    </option>
-  </VSelect>
+  <!-- <nuxt-link
+    v-for="locale in availableLocales"
+    :key="locale.code"
+    :to="switchLocalePath(locale.code)"
+  >
+    {{ locale.name }}
+  </nuxt-link> -->
 </template>
