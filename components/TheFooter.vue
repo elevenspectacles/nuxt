@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
     <VSection class="flex justify-between px-6 py-12">
       <div class="flex-1">
         <nuxt-link :to="localePath('/')">
-          <img src="https://place-hold.it/200x80/666" alt="" />
+          <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="144" />
         </nuxt-link>
         <p class="mt-6 text-sm max-w-sm">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum odio

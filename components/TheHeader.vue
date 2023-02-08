@@ -7,7 +7,7 @@ const localePath = useLocalePath();
     <section class="flex justify-between items-center px-6 py-2">
       <div>
         <nuxt-link :to="localePath('/')">
-          <img src="https://place-hold.it/200x80/666" alt="" />
+          <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="144" />
         </nuxt-link>
       </div>
       <div>
