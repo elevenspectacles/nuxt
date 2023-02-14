@@ -1,15 +1,15 @@
 <script setup>
+const { locale, availableLocales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
-
-// console.log($i18n.locales.filter((i) => i.code !== this.$i18n.locale));
 </script>
 
 <template>
-  <!-- <nuxt-link
-    v-for="locale in availableLocales"
-    :key="locale.code"
-    :to="switchLocalePath(locale.code)"
+  <a
+    v-for="locale in availableLocales.filter((item) => item !== locale)"
+    :key="locale"
+    href="#"
+    @click.prevent.stop="$i18n.setLocale(locale)"
   >
-    {{ locale.name }}
-  </nuxt-link> -->
+    {{ locale }}
+  </a>
 </template>

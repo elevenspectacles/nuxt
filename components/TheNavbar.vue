@@ -1,10 +1,11 @@
 <script setup>
 const localePath = useLocalePath();
+const { t } = useI18n();
 
 const links = [
   {
     name: "index",
-    label: "Home",
+    label: t("home"),
   },
   {
     name: "shop",
@@ -50,14 +51,26 @@ const links = [
   @apply block py-1 px-5 cursor-pointer uppercase text-c-gray hover:text-c-black no-underline relative transition-all ease-in-out duration-200;
 }
 
-.navbar__link:before {
+.navbar__link:before,
+.navbar__link:after {
   content: "";
-  height: 3px;
+  height: 2px;
   bottom: -1px;
-  @apply absolute left-0 right-0 block bg-accent rounded-sm  w-0;
+  @apply absolute block bg-accent w-0 transition-all ease-in-out duration-200;
 }
 
-.navbar__link:hover::before {
-  @apply w-full;
+.navbar__link:before {
+  right: calc(50% - 1px);
+  @apply rounded-l-sm;
+}
+
+.navbar__link:after {
+  left: calc(50% - 1px);
+  @apply rounded-r-sm;
+}
+
+.navbar__link:hover::before,
+.navbar__link:hover::after {
+  @apply w-1/2;
 }
 </style>

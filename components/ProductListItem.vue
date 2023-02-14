@@ -1,17 +1,17 @@
 <script setup>
 import { faker } from "@faker-js/faker";
 
-const name = faker.commerce.productName();
+const name = faker.commerce.product();
 const description = faker.commerce.productDescription();
-const price = faker.commerce.price(100, 200, 0, "$");
+const price = faker.commerce.price(100, 500, 2, "$");
 </script>
 
 <template>
   <div
-    class="cursor-pointer group flex flex-col rounded-md relative items-center justify-between overflow-hidden transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-xl hover:shadow-gray-200"
+    class="group cursor-pointer group flex flex-col rounded-md relative items-center justify-between overflow-hidden transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-xl hover:shadow-gray-200"
   >
     <div
-      class="flex justify-center items-center p-6 h-full 3xl:min-h-[330px]"
+      class="flex justify-center items-center p-6 h-full 3xl:min-h-[330px] rounded-md bg-gray-50 group-hover:rounded-none transition-all ease-in-out duration-100"
       title="Ray ban Aviator"
     >
       <header
@@ -78,35 +78,23 @@ const price = faker.commerce.price(100, 200, 0, "$");
       </header>
     </div>
     <!-- <span
-      class="absolute top-3.5 md:top-5 3xl:top-7 start-3.5 md:start-5 3xl:start-7 bg-heading text-white text-10px md:text-sm leading-5 rounded-md inline-block px-2 xl:px-3 pt-0.5 pb-1"
+      class="absolute top-3.5 md:top-5 3xl:top-7 start-3.5 md:start-5 3xl:start-7 bg-heading text-white text-10px md:text-sm leading-5 -md-md inline-block px-2 xl:px-3 pt-0.5 pb-1"
     >
       15%
     </span> -->
-    <div
-      class="flex flex-col md:flex-row lg:flex-col 2xl:flex-row md:justify-between md:items-center lg:items-start 2xl:items-center w-full p-6"
-      title="Ray ban Aviator"
-    >
+    <div class="w-full py-6 px-4">
       <div class="md:pe-2 lg:pe-0 2xl:pe-2 overflow-hidden">
-        <h2
-          class="text-heading font-semibold text-sm md:text-base xl:text-lg mb-1 truncate"
-        >
+        <h2 class="text-sm md:text-base xl:text-md mb-1">
           {{ name }}
         </h2>
-        <p
-          class="text-body text-xs xl:text-sm leading-normal xl:leading-relaxed truncate max-w-[250px]"
-        >
+        <p class="text-c-gray text-xs xl:text-sm truncate max-w-[250px]">
           {{ description }}
         </p>
       </div>
-      <div
-        class="flex-shrink-0 flex flex-row-reverse md:flex-col lg:flex-row-reverse 2xl:flex-col items-center md:items-end lg:items-start 2xl:items-end justify-end md:text-end lg:text-start xl:text-end mt-2 md:-mt-0.5 lg:mt-2 2xl:-mt-0.5"
-      >
-        <div
-          class="text-heading font-segoe font-semibold text-base md:text-xl lg:text-base xl:text-xl 3xl:text-2xl 3xl:mt-0.5 pe-2 md:pe-0 lg:pe-2 2xl:pe-0"
-        >
-          {{ price }}
-        </div>
-      </div>
+
+      <p class="mt-2.5 font-semibold text-lg">
+        {{ price }}
+      </p>
     </div>
   </div>
 </template>

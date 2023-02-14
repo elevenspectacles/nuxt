@@ -1,7 +1,12 @@
+<script setup>
+const story = await useStoryblok("home", { version: "draft" });
+</script>
+
 <template>
-  <client-only>
+  <pre>{{ story }}</pre>
+  <!-- <client-only>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </client-only>
+  </client-only> -->
 </template>
