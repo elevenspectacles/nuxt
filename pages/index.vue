@@ -1,6 +1,10 @@
+<script setup>
+const story = await useStoryblok("home", { version: "draft" });
+</script>
+
 <template>
   <div>
-    <TheJumbotron />
+    <StoryblokComponent v-if="story" :blok="story.content" />
 
     <TheFeaturedProducts />
 

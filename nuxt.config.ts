@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@formkit/nuxt",
+    // "@nuxtjs/sitemap",
     [
       "@storyblok/nuxt",
       {

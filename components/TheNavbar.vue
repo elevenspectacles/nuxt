@@ -8,7 +8,7 @@ const links = [
     label: t("home"),
   },
   {
-    name: "shop",
+    name: "store",
     label: "Store",
   },
   {
