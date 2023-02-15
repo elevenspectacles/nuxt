@@ -14,7 +14,7 @@ const price = faker.commerce.price(100, 500, 2, "$");
       class="flex justify-center items-center p-6 h-full 3xl:min-h-[330px] rounded-md bg-gray-50 group-hover:rounded-none transition-all ease-in-out duration-100"
       title="Ray ban Aviator"
     >
-      <header
+      <!-- <header
         style="
           box-sizing: border-box;
           display: inline-block;
@@ -75,7 +75,7 @@ const price = faker.commerce.price(100, 500, 2, "$");
             https://chawkbazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Ffeatured%2F4.png&w=640&q=75 2x
           "
         /><noscript></noscript>
-      </header>
+      </header> -->
     </div>
     <!-- <span
       class="absolute top-3.5 md:top-5 3xl:top-7 start-3.5 md:start-5 3xl:start-7 bg-heading text-white text-10px md:text-sm leading-5 -md-md inline-block px-2 xl:px-3 pt-0.5 pb-1"
