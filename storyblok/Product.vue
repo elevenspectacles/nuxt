@@ -1,13 +1,12 @@
 <script setup>
 defineProps({
-  product: Object,
+  blok: Object,
 });
 </script>
 
 <template>
-  <VSection>
-    <pre>{{ product }}</pre>
-    <h1>{{ product.name }}</h1>
-    <p>{{ product.price }}</p>
-  </VSection>
+  <div v-editable="blok">
+    <h1>{{ blok.name }}</h1>
+    <p>{{ blok.price }}</p>
+  </div>
 </template>

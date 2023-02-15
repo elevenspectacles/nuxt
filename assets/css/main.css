@@ -41,12 +41,12 @@ h6,
     "Noto Color Emoji", sans-serif;
   letter-spacing: 1.3px;
   @apply mb-4;
-  @apply uppercase font-bold;
+  @apply uppercase;
 }
 
 h1,
 .h1 {
-  @apply md:text-3xl lg:text-5xl font-bold;
+  @apply md:text-3xl lg:text-5xl;
 }
 
 h2,

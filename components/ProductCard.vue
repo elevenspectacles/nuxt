@@ -1,8 +1,8 @@
 <script setup>
-defineProps({
-  blok: Object,
-});
 const localePath = useLocalePath();
+defineProps({
+  product: Object,
+});
 </script>
 
 <template>
@@ -85,15 +85,18 @@ const localePath = useLocalePath();
     <div class="w-full py-6 px-4">
       <div class="md:pe-2 lg:pe-0 2xl:pe-2 overflow-hidden">
         <h2 class="text-sm md:text-base xl:text-md mb-1">
-          {{ blok.name }}
+          {{ product.name }}
         </h2>
-        <p class="text-c-gray text-xs xl:text-sm truncate max-w-[250px]">
-          {{ blok.description }}
+        <p
+          class="text-c-gray text-xs xl:text-sm truncate max-w-[250px]"
+          v-if="product.description"
+        >
+          {{ product.description }}
         </p>
       </div>
 
       <p class="mt-2.5 font-semibold text-lg">
-        {{ blok.price }}
+        {{ product.price }}
       </p>
     </div>
   </nuxt-link>

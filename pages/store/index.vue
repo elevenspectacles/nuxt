@@ -3,10 +3,10 @@ const story = await useStoryblok(
   "store",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
-    resolve_relations: "featuredProducts.products",
+    resolve_relations: "products.productList",
   },
   {
-    resolveRelations: "featuredProducts.products",
+    resolveRelations: "products.productList",
   }
 );
 </script>

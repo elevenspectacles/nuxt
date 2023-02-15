@@ -3,17 +3,16 @@ const story = await useStoryblok(
   "home",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
-    resolve_relations: "featuredProducts.products",
+    resolve_relations: "featuredProducts.productList",
   },
   {
-    resolveRelations: "featuredProducts.products",
+    resolveRelations: "featuredProducts.productList",
   }
 );
 </script>
 
 <template>
   <div>
-    <pre>{{ story }}</pre>
     <StoryblokComponent v-if="story" :blok="story.content" />
 
     <TheSocialSection />

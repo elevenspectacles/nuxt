@@ -6,5 +6,7 @@ const story = await useStoryblok(`store/${route.params.slug}`, {
 </script>
 
 <template>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+  <VSection>
+    <StoryblokComponent v-if="story" :blok="story.content" />
+  </VSection>
 </template>

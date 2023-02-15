@@ -7,7 +7,7 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <section class="jumbotron">
+  <section class="jumbotron" v-editable="blok">
     <div class="jumbotron__overlay">
       <h1>{{ blok.heading }}</h1>
       <p class="mb-6">
