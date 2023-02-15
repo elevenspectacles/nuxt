@@ -84,7 +84,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </VSection>
     <section
-      class="flex flex-col-reverse md:flex-row text-center md:justify-between mx-auto mx-6 py-6 border-t"
+      class="flex flex-col-reverse md:flex-row text-center md:justify-between mx-6 py-6 border-t border-gray-400"
     >
       <p class="text-xs lg:text-sm leading-6">
         &#169; {{ currentYear }} Eleven spectacles - All rights reserved.
@@ -103,7 +103,7 @@ const currentYear = new Date().getFullYear();
 
 .footer p,
 .footer h3 {
-  @apply text-white;
+  @apply text-gray-200;
 }
 .footer h3 {
   @apply mb-6;
@@ -113,7 +113,7 @@ const currentYear = new Date().getFullYear();
   @apply text-xs lg:text-sm flex flex-col space-y-1;
 }
 .footer a {
-  @apply transition-colors duration-200 text-gray-300 hover:text-white hover:underline underline-offset-2;
+  @apply transition-colors duration-200 text-gray-400 hover:text-gray-200 hover:underline underline-offset-2;
 }
 
 .footer__cards-img {
