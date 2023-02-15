@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const story = await useStoryblok(`st/${route.params.slug}`, {
-  version: "draft",
+  version: route.query._storyblok ? "draft" : "published",
 });
 </script>
 

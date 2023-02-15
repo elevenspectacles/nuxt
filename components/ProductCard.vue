@@ -1,13 +1,13 @@
 <script setup>
-import { faker } from "@faker-js/faker";
-
-const name = faker.commerce.product();
-const description = faker.commerce.productDescription();
-const price = faker.commerce.price(100, 500, 2, "$");
+defineProps({
+  blok: Object,
+});
+const localePath = useLocalePath();
 </script>
 
 <template>
-  <div
+  <nuxt-link
+    :to="localePath(`/store/${product.slug}`)"
     class="group cursor-pointer group flex flex-col rounded-md relative items-center justify-between overflow-hidden transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-xl hover:shadow-gray-200"
   >
     <div
@@ -85,16 +85,16 @@ const price = faker.commerce.price(100, 500, 2, "$");
     <div class="w-full py-6 px-4">
       <div class="md:pe-2 lg:pe-0 2xl:pe-2 overflow-hidden">
         <h2 class="text-sm md:text-base xl:text-md mb-1">
-          {{ name }}
+          {{ blok.name }}
         </h2>
         <p class="text-c-gray text-xs xl:text-sm truncate max-w-[250px]">
-          {{ description }}
+          {{ blok.description }}
         </p>
       </div>
 
       <p class="mt-2.5 font-semibold text-lg">
-        {{ price }}
+        {{ blok.price }}
       </p>
     </div>
-  </div>
+  </nuxt-link>
 </template>

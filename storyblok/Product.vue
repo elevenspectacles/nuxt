@@ -1,13 +1,13 @@
 <script setup>
 defineProps({
-  blok: Object,
+  product: Object,
 });
 </script>
 
 <template>
   <VSection>
-    <pre>{{ blok }}</pre>
-    <h1>{{ blok.name }}</h1>
-    <p>{{ blok.price }}</p>
+    <pre>{{ product }}</pre>
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.price }}</p>
   </VSection>
 </template>
