@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/33301338-8f3f-410c-8e57-abe6aabebfda/deploy-status)](https://app.netlify.com/sites/famous-torte-a83294/deploys)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
