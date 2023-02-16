@@ -1,5 +1,6 @@
 <script setup>
 const localePath = useLocalePath();
+const { t } = useI18n();
 const currentYear = new Date().getFullYear();
 </script>
 
@@ -7,7 +8,7 @@ const currentYear = new Date().getFullYear();
   <footer class="footer">
     <VSection class="flex justify-between px-6 py-12">
       <div class="flex-1">
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath({ name: 'index' })">
           <img
             src="/images/logo-white.svg"
             alt="Eleven Spectacles logo"
@@ -23,53 +24,51 @@ const currentYear = new Date().getFullYear();
 
       <div class="flex-1 flex justify-between">
         <nav class="flex-1">
-          <h3>About us</h3>
+          <h3>{{ t("ourCompany") }}</h3>
           <ul>
             <li>
-              <a href="#">About Us</a>
+              <nuxt-link :to="localePath({ name: 'about-us' })">
+                {{ t("aboutUs") }}
+              </nuxt-link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#">{{ t("legal") }}</a>
             </li>
             <li>
-              <a href="#">Legal</a>
+              <a href="#">{{ t("privacy") }}</a>
             </li>
             <li>
-              <a href="#">Privacy</a>
-            </li>
-            <li>
-              <a href="#">Cookies</a>
+              <a href="#">{{ t("cookies") }}</a>
             </li>
           </ul>
         </nav>
-        <nav class="flex-1 px-6">
-          <h3>Need help</h3>
+        <nav class="flex-1 px-12">
+          <h3>{{ t("needHelp") }}</h3>
           <ul>
             <li>
-              <a href="#">Contact us</a>
+              <nuxt-link :to="localePath({ name: 'contact-us' })">
+                {{ t("contactUs") }}
+              </nuxt-link>
             </li>
             <li>
-              <a href="#">Shipping services</a>
+              <a href="#">{{ t("shipping") }}</a>
             </li>
             <li>
-              <a href="#">Payment options</a>
+              <a href="#">{{ t("payment") }}</a>
             </li>
             <li>
-              <a href="#">Returns & Exchange</a>
+              <a href="#">{{ t("returnAndExchange") }}</a>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <a href="#">{{ t("faq") }}</a>
             </li>
             <li>
-              <a href="#">Unsubscribe</a>
-            </li>
-            <li>
-              <a href="#">Sitemap</a>
+              <a href="#">{{ t("sitemap") }}</a>
             </li>
           </ul>
         </nav>
         <div class="flex-1">
-          <h3>Follow us on</h3>
+          <h3>{{ t("followUs") }}</h3>
           <div>
             <a href="#" class="flex items-center" target="_blank">
               <Icon name="mdi:facebook" class="text-xl mr-2"></Icon> Facebook

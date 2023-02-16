@@ -2,28 +2,24 @@
 const localePath = useLocalePath();
 const { t } = useI18n();
 
-const links = [
+const links = computed(() => [
   {
     name: "index",
     label: t("home"),
   },
   {
     name: "store",
-    label: "Store",
+    label: t("store"),
   },
   {
     name: "about-us",
-    label: "About us",
-  },
-  {
-    name: "blog",
-    label: "Blog",
+    label: t("aboutUs"),
   },
   {
     name: "contact-us",
-    label: "Contact us",
+    label: t("contactUs"),
   },
-];
+]);
 </script>
 
 <template>
@@ -50,6 +46,10 @@ const links = [
 .navbar__link {
   @apply block py-1 px-5 cursor-pointer uppercase text-c-gray hover:text-c-black no-underline relative transition-all ease-in-out duration-200;
 }
+/* 
+.navbar__link.router-link-active {
+  @apply text-c-black;
+} */
 
 .navbar__link:before,
 .navbar__link:after {

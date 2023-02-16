@@ -1,9 +1,12 @@
 <script setup>
+const { locale } = useI18n();
+
 const story = await useStoryblok(
   "home",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
     resolve_relations: "featuredProducts.productList",
+    language: locale.value,
   },
   {
     resolveRelations: "featuredProducts.productList",

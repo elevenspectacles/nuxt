@@ -6,7 +6,7 @@ const localePath = useLocalePath();
   <header class="header">
     <section class="flex justify-between items-center px-6 py-1">
       <div>
-        <nuxt-link :to="localePath('/')">
+        <nuxt-link :to="localePath({ name: 'index' })">
           <img
             src="/images/logo.svg"
             alt="Eleven Spectacles logo"
@@ -19,7 +19,7 @@ const localePath = useLocalePath();
       </div>
       <div class="flex items-center">
         <LanguageSelect />
-        <!-- <Icon name="ic:round-search"></Icon> -->
+
         <nuxt-link :to="localePath('cart')" class="cart ml-4">
           <Icon name="ic:outline-shopping-bag" class="cart__icon"></Icon>
           <span class="cart__count">0</span>
@@ -41,15 +41,14 @@ const localePath = useLocalePath();
 }
 
 .cart {
-  background: #905035;
-  @apply w-11 h-11 flex items-center justify-center relative rounded-full bg-gray-100 hover:bg-gray-200;
+  @apply w-11 h-11 flex items-center justify-center relative rounded-full;
 }
 
 .cart:hover .cart__icon {
   @apply text-c-black;
 }
 .cart__icon {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1;
   @apply text-c-gray;
 }
@@ -64,7 +63,8 @@ const localePath = useLocalePath();
   top: 0px;
   right: 0px;
   font-weight: 500;
-  @apply flex items-center justify-center text-white absolute rounded-full
-    bg-accent;
+  border: 1px solid red;
+  @apply flex items-center justify-center text-accent absolute rounded-full
+    bg-white;
 }
 </style>

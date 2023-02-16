@@ -44,28 +44,59 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { name: "English", code: "en" },
-      { name: "Български", code: "bg" },
+      {
+        code: "en",
+        name: "English",
+      },
+      {
+        code: "bg",
+        name: "Български",
+      },
     ],
+    defaultLocale: "bg",
     strategy: "prefix_except_default",
-    // used in URL path prefix+
-    defaultLocale: "en",
-    skipSettingLocaleOnNavigate: false,
     // https://i18n.nuxtjs.org/browser-language-detection
     detectBrowserLanguage: {
-      alwaysRedirect: true,
-      useCookie: false,
-      cookieKey: "eleven_i18n_redirected",
-      redirectOn: "root", // recommended
+      cookieKey: "i18n_eleven",
     },
+
     vueI18n: {
-      fallbackLocale: "en",
       messages: {
         en: {
           home: "Home",
+          store: "Collections",
+          aboutUs: "About us",
+          contactUs: "Contact us",
+          ourCompany: "Our company",
+          legal: "Legal",
+          privacy: "Privacy & Policy",
+          cookies: "Cookies",
+          needHelp: "Need help",
+          shipping: "Shipping services",
+          payment: "Payment Options",
+          returnAndExchange: "Returns & Exchanges",
+          faq: "FAQs",
+          sitemap: "Sitemap",
+          followUs: "Follow us",
+          copyright: "Eleven spectacles - All rights reserved.",
         },
         bg: {
           home: "Начало",
+          store: "Колекции",
+          aboutUs: "За нас",
+          ourCompany: "За компанията",
+          contactUs: "Контакти",
+          legal: "Legal",
+          privacy: "Политика за поверителност",
+          cookies: "Бисквитки",
+          needHelp: "Нужда от помощ",
+          shipping: "Доставка",
+          payment: "Начин на плащане",
+          returnAndExchange: "Връщане и замяна",
+          faq: "Често задавани въпроси",
+          sitemap: "Карта на сайта",
+          followUs: "Последвайте ни",
+          copyright: "Eleven spectacles - All rights reserved.",
         },
       },
     },

@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <nuxt-link
-    :to="localePath(`/store/${product.slug}`)"
+    :to="localePath({ name: 'store-slug', params: { slug: product.slug } })"
     class="group cursor-pointer group flex flex-col rounded-md relative items-center justify-between overflow-hidden transition duration-200 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-xl hover:shadow-gray-200"
   >
     <div
