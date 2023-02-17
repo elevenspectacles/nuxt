@@ -39,7 +39,15 @@ const currentYear = new Date().getFullYear();
               </nuxt-link>
             </li>
             <li>
-              <a href="#">{{ t("privacy") }}</a>
+              <nuxt-link
+                :to="
+                  localePath({
+                    name: 'st-slug',
+                    params: { slug: 'privacy-policy' },
+                  })
+                "
+                >{{ t("privacy") }}
+              </nuxt-link>
             </li>
             <li>
               <nuxt-link
