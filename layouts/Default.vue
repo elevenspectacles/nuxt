@@ -22,7 +22,7 @@ watch(y, () => {
       ]"
     />
     <main>
-      <slot></slot>
+      <slot />
     </main>
     <TheFooter />
   </div>

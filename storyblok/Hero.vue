@@ -17,11 +17,12 @@ const localePath = useLocalePath();
         Shop now
       </nuxt-link>
     </div>
-    <img
+    <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" />
+    <!-- <img
       :src="blok.image?.filename"
       :alt="blok.image?.alt"
       class="jumbotron__image"
-    />
+    /> -->
     <!-- <picture class="jumbotron__image">
       <source
         srcset="
@@ -52,12 +53,14 @@ const localePath = useLocalePath();
 
 <style lang="postcss" scoped>
 .jumbotron {
-  @apply relative bg-c-black flex items-center;
-  height: calc(100vh - 96px);
+  @apply relative  flex items-center;
+  background: #0c0c0c;
+  height: 100vh;
+  margin-top: -74px;
 }
 
 .jumbotron__overlay {
-  @apply relative max-w-xl text-c-black px-6 py-10  mx-6 z-20;
+  @apply relative max-w-xl text-white px-6 py-10  mx-6 z-20;
 }
 
 /* .jumbotron__overlay::before {
@@ -67,14 +70,12 @@ const localePath = useLocalePath();
 
 .jumbotron__image {
   position: absolute;
-  left: 0;
+  left: 0%;
   right: 0;
   top: 0;
   bottom: 0;
-}
-
-.jumbotron__image {
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 </style>

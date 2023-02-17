@@ -1,11 +1,11 @@
 <script setup>
-defineProps({
-  blok: Object,
+const { blok } = defineProps({ blok: Object });
+
+const articleContent = computed(() => {
+  return renderRichText(blok.content);
 });
 </script>
 
 <template>
-  <pre>{{ blok.content }}</pre>
-  <h1>{{ blok.title }}</h1>
-  <div v-html="blok.content"></div>
+  <div v-html="articleContent"></div>
 </template>

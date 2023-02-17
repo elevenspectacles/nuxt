@@ -1,3 +1,3 @@
 <template>
-  <div>checkout</div>
+  <div><slot /></div>
 </template>

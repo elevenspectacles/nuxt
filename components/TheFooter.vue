@@ -32,13 +32,23 @@ const currentYear = new Date().getFullYear();
               </nuxt-link>
             </li>
             <li>
-              <a href="#">{{ t("legal") }}</a>
+              <nuxt-link
+                :to="localePath({ name: 'st-slug', params: { slug: 'legal' } })"
+              >
+                {{ t("legal") }}
+              </nuxt-link>
             </li>
             <li>
               <a href="#">{{ t("privacy") }}</a>
             </li>
             <li>
-              <a href="#">{{ t("cookies") }}</a>
+              <nuxt-link
+                :to="
+                  localePath({ name: 'st-slug', params: { slug: 'cookies' } })
+                "
+              >
+                {{ t("cookies") }}
+              </nuxt-link>
             </li>
           </ul>
         </nav>
@@ -112,7 +122,7 @@ const currentYear = new Date().getFullYear();
   @apply text-xs lg:text-sm flex flex-col space-y-1;
 }
 .footer a {
-  @apply transition-colors duration-200 text-gray-400 hover:text-gray-200 hover:underline underline-offset-2;
+  @apply transition-colors duration-200 text-gray-400 hover:text-gray-200 hover:underline underline-offset-4;
 }
 
 .footer__cards-img {
