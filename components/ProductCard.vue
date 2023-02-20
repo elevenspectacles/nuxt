@@ -14,6 +14,22 @@ defineProps({
       class="flex justify-center items-center p-6 h-full 3xl:min-h-[330px] rounded-md bg-gray-50 group-hover:rounded-none transition-all ease-in-out duration-100"
       title="Ray ban Aviator"
     >
+      <header>
+        <picture>
+          <source
+            media="(min-width:650px)"
+            :srcset="product.content.images[0].filename"
+          />
+          <source
+            media="(min-width:465px)"
+            :srcset="product.content.images[0].filename"
+          />
+          <img
+            :src="product.content.images[0].filename"
+            :alt="product.content.images[0].alt"
+          />
+        </picture>
+      </header>
       <!-- <header
         style="
           box-sizing: border-box;

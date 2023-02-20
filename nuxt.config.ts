@@ -86,6 +86,8 @@ export default defineNuxtConfig({
         en: {
           home: "Home",
           store: "Collections",
+          sunglasses: "Sunglasses",
+          optical: "Optical",
           aboutUs: "About us",
           contactUs: "Contact us",
           ourCompany: "Our company",
@@ -104,6 +106,8 @@ export default defineNuxtConfig({
         bg: {
           home: "Начало",
           store: "Колекции",
+          sunglasses: "Слънчеви очила",
+          optical: "Диоптрични очила",
           aboutUs: "За нас",
           ourCompany: "За компанията",
           contactUs: "Контакти",

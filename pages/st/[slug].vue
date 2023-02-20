@@ -25,6 +25,11 @@ const story = await useStoryblok(`/st/${route.params.slug}`, {
   @apply mt-6;
 }
 
+.static-page a {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .static-page li {
   @apply relative pl-5;
 }
