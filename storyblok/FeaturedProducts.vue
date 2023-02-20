@@ -8,13 +8,12 @@ defineProps({
 </script>
 
 <template>
-  <VSection v-editable="blok">
-    <h1 class="mb-6">{{ blok.heading }}</h1>
+  <VSection v-editable="blok" class="px-0">
+    <h1 class="mb-6 px-6">{{ blok.heading }}</h1>
 
     <swiper-container
-      slides-per-view="5"
       speed="500"
-      space="10"
+      class="px-4"
       :breakpoints="{
         480: {
           slidesPerView: 1,
@@ -30,10 +29,10 @@ defineProps({
         },
       }"
     >
-      <div slot="container-start"></div>
-      <div slot="container-end"></div>
       <swiper-slide v-for="product in blok.productList" :key="product.uuid">
-        <ProductCard :product="product" />
+        <div class="px-2 py-12">
+          <ProductCard :product="product" />
+        </div>
       </swiper-slide>
     </swiper-container>
   </VSection>

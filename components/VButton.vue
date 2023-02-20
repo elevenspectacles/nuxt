@@ -13,4 +13,8 @@
 .button--primary {
   @apply bg-accent hover:bg-accent-secondary focus:bg-accent-secondary focus:outline-1 focus:outline-accent hover:text-white;
 }
+
+.button--block {
+  @apply w-full;
+}
 </style>
