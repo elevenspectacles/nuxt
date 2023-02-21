@@ -16,7 +16,7 @@ defineProps({
 
 <style lang="postcss" scoped>
 .cover {
-  @apply relative flex items-center justify-center flex-col h-40 bg-gray-800;
+  @apply relative flex items-center justify-center flex-col h-52 bg-gray-800;
 }
 
 .jumbotron__overlay {

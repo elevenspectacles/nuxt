@@ -7,17 +7,17 @@ defineProps({
 
 <template>
   <nuxt-link
-    :to="localePath({ name: 'store-slug', params: { slug: product.slug } })"
+    :to="localePath(`/${product.full_slug}`)"
     class="group cursor-pointer flex flex-col rounded-md relative items-center justify-between overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 md:hover:-translate-y-1.5 hover:shadow-xl hover:shadow-gray-200"
   >
     <header class="w-full h-80 relative">
       <img
-        class="opacity-100 group-hover:opacity-0 absolute top-0 right-0 bottom-0 left-0 object-contain w-full h-full"
+        class="opacity-100 group-hover:opacity-0 duration-500 absolute top-0 right-0 bottom-0 left-0 object-contain w-full h-full"
         :src="product.content.images[1].filename"
         :alt="product.content.images[1].alt"
       />
       <img
-        class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 bottom-0 left-0 object-contain w-full h-full"
+        class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 right-0 bottom-0 left-0 object-contain w-full h-full"
         :src="product.content.images[0].filename"
         :alt="product.content.images[0].alt"
       />

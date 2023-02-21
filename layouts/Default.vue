@@ -14,7 +14,7 @@ watch(y, () => {
 
 <template>
   <div class="page-wrapper" ref="pageWrapper">
-    <TheHeader
+    <!-- <TheHeader
       :class="[
         {
           'header--hide': toggleHeader === 'hide',
@@ -23,7 +23,7 @@ watch(y, () => {
     />
     <main>
       <slot />
-    </main>
+    </main> -->
     <TheFooter />
   </div>
 </template>
