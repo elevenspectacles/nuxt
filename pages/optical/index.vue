@@ -1,6 +1,6 @@
 <script setup>
 const story = await useStoryblok(
-  "/store",
+  "/optical",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
     resolve_relations: "products.productList",
@@ -12,8 +12,5 @@ const story = await useStoryblok(
 </script>
 
 <template>
-  <VSection>
-    <pre>{{ story.content }}</pre>
-    <StoryblokComponent v-if="story" :blok="story.content" />
-  </VSection>
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>

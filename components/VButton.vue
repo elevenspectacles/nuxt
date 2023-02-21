@@ -6,7 +6,6 @@
 
 <style lang="postcss">
 .button {
-  letter-spacing: 1.5px;
   @apply uppercase text-sm leading-none inline-flex items-center cursor-pointer transition ease-in-out duration-300 text-center border-0 placeholder-white focus-visible:outline-none justify-center focus:outline-none border-transparent rounded text-white px-5 md:px-6 lg:px-8 py-4 flex-shrink-0 h-[50px];
 }
 

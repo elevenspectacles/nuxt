@@ -4,11 +4,11 @@ const { t } = useI18n();
 
 const links = computed(() => [
   {
-    name: "store",
+    name: "sunglasses",
     label: t("sunglasses"),
   },
   {
-    name: "store",
+    name: "optical",
     label: t("optical"),
   },
   {
