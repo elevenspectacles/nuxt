@@ -8,7 +8,7 @@ const localePath = useLocalePath();
 
 <template>
   <section class="jumbotron" v-editable="blok">
-    <div class="jumbotron__overlay">
+    <!-- <div class="jumbotron__overlay">
       <h1>{{ blok.heading }}</h1>
       <p class="mb-6">
         {{ blok.subheading }}
@@ -16,7 +16,7 @@ const localePath = useLocalePath();
       <nuxt-link class="button button--primary" :to="localePath('shop')">
         Shop now
       </nuxt-link>
-    </div>
+    </div> -->
     <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" />
     <!-- <img
       :src="blok.image?.filename"

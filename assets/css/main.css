@@ -52,7 +52,7 @@ h3,
 p,
 ul,
 li {
-  @apply text-xl leading-7 lg:text-base lg:leading-loose font-extralight;
+  @apply text-base leading-loose font-extralight;
 }
 
 p + p,
@@ -74,7 +74,7 @@ video {
 }
 
 a {
-  @apply text-sm leading-7 lg:text-base lg:leading-loose text-accent no-underline font-thin;
+  @apply text-base leading-loose text-accent no-underline font-thin;
 }
 
 a:hover {

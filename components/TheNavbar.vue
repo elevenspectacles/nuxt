@@ -23,7 +23,7 @@ const links = computed(() => [
 </script>
 
 <template>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation">
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link class="navbar__link" :to="localePath(link.name)">
@@ -36,7 +36,7 @@ const links = computed(() => [
 
 <style lang="postcss">
 .navbar {
-  @apply flex justify-center;
+  @apply hidden lg:flex justify-center;
 }
 
 .navbar__list {

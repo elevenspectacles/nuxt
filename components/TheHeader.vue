@@ -1,31 +1,57 @@
 <script setup>
 const localePath = useLocalePath();
+const isOpen = ref(false);
 </script>
 
 <template>
   <header class="header header--homepage">
     <section class="flex justify-between items-center px-6 py-2">
-      <div>
-        <nuxt-link :to="localePath({ name: 'index' })">
-          <img
-            src="/images/logo.svg"
-            alt="Eleven Spectacles logo"
-            width="128"
-          />
-        </nuxt-link>
-      </div>
-      <div>
-        <TheNavbar />
-      </div>
-      <div class="flex items-center">
-        <LanguageSelect />
+      <LanguageSelect class="-ml-3 block lg:hidden" />
 
-        <div class="ml-4 pl-4 border-l">
+      <nuxt-link
+        :to="localePath({ name: 'index' })"
+        class="justify-self-center lg:justify-self-start"
+      >
+        <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
+      </nuxt-link>
+
+      <TheNavbar :isOpen="isOpen" />
+
+      <div class="flex items-center">
+        <LanguageSelect class="hidden lg:block" />
+
+        <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">
           <nuxt-link :to="localePath('cart')" class="cart">
             <Icon name="ic:outline-shopping-bag" class="cart__icon"></Icon>
             <span class="cart__count">0</span>
           </nuxt-link>
         </div>
+
+        <button
+          @click="isOpen = !isOpen"
+          class="text-gray-500 -ml-4 w-12 h-12 relative focus:outline-none bg-white block lg:hidden"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div
+            class="block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            <span
+              aria-hidden="true"
+              class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+              :class="{ 'rotate-45': isOpen, ' -translate-y-1.5': !isOpen }"
+            ></span>
+            <span
+              aria-hidden="true"
+              class="block absolute h-0.5 w-8 bg-current transform transition duration-800 ease-in-out"
+              :class="{ 'opacity-0': isOpen }"
+            ></span>
+            <span
+              aria-hidden="true"
+              class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+              :class="{ '-rotate-45': isOpen, ' translate-y-1.5': !isOpen }"
+            ></span>
+          </div>
+        </button>
       </div>
     </section>
   </header>
