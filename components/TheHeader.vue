@@ -1,6 +1,13 @@
 <script setup>
 const localePath = useLocalePath();
 const isOpen = ref(false);
+
+// const isLocked = useScrollLock(document.querySelector(".page-wrapper"));
+// isLocked.value = true;
+// watch(isOpen, (newVal) => {
+//   isLocked.value = !newVal;
+//   console.log(isLocked);
+// });
 </script>
 
 <template>
@@ -15,16 +22,13 @@ const isOpen = ref(false);
         <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
       </nuxt-link>
 
-      <TheNavbar :isOpen="isOpen" />
+      <TheNavbar :isOpen="isOpen" @changeRoute="isOpen = false" />
 
       <div class="flex items-center">
         <LanguageSelect class="hidden lg:block" />
 
         <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">
-          <nuxt-link :to="localePath('cart')" class="cart">
-            <Icon name="ic:outline-shopping-bag" class="cart__icon"></Icon>
-            <span class="cart__count">0</span>
-          </nuxt-link>
+          <CartButton />
         </div>
 
         <button
@@ -57,7 +61,7 @@ const isOpen = ref(false);
   </header>
 </template>
 
-<style scoped lang="postcss">
+<style lang="postcss">
 .header {
   position: sticky;
   top: 0;
@@ -71,33 +75,5 @@ const isOpen = ref(false);
 
 .header--hide {
   @apply -translate-y-full;
-}
-
-.cart {
-  @apply w-10 h-10 flex items-center justify-center relative rounded-full bg-c-black hover:bg-c-gray;
-}
-
-.cart:hover .cart__icon {
-  @apply text-white;
-}
-.cart__icon {
-  font-size: 20px;
-  line-height: 1;
-  @apply text-white;
-}
-
-.cart__count {
-  min-width: 18px;
-  min-height: 18px;
-  padding: 0px;
-  border-radius: 20px;
-  font-size: 9px;
-  line-height: 1;
-  top: 0px;
-  right: 0px;
-  font-weight: 500;
-  border: 1px solid;
-  @apply flex items-center justify-center text-accent absolute rounded-full
-    bg-white border-c-black;
 }
 </style>

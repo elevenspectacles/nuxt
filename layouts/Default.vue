@@ -21,6 +21,9 @@ watch(y, () => {
         },
       ]"
     />
+    <div class="block lg:hidden fixed right-6 bottom-6 z-40">
+      <CartButton />
+    </div>
 
     <main>
       <slot />

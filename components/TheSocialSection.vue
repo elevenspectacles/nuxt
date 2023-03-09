@@ -23,12 +23,10 @@ const items = 6;
       <div
         class="absolute top left bg-black w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-50"
       ></div>
-      <div
-        class="absolute top left h-full w-full flex items-center justify-center"
-      >
+      <div class="absolute top left h-full w-full flex items-center justify-center">
         <Icon
           name="mdi:instagram"
-          class="text-white text-base sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl transform opacity-0 scale-150 transition-all duration-400 ease-in-out group-hover:opacity-100 group-hover:scale-100"
+          class="text-white text-6xl transform opacity-0 scale-150 transition-all duration-400 ease-in-out group-hover:opacity-100 group-hover:scale-100"
         />
       </div>
     </a>
