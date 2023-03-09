@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const story = await useStoryblok(`/optical/${route.params.slug}`, {
+const story = await useAsyncStoryblok(`optical/${route.params.slug}`, {
   version: route.query._storyblok ? "draft" : "published",
 });
 </script>

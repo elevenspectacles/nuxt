@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const story = await useStoryblok(`/sunglasses/${route.params.slug}`, {
+const story = await useAsyncStoryblok(`sunglasses/${route.params.slug}`, {
   version: route.query._storyblok ? "draft" : "published",
 });
 </script>

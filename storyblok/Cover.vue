@@ -10,7 +10,11 @@ defineProps({
     <p class="text-white">
       {{ blok.subheading }}
     </p>
-    <!-- <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" /> -->
+    <!-- <img
+      src="/"
+      :alt="blok.image?.alt"
+      class="cover__image"
+    /> -->
   </section>
 </template>
 
@@ -19,16 +23,7 @@ defineProps({
   @apply relative flex items-center justify-center flex-col h-52 bg-gray-800;
 }
 
-.jumbotron__overlay {
-  @apply relative max-w-xl text-white px-6 py-10  mx-6 z-20;
-}
-
-/* .jumbotron__overlay::before {
-  content: "";
-  @apply top-0 right-0 bottom-0 left-0 absolute block bg-c-black opacity-60 -z-10 rounded-md;
-} */
-
-.jumbotron__image {
+.cover__image {
   position: absolute;
   left: 0%;
   right: 0;

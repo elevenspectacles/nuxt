@@ -1,6 +1,6 @@
 <script setup>
-const story = await useStoryblok(
-  "/sunglasses",
+const story = await useAsyncStoryblok(
+  "sunglasses",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
     resolve_relations: "products.productList",

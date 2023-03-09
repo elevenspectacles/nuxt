@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 const { locale } = useI18n();
-const story = await useStoryblok(`/st/${route.params.slug}`, {
+const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
   version: route.query._storyblok ? "draft" : "published",
   language: locale.value,
 });
