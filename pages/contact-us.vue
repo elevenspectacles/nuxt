@@ -1,4 +1,17 @@
 <script setup>
+const { locale } = useI18n();
+const story = await useAsyncStoryblok(
+  "contact-us",
+  {
+    version: useRoute().query._storyblok ? "draft" : "published",
+    resolve_relations: "products.productList",
+    language: locale.value,
+  },
+  {
+    resolveRelations: "products.productList",
+  }
+);
+
 const formData = ref({
   name: "",
   email: "",
@@ -11,9 +24,8 @@ function submit() {}
 
 <template>
   <div>
+    <StoryblokComponent v-if="story" :blok="story.content" />
     <VSection class="max-w-[1024px] mx-auto">
-      <h2>Get in touch</h2>
-
       <FormKit type="form" @submit="submit" :value="formData">
         <div class="flex flex-col space-y-5">
           <div class="flex flex-col md:flex-row space-y-5 md:space-y-0">
