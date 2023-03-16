@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <button class="button"><slot /></button>
+  <button class="button" @click="($event) => $emit('click')"><slot /></button>
 </template>
 
 <style lang="postcss">
@@ -11,6 +11,10 @@
 
 .button--primary {
   @apply bg-accent hover:bg-accent-secondary focus:bg-accent-secondary focus:outline-1 focus:outline-accent hover:text-white;
+}
+
+.button--outline {
+  @apply border border-accent-secondary text-accent hover:bg-accent-secondary hover:text-white;
 }
 
 .button--block {

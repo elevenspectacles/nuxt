@@ -1,6 +1,32 @@
 <script setup>
-import { register } from "swiper/element/bundle";
-register();
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+
+const options = {
+  perPage: 5,
+  focus: "center",
+  trimSpace: "move",
+  autoplay: true,
+  interval: 5000,
+  throttle: 200,
+  gap: "24px",
+  padding: "24px",
+  perMove: 1,
+  slideFocus: true,
+  pagination: true,
+  lazyLoad: "nearby",
+  omitEnd: true,
+  breakpoints: {
+    1440: {
+      perPage: 3,
+    },
+    920: {
+      perPage: 2,
+    },
+    600: {
+      perPage: 1,
+    },
+  },
+};
 
 defineProps({
   blok: Object,
@@ -9,31 +35,24 @@ defineProps({
 
 <template>
   <VSection v-editable="blok" class="px-0">
-    <h1 class="mb-6 px-6">{{ blok.heading }}</h1>
+    <h1 class="mb-6 px-6 text-center">{{ blok.heading }}</h1>
 
-    <swiper-container
-      speed="500"
-      class="px-4"
-      :breakpoints="{
-        480: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1440: {
-          slidesPerView: 4,
-        },
-      }"
-    >
-      <swiper-slide v-for="product in blok.productList" :key="product.uuid">
-        <div class="px-2 py-12">
+    <div class="px-12">
+      <splide :options="options" id="splide" class="splide">
+        <splide-slide
+          v-for="product in blok.productList"
+          :key="product.uuid"
+          class="splide__slide"
+        >
           <ProductCard :product="product" />
-        </div>
-      </swiper-slide>
-    </swiper-container>
+        </splide-slide>
+      </splide>
+    </div>
   </VSection>
 </template>
+
+<style scoped>
+.splide__slide {
+  padding-bottom: 48px;
+}
+</style>

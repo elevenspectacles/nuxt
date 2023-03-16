@@ -102,6 +102,11 @@ export default defineNuxtConfig({
           sitemap: "Sitemap",
           followUs: "Follow us",
           copyright: "Eleven spectacles - All rights reserved.",
+          error: {
+            title: "Page not found",
+            subtitle: "Sorry, we couldn’t find the page you’re looking for.",
+            goBack: "Go back home",
+          },
         },
         bg: {
           home: "Начало",
@@ -122,6 +127,12 @@ export default defineNuxtConfig({
           sitemap: "Карта на сайта",
           followUs: "Последвайте ни",
           copyright: "Eleven spectacles - All rights reserved.",
+          error: {
+            title: "Страницата не е намерена",
+            subtitle:
+              "За съжаление не можахме да намерим страницата която търсите.",
+            goBack: "Отиди на началната страница",
+          },
         },
       },
     },

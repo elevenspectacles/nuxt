@@ -1,3 +1,7 @@
+<script setup>
+import "@splidejs/vue-splide/css/core";
+</script>
+
 <template>
   <client-only>
     <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />

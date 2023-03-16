@@ -8,8 +8,5 @@ const story = await useAsyncStoryblok(`optical/${route.params.slug}`, {
 </script>
 
 <template>
-  <VSection>
-    <pre>{{ story.content }}</pre>
-    <StoryblokComponent v-if="story" :blok="story.content" />
-  </VSection>
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
