@@ -1,6 +1,11 @@
 <script setup>
+import { storeToRefs } from "pinia";
+const navStore = useNavStore();
+
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
+const { isOpen } = storeToRefs(navStore);
+const isLocked = useScrollLock(pageWrapper);
 const { y, directions } = useScroll(pageWrapper);
 
 watch(y, () => {
@@ -8,6 +13,17 @@ watch(y, () => {
     toggleHeader.value = "";
   } else {
     toggleHeader.value = "hide";
+  }
+});
+
+watch(isOpen, (newVal) => {
+  isLocked.value = newVal;
+});
+
+useResizeObserver(pageWrapper, (entries) => {
+  const { width } = entries[0].contentRect;
+  if (width > 1024 && isLocked.value) {
+    isLocked.value = false;
   }
 });
 </script>
@@ -21,7 +37,7 @@ watch(y, () => {
         },
       ]"
     />
-    <div class="block lg:hidden fixed right-6 bottom-6 z-40">
+    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!isOpen">
       <CartButton />
     </div>
 

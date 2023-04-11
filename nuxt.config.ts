@@ -48,6 +48,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@formkit/nuxt",
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
     // "@nuxtjs/sitemap",
     [
       "@storyblok/nuxt",
@@ -56,6 +62,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  imports: {
+    dirs: ["stores"],
+  },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
@@ -78,9 +87,9 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
     // https://i18n.nuxtjs.org/browser-language-detection
     detectBrowserLanguage: {
+      useCookie: true,
       cookieKey: "i18n_eleven",
     },
-
     vueI18n: {
       messages: {
         en: {

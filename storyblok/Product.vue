@@ -8,7 +8,6 @@ defineProps({
 
 <template>
   <VSection v-editable="blok">
-    {{ blok }}
     <section class="flex items-start">
       <div class="pr-6 w-1/2">
         <div class="sticky top-0">

@@ -1,12 +1,10 @@
 <script setup>
+import { storeToRefs } from "pinia";
 const localePath = useLocalePath();
 const { t } = useI18n();
 
-defineProps({
-  isOpen: {
-    type: Boolean,
-  },
-});
+const navStore = useNavStore();
+const { isOpen } = storeToRefs(navStore);
 
 const links = computed(() => [
   {
@@ -42,10 +40,6 @@ const links = computed(() => [
       </li>
     </ul>
   </nav>
-  <!-- <div
-    :class="['overlay', { 'overlay--visible': isOpen }]"
-    @click="$emit('changeRoute')"
-  ></div> -->
 </template>
 
 <style lang="postcss">
@@ -88,14 +82,6 @@ const links = computed(() => [
 
   .navbar--visible {
     @apply opacity-100;
-  }
-
-  .overlay {
-    @apply hidden fixed h-full top-0 right-0 bottom-0 left-0 w-full  opacity-50 bg-black transition-opacity duration-200 delay-100 cursor-pointer z-30;
-  }
-
-  .overlay--visible {
-    @apply block;
   }
 
   .navbar__list {
