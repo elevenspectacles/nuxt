@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       viewport: "width=500, initial-scale=1",
       title: "Eleven spectacles",
       meta: [
-        { name: "description", content: "My amazing site." },
+        { name: "description", content: "Eleven Spectacles" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
       ],
