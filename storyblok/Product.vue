@@ -11,22 +11,26 @@ defineProps({
     {{ blok }}
     <section class="flex items-start">
       <div class="pr-6 w-1/2">
-        <splide :options="{ rewind: true }">
-          <splide-slide>
-            <img :src="blok.images[0].filename" alt="" />
-          </splide-slide>
-          <splide-slide>
-            <img :src="blok.images[0].filename" alt="" />
-          </splide-slide>
-          <splide-slide>
-            <img :src="blok.images[0].filename" alt="" />
-          </splide-slide>
-        </splide>
+        <div class="sticky top-0">
+          <splide :options="{ rewind: true }">
+            <splide-slide v-for="image in blok.images" :key="image.id">
+              <img :src="image.filename" :alt="image.alt" />
+            </splide-slide>
+          </splide>
+        </div>
       </div>
       <div class="pl-6 w-1/2">
         <h1 class="h2 mb-6">{{ blok.name }}</h1>
         <p class="h2 mb-6">{{ blok.price }} BGN</p>
-        <button class="button button--primary button--block">Add to Cart</button>
+
+        <nav></nav>
+        <p class="mb-6">{{ blok.description }}</p>
+
+        <div>Вариация на продукт:</div>
+
+        <button class="button button--primary button--block mt-6">
+          Add to Cart - {{ blok.price }} BGN
+        </button>
       </div>
     </section>
   </VSection>
