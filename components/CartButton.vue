@@ -1,8 +1,11 @@
-<script setup></script>
+<script setup>
+const cartStore = useCartStore();
+</script>
+
 <template>
   <nuxt-link :to="localePath('cart')" class="cart-button">
     <Icon name="ic:outline-shopping-bag" class="cart-button__icon"></Icon>
-    <span class="cart-button__count">0</span>
+    <span class="cart-button__count">{{ cartStore.count }}</span>
   </nuxt-link>
 </template>
 

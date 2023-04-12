@@ -1,10 +1,8 @@
 import { defineStore } from 'pinia'
 
-export const useNavStore = defineStore('useNavStore', {
+export const useNavStore = defineStore('navStore', {
   state: () => ({ isOpen: false }),
-  getters: {
-    // isOpen: (state) => state.isOpen,
-  },
+
   actions: {
     toggle() {
       this.isOpen = !this.isOpen

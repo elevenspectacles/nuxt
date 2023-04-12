@@ -1,15 +1,14 @@
 <script setup>
-import { storeToRefs } from "pinia";
 const localePath = useLocalePath();
 
 const navStore = useNavStore();
-const { isOpen } = storeToRefs(navStore);
-const { toggle } = navStore;
 </script>
 
 <template>
   <header class="header header--homepage">
-    <section class="flex justify-between items-center px-6 py-2 bg-white">
+    <section
+      class="flex justify-between items-center px-6 py-2 bg-white border-b"
+    >
       <LanguageSelect class="-ml-3 block lg:hidden" />
 
       <nuxt-link
@@ -19,7 +18,7 @@ const { toggle } = navStore;
         <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
       </nuxt-link>
 
-      <TheNavbar :isOpen="isOpen" @changeRoute="toggle" />
+      <TheNavbar :isOpen="navStore.isOpen" @changeRoute="navStore.toggle" />
 
       <div class="flex items-center">
         <LanguageSelect class="hidden lg:block" />
@@ -29,8 +28,9 @@ const { toggle } = navStore;
         </div>
 
         <button
-          @click="toggle"
-          class="text-gray-500 -ml-4 w-12 h-12 relative focus:outline-none bg-white block lg:hidden"
+          @click="navStore.toggle"
+          @keyup.space="navStore.toggle"
+          class="text-gray-500 -ml-4 w-12 h-12 relative bg-white block lg:hidden"
         >
           <span class="sr-only">Open main menu</span>
           <div
@@ -40,21 +40,21 @@ const { toggle } = navStore;
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
               :class="{
-                'rotate-45': isOpen,
-                ' -translate-y-1.5': !isOpen,
+                'rotate-45': navStore.isOpen,
+                ' -translate-y-1.5': !navStore.isOpen,
               }"
             ></span>
             <span
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-800 ease-in-out"
-              :class="{ 'opacity-0': isOpen }"
+              :class="{ 'opacity-0': navStore.isOpen }"
             ></span>
             <span
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
               :class="{
-                '-rotate-45': isOpen,
-                ' translate-y-1.5': !isOpen,
+                '-rotate-45': navStore.isOpen,
+                ' translate-y-1.5': !navStore.isOpen,
               }"
             ></span>
           </div>
@@ -62,8 +62,8 @@ const { toggle } = navStore;
       </div>
     </section>
     <div
-      :class="['overlay', { 'overlay--visible': isOpen }]"
-      @click="toggle"
+      :class="['overlay', { 'overlay--show': navStore.isOpen }]"
+      @click="navStore.toggle"
     ></div>
   </header>
 </template>
@@ -84,11 +84,11 @@ const { toggle } = navStore;
 
 @media screen and (max-width: 1024px) {
   .overlay {
-    @apply hidden fixed h-full top-0 right-0 bottom-0 left-0 w-full  opacity-50 bg-black transition-opacity duration-200 delay-100 cursor-pointer -z-10;
+    @apply block pointer-events-none fixed h-full top-0 right-0 bottom-0 left-0 w-full  opacity-0 bg-black transition-all duration-300  cursor-pointer -z-20;
   }
 
-  .overlay--visible {
-    @apply block;
+  .overlay--show {
+    @apply opacity-50 pointer-events-auto;
   }
 }
 </style>

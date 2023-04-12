@@ -1,5 +1,5 @@
 <template>
   <VSection>
-    <h1>shopping cart</h1>
+    <h1>Shopping Cart</h1>
   </VSection>
 </template>

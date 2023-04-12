@@ -1,10 +1,8 @@
 <script setup>
-import { storeToRefs } from "pinia";
 const localePath = useLocalePath();
 const { t } = useI18n();
 
 const navStore = useNavStore();
-const { isOpen } = storeToRefs(navStore);
 
 const links = computed(() => [
   {
@@ -27,7 +25,10 @@ const links = computed(() => [
 </script>
 
 <template>
-  <nav :class="['navbar', { 'navbar--visible': isOpen }]" role="navigation">
+  <nav
+    :class="['navbar', { 'navbar--visible': navStore.isOpen }]"
+    role="navigation"
+  >
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link
@@ -44,7 +45,7 @@ const links = computed(() => [
 
 <style lang="postcss">
 .navbar {
-  @apply lg:flex justify-center;
+  @apply lg:flex justify-center pointer-events-none;
 }
 
 .navbar__list {
@@ -76,12 +77,12 @@ const links = computed(() => [
 
 @media screen and (max-width: 1024px) {
   .navbar {
-    @apply absolute right-0 left-0 w-full bg-white text-center border-t shadow-lg py-3 opacity-0 transition-opacity duration-150;
+    @apply absolute right-0 left-0 w-full bg-white text-center shadow-lg py-3 duration-300 -translate-y-full -z-10;
     top: 74px;
   }
 
   .navbar--visible {
-    @apply opacity-100;
+    @apply opacity-100 pointer-events-auto translate-y-0;
   }
 
   .navbar__list {
