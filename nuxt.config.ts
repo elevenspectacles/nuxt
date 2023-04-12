@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+import i18n from "./utils/dictionary/i18n";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -72,78 +72,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  i18n: {
-    locales: [
-      {
-        code: "en",
-        name: "English",
-      },
-      {
-        code: "bg",
-        name: "Български",
-      },
-    ],
-    defaultLocale: "bg",
-    strategy: "prefix_except_default",
-    // https://i18n.nuxtjs.org/browser-language-detection
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_eleven",
-    },
-    vueI18n: {
-      messages: {
-        en: {
-          home: "Home",
-          store: "Collections",
-          sunglasses: "Sunglasses",
-          optical: "Optical",
-          aboutUs: "About us",
-          contactUs: "Contact us",
-          ourCompany: "Our company",
-          legal: "Legal",
-          privacy: "Privacy & Policy",
-          cookies: "Cookies",
-          needHelp: "Need help",
-          shipping: "Shipping services",
-          payment: "Payment Options",
-          returnAndExchange: "Returns & Exchanges",
-          faq: "FAQs",
-          sitemap: "Sitemap",
-          followUs: "Follow us",
-          copyright: "Eleven spectacles - All rights reserved.",
-          error: {
-            title: "Page not found",
-            subtitle: "Sorry, we couldn’t find the page you’re looking for.",
-            goBack: "Go back home",
-          },
-        },
-        bg: {
-          home: "Начало",
-          store: "Колекции",
-          sunglasses: "Слънчеви очила",
-          optical: "Диоптрични очила",
-          aboutUs: "За нас",
-          ourCompany: "За компанията",
-          contactUs: "Контакти",
-          legal: "Legal",
-          privacy: "Политика за поверителност",
-          cookies: "Бисквитки",
-          needHelp: "Нужда от помощ",
-          shipping: "Доставка",
-          payment: "Начин на плащане",
-          returnAndExchange: "Връщане и замяна",
-          faq: "Често задавани въпроси",
-          sitemap: "Карта на сайта",
-          followUs: "Последвайте ни",
-          copyright: "Eleven spectacles - All rights reserved.",
-          error: {
-            title: "Страницата не е намерена",
-            subtitle:
-              "За съжаление не можахме да намерим страницата която търсите.",
-            goBack: "Отиди на началната страница",
-          },
-        },
-      },
-    },
-  },
+  ...i18n,
 });

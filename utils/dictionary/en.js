@@ -1,0 +1,27 @@
+export default {
+  en: {
+    home: "Home",
+    store: "Collections",
+    sunglasses: "Sunglasses",
+    optical: "Optical",
+    aboutUs: "About us",
+    contactUs: "Contact us",
+    ourCompany: "Our company",
+    legal: "Legal",
+    privacy: "Privacy & Policy",
+    cookies: "Cookies",
+    needHelp: "Need help",
+    shipping: "Shipping services",
+    payment: "Payment Options",
+    returnAndExchange: "Returns & Exchanges",
+    faq: "FAQs",
+    sitemap: "Sitemap",
+    followUs: "Follow us",
+    copyright: "Eleven spectacles - All rights reserved.",
+    error: {
+      title: "Page not found",
+      subtitle: "Sorry, we couldn’t find the page you’re looking for.",
+      goBack: "Go back home",
+    },
+  },
+}
