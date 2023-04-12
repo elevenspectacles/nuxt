@@ -1,3 +1,4 @@
 <template>
-  <div><slot /></div>
+  <main><slot /></main>
+  <TheFooter />
 </template>

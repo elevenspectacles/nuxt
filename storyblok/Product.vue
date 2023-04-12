@@ -1,6 +1,9 @@
 <script setup>
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css/core";
+
+const productStore = useCartStore();
+
 defineProps({
   blok: Object,
 });
@@ -27,7 +30,10 @@ defineProps({
 
         <div>Вариация на продукт:</div>
 
-        <button class="button button--primary button--block mt-6">
+        <button
+          class="button button--primary button--block mt-6"
+          @click="productStore.addItem(blok)"
+        >
           Add to Cart - {{ blok.price }} BGN
         </button>
       </div>

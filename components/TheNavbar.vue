@@ -45,7 +45,7 @@ const links = computed(() => [
 
 <style lang="postcss">
 .navbar {
-  @apply lg:flex justify-center pointer-events-none;
+  @apply lg:flex justify-center;
 }
 
 .navbar__list {
