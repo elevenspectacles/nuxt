@@ -8,7 +8,7 @@ defineProps({
 <template>
   <nuxt-link
     :to="localePath(`/${product.full_slug}`)"
-    class="group cursor-pointer flex flex-col rounded-md relative items-center justify-between"
+    class="group cursor-pointer flex flex-col relative items-center justify-between"
   >
     <header class="w-full h-80 relative">
       <img

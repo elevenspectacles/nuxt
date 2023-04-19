@@ -1,23 +1,18 @@
-<script setup></script>
-
 <template>
-  <button class="button" @click="($event) => $emit('click')"><slot /></button>
+  <button
+    class="group relative inline-block text-sm font-medium text-c-black focus:outline-none focus:ring active:text-c-black"
+    @click="$emit('click')"
+  >
+    <span
+      class="absolute inset-0 translate-x-0 translate-y-0 bg-c-black transition-transform group-hover:translate-y-1 group-hover:translate-x-1"
+      aria-hidden="true"
+    ></span>
+    <span
+      class="relative block border border-current bg-white px-8 h-[50px] uppercase leading-[50px]"
+    >
+      <slot />
+    </span>
+  </button>
 </template>
 
-<style lang="postcss">
-.button {
-  @apply uppercase text-sm leading-none inline-flex items-center cursor-pointer transition ease-in-out duration-300 text-center border-0 placeholder-white focus-visible:outline-none justify-center focus:outline-none border-transparent rounded text-white px-5 md:px-6 lg:px-8 py-4 flex-shrink-0 h-[50px];
-}
-
-.button--primary {
-  @apply bg-accent hover:bg-accent-secondary focus:bg-accent-secondary focus:outline-1 focus:outline-accent hover:text-white;
-}
-
-.button--outline {
-  @apply border border-accent-secondary text-accent hover:bg-accent-secondary hover:text-white;
-}
-
-.button--block {
-  @apply w-full;
-}
-</style>
+<style lang="postcss"></style>

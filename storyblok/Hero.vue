@@ -63,11 +63,6 @@ const localePath = useLocalePath();
   @apply relative max-w-xl text-white px-6 py-10  mx-6 z-20;
 }
 
-/* .jumbotron__overlay::before {
-  content: "";
-  @apply top-0 right-0 bottom-0 left-0 absolute block bg-c-black opacity-60 -z-10 rounded-md;
-} */
-
 .jumbotron__image {
   position: absolute;
   left: 0%;

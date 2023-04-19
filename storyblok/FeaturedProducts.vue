@@ -2,7 +2,7 @@
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 const options = {
   type: "loop",
-  perPage: 5,
+  perPage: 4,
   focus: "left",
   autoplay: true,
   interval: 5000,
@@ -32,22 +32,40 @@ defineProps({
 
 <template>
   <VSection v-editable="blok" class="px-0">
-    <h1 class="mb-6 px-6 text-center">{{ blok.heading }}</h1>
-    <splide :options="options" class="c-featured-products">
-      <splide-slide
-        v-for="product in blok.productList"
-        :key="product.uuid"
-        class="splide__slide"
-      >
-        <ProductCard :product="product" />
-      </splide-slide>
-    </splide>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:items-stretch">
+      <div class="grid p-6 bg-gray-100 place-content-center sm:p-8">
+        <div class="max-w-md mx-auto text-center lg:text-left">
+          <header>
+            <h2>Featured products</h2>
+
+            <p class="mt-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas rerum quam
+              amet provident nulla error!
+            </p>
+          </header>
+
+          <VButton class="mt-6"> Shop All </VButton>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3">
+        <splide :options="options" class="c-featured-products">
+          <splide-slide
+            v-for="product in blok.productList"
+            :key="product.uuid"
+            class="splide__slide"
+          >
+            <ProductCard :product="product" />
+          </splide-slide>
+        </splide>
+      </div>
+    </div>
   </VSection>
 </template>
 
 <style lang="postcss">
 .c-featured-products .splide__slide {
-  padding-bottom: 48px;
+  padding-bottom: 24px;
 }
 
 .c-featured-products .splide__arrow {
@@ -57,7 +75,7 @@ defineProps({
   transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
-  @apply transition-colors bg-gray-100 flex items-center justify-center border border-r-0 hover:bg-c-black hover:border-c-black;
+  @apply transition-colors bg-gray-100 flex items-center justify-center border  hover:bg-c-black hover:border-c-black;
 }
 
 .c-featured-products .splide__arrow svg {

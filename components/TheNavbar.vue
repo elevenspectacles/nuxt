@@ -25,10 +25,7 @@ const links = computed(() => [
 </script>
 
 <template>
-  <nav
-    :class="['navbar', { 'navbar--visible': navStore.isOpen }]"
-    role="navigation"
-  >
+  <nav :class="['navbar', { 'navbar--visible': navStore.isOpen }]" role="navigation">
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link
@@ -68,7 +65,7 @@ const links = computed(() => [
   content: "";
   height: 2px;
   bottom: -4px;
-  @apply absolute left-0 right-0 block bg-accent w-0 transition-all ease-in-out duration-200 rounded-sm;
+  @apply absolute left-0 right-0 block bg-accent w-0 transition-all ease-in-out duration-200;
 }
 
 .navbar__link.router-link-active span:before {

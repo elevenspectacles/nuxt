@@ -9,7 +9,7 @@ const items = 6;
     <a
       v-for="item in items"
       :key="item"
-      class="group flex justify-center text-center relative h-52 rounded overflow-hidden"
+      class="group flex justify-center text-center relative h-52 overflow-hidden"
       href="/#"
       target="_blank"
     >
