@@ -1,7 +1,6 @@
 <script setup>
 import { storeToRefs } from "pinia";
 const navStore = useNavStore();
-const { isOpen } = storeToRefs(navStore);
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
 const isLocked = useScrollLock(pageWrapper);
@@ -15,8 +14,9 @@ watch(y, () => {
   }
 });
 
-watch(isOpen, (newVal) => {
-  isLocked.value = newVal;
+navStore.$subscribe((mutation, state) => {
+  console.log(state.isOpen);
+  isLocked.value = state.isOpen;
 });
 
 useResizeObserver(pageWrapper, (entries) => {
@@ -36,10 +36,7 @@ useResizeObserver(pageWrapper, (entries) => {
         },
       ]"
     />
-    <div
-      class="block lg:hidden fixed right-6 bottom-6 z-40"
-      v-if="!navStore.isOpen"
-    >
+    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!navStore.isOpen">
       <CartButton />
     </div>
 
