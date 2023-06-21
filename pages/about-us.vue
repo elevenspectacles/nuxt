@@ -1,15 +1,14 @@
 <script setup>
 const { locale } = useI18n();
-
 const story = await useAsyncStoryblok(
-  "home",
+  "about-us",
   {
     version: useRoute().query._storyblok ? "draft" : "published",
-    resolve_relations: "featuredProducts.productList",
+    resolve_relations: "products.productList",
     language: locale.value,
   },
   {
-    resolveRelations: "featuredProducts.productList",
+    resolveRelations: "products.productList",
   }
 );
 </script>
@@ -17,11 +16,6 @@ const story = await useAsyncStoryblok(
 <template>
   <div>
     <StoryblokComponent v-if="story" :blok="story.content" />
-
-    <TheAboutUs />
-
-    <TheSocialSection />
-
-    <TheSubscribe />
+    <VSection>Sample text</VSection>
   </div>
 </template>
