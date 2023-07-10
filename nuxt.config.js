@@ -1,6 +1,4 @@
 require("dotenv").config();
-import i18n from "./utils/dictionary/i18n.config.js";
-import { defineNuxtConfig } from 'nuxt/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -57,12 +55,12 @@ export default defineNuxtConfig({
       },
     ],
     // "@nuxtjs/sitemap",
-    [
-      "@storyblok/nuxt",
-      {
-        accessToken: process.env.STORY_BLOK,
-      },
-    ],
+    // [
+    //   "@storyblok/nuxt",
+    //   {
+    //     accessToken: process.env.STORY_BLOK,
+    //   },
+    // ],
   ],
   imports: {
     dirs: ["stores"],
@@ -74,5 +72,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  ...i18n,
+  i18n: {
+    vueI18n: './utils/dictionary/i18n.config.ts'
+  },
+  // vite: {
+  //   optimizeDeps: { exclude: ['fsevents'] }
+  // },
+  devtools: { enabled: true }
 });

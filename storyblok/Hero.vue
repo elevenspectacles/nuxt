@@ -2,8 +2,6 @@
 defineProps({
   blok: Object,
 });
-
-const localePath = useLocalePath();
 </script>
 
 <template>

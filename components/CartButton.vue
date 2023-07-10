@@ -1,5 +1,6 @@
 <script setup>
 const cartStore = useCartStore();
+const localePath = useLocalePath();
 </script>
 
 <template>

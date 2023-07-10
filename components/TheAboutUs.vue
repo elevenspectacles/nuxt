@@ -1,8 +1,3 @@
-<script setup>
-const localePath = useLocalePath();
-const { t } = useI18n();
-</script>
-
 <template>
   <VSection>
     <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">

@@ -1,9 +1,10 @@
 import en from './en'
 import bg from './bg'
 
-export default {
+export default defineI18nConfig(() => ({
+  legacy: false,
   i18n: {
-    baseUrl: "https://my-nuxt-app.com",
+    // baseUrl: "https://my-nuxt-app.com",
     locales: [
       {
         code: "en",
@@ -25,11 +26,9 @@ export default {
       cookieSecure: true,
       redirectOn: "root",
     },
-    vueI18n: {
-      messages: {
-        ...en,
-        ...bg
-      },
+    messages: {
+      ...en,
+      ...bg
     },
   },
-}
+}))

@@ -1,6 +1,4 @@
 <script setup>
-import { faker } from "@faker-js/faker";
-
 const items = 6;
 </script>
 
@@ -15,7 +13,6 @@ const items = 6;
     >
       <img
         alt=""
-        :src="faker.image.city(600, 480, true)"
         decoding="async"
         data-nimg="intrinsic"
         class="bg-gray-300 object-cover h-full w-full"
