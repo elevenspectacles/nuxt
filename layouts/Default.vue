@@ -1,5 +1,5 @@
 <script setup>
-import { storeToRefs } from "pinia";
+const { locale } = useI18n();
 const navStore = useNavStore();
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
@@ -25,6 +25,12 @@ useResizeObserver(pageWrapper, (entries) => {
     isLocked.value = false;
   }
 });
+
+useHead({
+  htmlAttrs: {
+    lang: locale,
+  },
+});
 </script>
 
 <template>
@@ -36,7 +42,10 @@ useResizeObserver(pageWrapper, (entries) => {
         },
       ]"
     />
-    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!navStore.isOpen">
+    <div
+      class="block lg:hidden fixed right-6 bottom-6 z-40"
+      v-if="!navStore.isOpen"
+    >
       <CartButton />
     </div>
 
