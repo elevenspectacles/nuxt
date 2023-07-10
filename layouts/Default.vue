@@ -1,6 +1,7 @@
 <script setup>
 const { locale } = useI18n();
 const navStore = useNavStore();
+const { isOpen } = storeToRefs(navStore);
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
 const isLocked = useScrollLock(pageWrapper);
@@ -14,9 +15,8 @@ watch(y, () => {
   }
 });
 
-navStore.$subscribe((mutation, state) => {
-  console.log(state.isOpen);
-  isLocked.value = state.isOpen;
+watch(isOpen, (newVal) => {
+  isLocked.value = newVal;
 });
 
 useResizeObserver(pageWrapper, (entries) => {

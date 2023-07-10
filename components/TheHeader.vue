@@ -6,7 +6,9 @@ const navStore = useNavStore();
 
 <template>
   <header class="header header--homepage">
-    <section class="flex justify-between items-center px-6 py-2 bg-white border-b">
+    <section
+      class="flex justify-between items-center px-6 py-2 bg-white border-b"
+    >
       <LanguageSelect class="-ml-3 block lg:hidden" />
 
       <nuxt-link
@@ -16,7 +18,7 @@ const navStore = useNavStore();
         <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
       </nuxt-link>
 
-      <TheNavbar :isOpen="navStore.isOpen" @changeRoute="navStore.close" />
+      <TheNavbar :isOpen="navStore.isOpen" @changeRoute="navStore.toggle" />
 
       <div class="flex items-center">
         <LanguageSelect class="hidden lg:block" />

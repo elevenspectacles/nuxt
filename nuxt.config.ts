@@ -1,5 +1,5 @@
 require("dotenv").config();
-import i18n from "./utils/dictionary/i18n";
+import i18n from "./utils/dictionary/i18n.config";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -72,5 +72,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  ...i18n,
+  i18n: {
+    vueI18n: "./utils/dictionary/i18n.config.ts",
+  },
 });

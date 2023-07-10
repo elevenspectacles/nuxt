@@ -1,36 +1,53 @@
 {
+  "name": "eleven",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "nuxt",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "dev:https": " local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem & nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "prepare": "husky install"
   },
-  "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.7",
-    "@nuxtjs/tailwindcss": "^6.3.1",
-    "@vueuse/core": "^9.11.0",
-    "@vueuse/nuxt": "^9.11.0",
-    "autoprefixer": "^10.4.13",
-    "nuxt": "3.0.0",
-    "nuxt-icon": "^0.2.5",
-    "nuxt-purgecss": "^2.0.0",
-    "postcss": "^8.4.20"
+  "lint-staged": {
+    "*.{js,vue}": "eslint --cache",
+    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "@formkit/addons": "^1.0.0-beta.14",
-    "@formkit/nuxt": "^1.0.0-beta.12",
-    "@formkit/themes": "^1.0.0-beta.15",
-    "@marvr/storyblok-rich-text-vue-renderer": "^3.2.0",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@pinia/nuxt": "^0.4.6",
-    "@splidejs/vue-splide": "^0.6.12",
-    "@storyblok/nuxt": "^5.1.0",
-    "@vueuse/components": "^9.11.0",
-    "pinia": "^2.0.28"
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.25.3",
+    "element-ui": "^2.15.10",
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@nuxtjs/eslint-config": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/stylelint-module": "^4.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.0",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^28.0.0"
   }
 }
