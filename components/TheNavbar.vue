@@ -6,26 +6,29 @@ const navStore = useNavStore();
 
 const links = computed(() => [
   {
-    name: "sunglasses",
+    value: { name: "spectacles", params: { type: "sunglasses" } },
     label: t("sunglasses"),
   },
   {
-    name: "optical",
+    value: { name: "spectacles", params: { type: "optical" } },
     label: t("optical"),
   },
   {
-    name: "about-us",
+    value: { name: "about-us" },
     label: t("aboutUs"),
   },
   {
-    name: "contact-us",
+    value: { name: "contact-us" },
     label: t("contactUs"),
   },
 ]);
 </script>
 
 <template>
-  <nav :class="['navbar', { 'navbar--visible': navStore.isOpen }]" role="navigation">
+  <nav
+    :class="['navbar', { 'navbar--visible': navStore.isOpen }]"
+    role="navigation"
+  >
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link

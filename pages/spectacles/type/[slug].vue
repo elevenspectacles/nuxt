@@ -1,20 +1,17 @@
 <script setup>
+const route = useRoute();
 const { locale } = useI18n();
 const story = await useAsyncStoryblok(
-  "optical",
+  `${route.params.type}/${route.params.slug}`,
   {
-    version: useRoute().query._storyblok ? "draft" : "published",
-    resolve_relations: "products.productList",
+    version: route.query._storyblok ? "draft" : "published",
     language: locale.value,
-  },
-  {
-    resolveRelations: "products.productList",
   }
 );
 </script>
 
 <template>
-  <div>
+  <VSection>
     <StoryblokComponent v-if="story" :blok="story.content" />
-  </div>
+  </VSection>
 </template>

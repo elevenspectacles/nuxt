@@ -13,7 +13,7 @@ export default {
     needHelp: "Need help",
     shipping: "Shipping services",
     payment: "Payment Options",
-    returnAndExchange: "Returns & Exchanges",
+    returnAndExchange: "Returns & Exchange",
     faq: "FAQs",
     sitemap: "Sitemap",
     followUs: "Follow us",
