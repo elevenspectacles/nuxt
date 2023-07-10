@@ -9,12 +9,16 @@ const currentYear = new Date().getFullYear();
     <VSection class="block xl:flex xl:justify-between px-6 py-12">
       <div class="flex-1 flex flex-col items-center md:block">
         <nuxt-link :to="localePath({ name: 'index' })">
-          <img src="/images/logo-white.svg" alt="Eleven Spectacles logo" width="168" />
+          <img
+            src="/images/logo-white.svg"
+            alt="Eleven Spectacles logo"
+            width="168"
+          />
         </nuxt-link>
         <p class="mt-6 text-sm max-w-sm text-center md:text-left">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum odio
-          dignissimos, amet quod nihil cumque magni aliquid cum quo suscipit non laborum
-          sed, provident autem, iste aut itaque impedit.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum
+          odio dignissimos, amet quod nihil cumque magni aliquid cum quo
+          suscipit non laborum sed, provident autem, iste aut itaque impedit.
         </p>
       </div>
 
@@ -52,7 +56,9 @@ const currentYear = new Date().getFullYear();
             </li>
             <li>
               <nuxt-link
-                :to="localePath({ name: 'st-slug', params: { slug: 'cookies' } })"
+                :to="
+                  localePath({ name: 'st-slug', params: { slug: 'cookies' } })
+                "
                 class="block"
               >
                 {{ t("cookies") }}

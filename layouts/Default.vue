@@ -1,5 +1,5 @@
 <script setup>
-import { storeToRefs } from "pinia";
+const { locale } = useI18n();
 const navStore = useNavStore();
 const { isOpen } = storeToRefs(navStore);
 const pageWrapper = ref(null);
@@ -24,6 +24,12 @@ useResizeObserver(pageWrapper, (entries) => {
   if (width > 1024 && isLocked.value) {
     isLocked.value = false;
   }
+});
+
+useHead({
+  htmlAttrs: {
+    lang: locale,
+  },
 });
 </script>
 
