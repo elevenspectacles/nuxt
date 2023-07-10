@@ -1,11 +1,10 @@
 <template>
-  <div>test</div>
-  <!-- <client-only> -->
-  <!-- <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
+  <client-only>
+    <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
     <NuxtLayout>
       <NuxtPage />
-    </NuxtLayout> -->
-  <!-- </client-only> -->
+    </NuxtLayout>
+  </client-only>
 </template>
 
 <style>
