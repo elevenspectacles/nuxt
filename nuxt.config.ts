@@ -1,5 +1,5 @@
 require("dotenv").config();
-import i18n from "./utils/dictionary/i18n";
+import i18n from "./utils/dictionary/i18n.config.js";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
