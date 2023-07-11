@@ -36,7 +36,7 @@ useHead({
 
 <template>
   <div class="page-wrapper" ref="pageWrapper">
-    <!-- <TheHeader
+    <TheHeader
       :class="[
         {
           'header--hide': toggleHeader === 'hide',
@@ -45,12 +45,12 @@ useHead({
     />
     <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!navStore.isOpen">
       <CartButton />
-    </div> -->
+    </div>
 
     <main>
       <slot />
     </main>
-    <!-- <TheFooter /> -->
+    <TheFooter />
   </div>
 </template>
 
