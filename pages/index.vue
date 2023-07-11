@@ -1,5 +1,5 @@
 <script setup>
-// const { locale } = useI18n();
+const { locale } = useI18n();
 
 // const story = await useAsyncStoryblok(
 //   "home",
@@ -16,14 +16,12 @@
 
 <template>
   <div>
-    Test
-    <LanguageSelect />
     <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 
-    <!-- <TheAboutUs /> -->
+    <TheAboutUs />
 
-    <!-- <TheSocialSection /> -->
+    <TheSocialSection />
 
-    <!-- <TheSubscribe /> -->
+    <TheSubscribe />
   </div>
 </template>

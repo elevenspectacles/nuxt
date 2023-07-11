@@ -96,8 +96,8 @@ export default defineNuxtConfig({
     },
     vueI18n: './utils/dictionary/i18n.config.ts'
   },
-  // vite: {
-  //   optimizeDeps: { exclude: ['fsevents'] }
-  // },
+  vite: {
+    optimizeDeps: { exclude: ['fsevents'] }
+  },
   devtools: { enabled: true }
 });
