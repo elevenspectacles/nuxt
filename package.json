@@ -39,7 +39,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@pinia/nuxt": "^0.4.6",
     "@splidejs/vue-splide": "^0.6.12",
-    "@storyblok/nuxt": "^5.1.0",
+    "@storyblok/nuxt": "^5.5.2",
     "@vueuse/components": "^9.11.0",
     "pinia": "^2.0.28"
   },

@@ -17,6 +17,7 @@
 <template>
   <div>
     Test
+    <LanguageSelect />
     <!-- <StoryblokComponent v-if="story" :blok="story.content" /> -->
 
     <!-- <TheAboutUs /> -->

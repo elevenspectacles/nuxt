@@ -54,7 +54,6 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate"],
       },
     ],
-    // "@nuxtjs/sitemap",
     // [
     //   "@storyblok/nuxt",
     //   {
@@ -73,6 +72,28 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    locales: [
+      {
+        code: "en",
+        name: "English",
+        iso: "en",
+      },
+      {
+        code: "bg",
+        name: "Български",
+        iso: "bg",
+      },
+    ],
+    defaultLocale: "bg",
+    defaultLocale: "bg",
+    strategy: "prefix_except_default",
+    // https://i18n.nuxtjs.org/browser-language-detection
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_eleven",
+      cookieSecure: true,
+      redirectOn: "root",
+    },
     vueI18n: './utils/dictionary/i18n.config.ts'
   },
   // vite: {
