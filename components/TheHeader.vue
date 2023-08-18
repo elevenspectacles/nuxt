@@ -18,7 +18,7 @@ const navStore = useNavStore();
         <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
       </nuxt-link>
 
-      <TheNavbar :isOpen="navStore.isOpen" @changeRoute="navStore.toggle" />
+      <TheNavbar :isOpen="navStore.isOpen" @change-route="navStore.close" />
 
       <div class="flex items-center">
         <LanguageSelect class="hidden lg:block" />

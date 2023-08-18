@@ -7,5 +7,12 @@ export const useNavStore = defineStore('navStore', {
     toggle() {
       this.isOpen = !this.isOpen
     },
+
+    close() {
+      console.log(this.isOpen)
+      if (this.isOpen) {
+        this.isOpen = false
+      }
+    }
   },
 })

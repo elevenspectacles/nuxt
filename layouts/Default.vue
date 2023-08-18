@@ -43,7 +43,10 @@ useHead({
         },
       ]"
     />
-    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!navStore.isOpen">
+    <div
+      class="block lg:hidden fixed right-6 bottom-6 z-40"
+      v-if="!navStore.isOpen"
+    >
       <CartButton />
     </div>
 
