@@ -54,12 +54,12 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate"],
       },
     ],
-    // [
-    //   "@storyblok/nuxt",
-    //   {
-    //     accessToken: process.env.STORY_BLOK,
-    //   },
-    // ],
+    [
+      "@storyblok/nuxt",
+      {
+        accessToken: process.env.STORY_BLOK,
+      },
+    ],
   ],
   imports: {
     dirs: ["stores"],
@@ -97,7 +97,8 @@ export default defineNuxtConfig({
     vueI18n: './utils/dictionary/i18n.config.ts'
   },
   vite: {
-    optimizeDeps: { exclude: ['fsevents'] }
+    //...
+    optimizeDeps: { exclude: ["fsevents", "ohash"] },
   },
   devtools: { enabled: true }
 });

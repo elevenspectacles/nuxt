@@ -14,7 +14,7 @@ const links = computed(() => [
     label: t("optical"),
   },
   {
-    value: { name: "about-us" },
+    value: { path: "/about-us" },
     label: t("aboutUs"),
   },
   {
@@ -33,7 +33,7 @@ const links = computed(() => [
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link
           class="navbar__link"
-          :to="localePath(link.name)"
+          :to="localePath(link.value)"
           @click="$emit('changeRoute')"
         >
           <span>{{ link.label }}</span>
