@@ -43,10 +43,11 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-purgecss",
-    "@nuxtjs/tailwindcss",
+    // "@nuxtjs/tailwindcss",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
+    '@nuxt/ui',
     "@formkit/nuxt",
     [
       "@pinia/nuxt",
@@ -97,7 +98,6 @@ export default defineNuxtConfig({
     vueI18n: './utils/dictionary/i18n.config.ts'
   },
   vite: {
-    //...
     optimizeDeps: { exclude: ["fsevents", "ohash"] },
   },
   devtools: { enabled: true }
