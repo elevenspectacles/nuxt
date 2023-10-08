@@ -61,17 +61,12 @@ export default defineNuxtConfig({
         accessToken: process.env.STORY_BLOK,
       },
     ],
+    '@nuxtjs/strapi',
   ],
   imports: {
     dirs: ["stores"],
   },
   css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
   i18n: {
     locales: [
       {
@@ -95,7 +90,14 @@ export default defineNuxtConfig({
       cookieSecure: true,
       redirectOn: "root",
     },
-    vueI18n: './utils/dictionary/i18n.config.ts'
+    vueI18n: './utils/dictionary/i18n.config.ts',
+    stapi: {
+      url: process.env.STRAPI_URL || 'http://localhost:1337',
+      prefix: '/api',
+      version: 'v4',
+      cookie: {},
+      cookieName: 'strapi_jwt'
+    }
   },
   vite: {
     optimizeDeps: { exclude: ["fsevents", "ohash"] },
