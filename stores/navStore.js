@@ -9,7 +9,6 @@ export const useNavStore = defineStore('navStore', {
     },
 
     close() {
-      console.log(this.isOpen)
       if (this.isOpen) {
         this.isOpen = false
       }
