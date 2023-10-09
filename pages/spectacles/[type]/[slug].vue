@@ -16,6 +16,9 @@ const response = await findOne("products", {
     type: {
       $eq: route.params.type,
     },
+    slug: {
+      $eq: route.params.slug,
+    },
   },
   locale: locale?.value || "en",
 });
