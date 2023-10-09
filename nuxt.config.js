@@ -96,7 +96,8 @@ export default defineNuxtConfig({
       prefix: '/api',
       version: 'v4',
       cookie: {},
-      cookieName: 'strapi_jwt'
+      cookieName: 'strapi_jwt',
+      devtools: true,
     }
   },
   vite: {

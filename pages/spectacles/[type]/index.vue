@@ -1,13 +1,23 @@
-<script setup>
-// const route = useRoute();
-
-const page = ref(1);
-const items = ref(Array(55));
-
+<script setup lang="ts">
+const route = useRoute();
+const { locale } = useI18n();
+const { find } = useStrapi();
+const response = await find("products", {
+  filters: {
+    type: {
+      $eq: route.params.type,
+    },
+  },
+  locale: locale?.value || "en",
+});
 </script>
 
 <template>
   <UContainer>
-    <UPagination v-model="page" :page-count="5" :total="items.length" />
+    <VSection>
+      <div v-for="product in response.data" :key="product.id">
+        <ProductCard :product="product" />
+      </div>
+    </VSection>
   </UContainer>
 </template>

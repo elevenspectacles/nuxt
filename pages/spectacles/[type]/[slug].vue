@@ -9,11 +9,23 @@ const { locale } = useI18n();
 //   }
 // );
 
+const { findOne } = useStrapi();
+
+const response = await findOne("products", {
+  filters: {
+    type: {
+      $eq: route.params.type,
+    },
+  },
+  locale: locale?.value || "en",
+});
+
 const test = () => {};
 </script>
 
 <template>
   <VSection>
+    {{ route.params.slug }}
     <UButton @click="test">Add to Cart</UButton>
   </VSection>
 </template>
