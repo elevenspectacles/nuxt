@@ -1,7 +1,12 @@
+<script setup>
+const isProd = process.env.NODE_ENV === "production";
+</script>
+
 <template>
   <client-only>
     <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
-    <NuxtLayout>
+    <UnderConstruction v-if="isProd" />
+    <NuxtLayout v-else>
       <NuxtPage />
     </NuxtLayout>
   </client-only>
