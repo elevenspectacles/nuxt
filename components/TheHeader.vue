@@ -74,10 +74,6 @@ const navStore = useNavStore();
   @apply sticky top-0 bg-white z-40 transition-all duration-500 shadow;
 }
 
-/* .header--homepage {
-  @apply bg-transparent;
-} */
-
 .header--hide {
   @apply -translate-y-full;
 }

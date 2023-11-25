@@ -1,14 +1,9 @@
-<script setup>
-const { locale } = useI18n();
-
-useHead({
-  htmlAttrs: {
-    lang: locale,
-  },
-});
-</script>
+<script setup></script>
 
 <template>
+  <header class="flex justify-center items-center px-6 py-2 bg-white border-b">
+    <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
+  </header>
   <main><slot /></main>
   <TheFooter />
 </template>

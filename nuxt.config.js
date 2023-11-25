@@ -47,7 +47,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
-    '@nuxt/ui',
+    "@nuxt/ui",
     "@formkit/nuxt",
     [
       "@pinia/nuxt",
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         accessToken: process.env.STORY_BLOK,
       },
     ],
-    '@nuxtjs/strapi',
+    "@nuxtjs/strapi",
   ],
   imports: {
     dirs: ["stores"],
@@ -90,18 +90,21 @@ export default defineNuxtConfig({
       cookieSecure: true,
       redirectOn: "root",
     },
-    vueI18n: './utils/dictionary/i18n.config.ts',
+    vueI18n: "./utils/dictionary/i18n.config.ts",
     stapi: {
-      url: process.env.STRAPI_URL || 'http://localhost:1337',
-      prefix: '/api',
-      version: 'v4',
+      url: process.env.STRAPI_URL || "http://localhost:1337",
+      prefix: "/api",
+      version: "v4",
       cookie: {},
-      cookieName: 'strapi_jwt',
+      cookieName: "strapi_jwt",
       devtools: true,
-    }
+    },
   },
   vite: {
     optimizeDeps: { exclude: ["fsevents", "ohash"] },
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  colorMode: {
+    preference: "light",
+  },
 });
