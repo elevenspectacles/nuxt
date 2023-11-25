@@ -35,7 +35,7 @@ const links = [
 
 <template>
   <nav class="flex-1">
-    <h3 class="text-white">{{ t("needHelp") }}</h3>
+    <h3 class="text-white mb-4 ml-2.5">{{ t("needHelp") }}</h3>
 
     <UVerticalNavigation :links="links" />
   </nav>

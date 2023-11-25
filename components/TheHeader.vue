@@ -21,6 +21,7 @@ const navStore = useNavStore();
       <TheNavbar :isOpen="navStore.isOpen" @change-route="navStore.close" />
 
       <div class="flex items-center">
+        <ColorModeButton />
         <LanguageSelect class="hidden lg:block" />
 
         <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">

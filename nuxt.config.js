@@ -107,4 +107,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
+  ui: {
+    primary: "red",
+    container: {
+      constrained: "max-w-5xl",
+    },
+  },
 });

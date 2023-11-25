@@ -1,8 +1,35 @@
+<script setup lang="ts">
+import type { FormError, FormSubmitEvent } from "#ui/types";
+
+const state = reactive({
+  email: undefined,
+  password: undefined,
+});
+
+const validate = (state: any): FormError[] => {
+  const errors = [];
+  if (!state.email) errors.push({ path: "email", message: "Required" });
+  if (!state.password) errors.push({ path: "password", message: "Required" });
+  return errors;
+};
+
+async function onSubmit(event: FormSubmitEvent<any>) {
+  // Do something with data
+  console.log(event.data);
+}
+</script>
+
 <template>
-  <form action="" @submit.prevent="" class="flex items-center">
-    <div class="w-[350px]">
-      <FormKit type="text" placeholder="Write your email here..." />
-    </div>
-    <VButton type="submit" class="button--primary ml-2">Subscribe</VButton>
-  </form>
+  <UForm
+    :validate="validate"
+    :state="state"
+    class="space-y-4"
+    @submit="onSubmit"
+  >
+    <UFormGroup label="Email" name="email">
+      <UInput v-model="state.email" />
+    </UFormGroup>
+
+    <UButton type="submit"> Submit </UButton>
+  </UForm>
 </template>

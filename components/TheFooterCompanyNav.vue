@@ -27,7 +27,7 @@ const links = [
 
 <template>
   <section>
-    <h3 class="text-white">{{ t("ourCompany") }}</h3>
+    <h3 class="text-white mb-4 ml-2.5">{{ t("ourCompany") }}</h3>
 
     <UVerticalNavigation :links="links" />
   </section>
