@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -58,7 +56,7 @@ export default defineNuxtConfig({
     [
       "@storyblok/nuxt",
       {
-        accessToken: process.env.STORY_BLOK,
+        accessToken: process.env.NUXT_STORY_BLOK,
       },
     ],
     "@nuxtjs/strapi",
@@ -92,7 +90,7 @@ export default defineNuxtConfig({
     },
     vueI18n: "./utils/dictionary/i18n.config.ts",
     stapi: {
-      url: process.env.STRAPI_URL || "http://localhost:1337",
+      url: process.env.NUXT_STRAPI_URL || "http://localhost:1337",
       prefix: "/api",
       version: "v4",
       cookie: {},
@@ -111,6 +109,12 @@ export default defineNuxtConfig({
     primary: "red",
     container: {
       constrained: "max-w-5xl",
+    },
+  },
+  runtimeConfig: {
+    public: {
+      posthogURL: process.env.NUXT_POSTHOG_URL,
+      posthogKey: process.env.NUXT_POSTHOG_KEY,
     },
   },
 });

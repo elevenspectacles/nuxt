@@ -1,5 +1,14 @@
-<script setup>
+<script setup lang="ts">
+import posthog from "posthog-js";
+const config = useRuntimeConfig();
 const isProd = process.env.NODE_ENV === "production";
+
+onMounted(() => {
+  console.log(config.public);
+  posthog.init(config.public.posthogKey, {
+    api_host: config.public.posthogURL,
+  });
+});
 </script>
 
 <template>
