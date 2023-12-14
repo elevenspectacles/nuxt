@@ -9,7 +9,6 @@ export default defineNuxtConfig({
         { name: "description", content: "Eleven Spectacles" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
-        { name: "robots", content: "noindex, nofollow" },
       ],
       link: [
         {
@@ -43,6 +42,7 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-purgecss",
     // "@nuxtjs/tailwindcss",
+    "nuxt-simple-sitemap",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
@@ -117,5 +117,15 @@ export default defineNuxtConfig({
       posthogURL: process.env.NUXT_POSTHOG_URL,
       posthogKey: process.env.NUXT_POSTHOG_KEY,
     },
+  },
+  site: {
+    url: "https://elevenspectacles.com",
+  },
+  sitemap: {
+    sources: ["https://elevenspectacles.com/st/legal"],
+  },
+  routeRules: {
+    // Don't add any /cart/** URLs to the sitemap.xml
+    "/cart/**": { index: false },
   },
 });

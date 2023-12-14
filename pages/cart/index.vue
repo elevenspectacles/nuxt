@@ -1,5 +1,10 @@
 <script setup lang="ts">
+useHead({
+  meta: [{ name: "robots", content: "noindex, nofollow" }],
+});
+
 const localePath = useLocalePath();
+
 definePageMeta({
   layout: "checkout",
 });

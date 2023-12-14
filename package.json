@@ -43,6 +43,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "@vueuse/components": "^10.5.0",
     "nuxt": "^3.8.2",
+    "nuxt-simple-sitemap": "^4.1.17",
     "pinia": "^2.1.6"
   },
   "overrides": {
