@@ -121,9 +121,6 @@ export default defineNuxtConfig({
   site: {
     url: "https://elevenspectacles.com",
   },
-  sitemap: {
-    sources: ["https://elevenspectacles.com/st/legal"],
-  },
   routeRules: {
     // Don't add any /cart/** URLs to the sitemap.xml
     "/cart/**": { index: false },
