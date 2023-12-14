@@ -15,7 +15,7 @@ defineProps({
         Shop now
       </nuxt-link>
     </div> -->
-    <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" />
+    <!-- <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" /> -->
     <!-- <img
       :src="blok.image?.filename"
       :alt="blok.image?.alt"
