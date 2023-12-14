@@ -1,0 +1,12 @@
+User-agent: *
+
+# Ignore checkout flow
+Disallow: /cart/   # Default cart page
+Disallow: /cart/order-details   # Default Order details page
+Disallow: /cart/order-confirmation   # Default Order confirmation page
+Disallow: /cart/thank-you   # Default Thank you page
+
+Disallow: /en/cart/   # English cart page
+Disallow: /en/cart/order-details   # English Order details page
+Disallow: /en/cart/order-confirmation   # English Order confirmation page
+Disallow: /en/cart/thank-you   # English Thank you page

@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         { name: "description", content: "Eleven Spectacles" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
+        { name: "robots", content: "noindex, nofollow" },
       ],
       link: [
         {

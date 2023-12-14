@@ -4,10 +4,11 @@ const config = useRuntimeConfig();
 const isProd = process.env.NODE_ENV === "production";
 
 onMounted(() => {
-  console.log(config.public);
-  posthog.init(config.public.posthogKey, {
-    api_host: config.public.posthogURL,
-  });
+  if (isProd) {
+    posthog.init(config.public.posthogKey, {
+      api_host: config.public.posthogURL,
+    });
+  }
 });
 </script>
 
