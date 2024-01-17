@@ -4,9 +4,7 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-16",
       viewport: "width=device-width, initial-scale=1",
-      title: "Eleven spectacles",
       meta: [
-        { name: "description", content: "Eleven Spectacles" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
       ],
@@ -41,8 +39,9 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-purgecss",
+    "@nuxtjs/seo",
+    "@nuxt/image",
     // "@nuxtjs/tailwindcss",
-    "@nuxtjs/sitemap",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
@@ -120,9 +119,8 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://elevenspectacles.com",
-  },
-  routeRules: {
-    // Don't add any /cart/** URLs to the sitemap.xml
-    "/cart/**": { index: false },
+    name: "Eleven Spectacles",
+    description:
+      "Welcome to Eleven Spectacles, your go-to place for high-quality frames, spectacles, and glasses. We are committed to enhancing your vision with style. Explore our collections today!",
   },
 });
