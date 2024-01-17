@@ -7,9 +7,9 @@ const localePath = useLocalePath();
     <div class="jumbotron__overlay">
       <h1>Lorem ipsum dolor sit amet</h1>
       <p class="mb-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, asperiores ipsum
-        laborum corporis qui facere iste aspernatur similique alias ab sit cupiditate
-        ratione eius a minus hic illo, beatae voluptate.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+        asperiores ipsum laborum corporis qui facere iste aspernatur similique
+        alias ab sit cupiditate ratione eius a minus hic illo, beatae voluptate.
       </p>
       <nuxt-link class="button button--primary" :to="localePath('shop')">
         Shop now
@@ -34,7 +34,7 @@ const localePath = useLocalePath();
         "
         media="(min-width: 1px)"
       />
-      <img
+      <NuxtImg
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         alt=""
         data-pin-nopin="true"

@@ -15,7 +15,7 @@ defineProps({
       <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
         <splide :options="{ rewind: true }">
           <splide-slide v-for="image in blok.images" :key="image.id">
-            <img :src="image.filename" :alt="image.alt" />
+            <NuxtImg :src="image.filename" :alt="image.alt" />
           </splide-slide>
         </splide>
       </div>
@@ -42,7 +42,9 @@ defineProps({
               </p>
             </div>
 
-            <button class="mt-2 text-sm font-medium underline">Read More</button>
+            <button class="mt-2 text-sm font-medium underline">
+              Read More
+            </button>
           </div>
 
           <div class="mt-8 flex gap-4">

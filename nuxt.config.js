@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-purgecss",
     // "@nuxtjs/tailwindcss",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",

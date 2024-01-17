@@ -9,10 +9,10 @@ const links = computed(() => [
     value: { name: "spectacles-type", params: { type: "sunglasses" } },
     label: t("sunglasses"),
   },
-  {
-    value: { name: "spectacles-type", params: { type: "optical" } },
-    label: t("optical"),
-  },
+  // {
+  //   value: { name: "spectacles-type", params: { type: "optical" } },
+  //   label: t("optical"),
+  // },
   {
     value: { name: "about-us" },
     label: t("aboutUs"),
@@ -25,7 +25,10 @@ const links = computed(() => [
 </script>
 
 <template>
-  <nav :class="['navbar', { 'navbar--visible': navStore.isOpen }]" role="navigation">
+  <nav
+    :class="['navbar', { 'navbar--visible': navStore.isOpen }]"
+    role="navigation"
+  >
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link

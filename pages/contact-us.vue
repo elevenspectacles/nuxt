@@ -24,8 +24,8 @@ function submit() {}
 
 <template>
   <div>
-    <StoryblokComponent v-if="story" :blok="story.content" />
     <VSection class="max-w-[1024px] mx-auto">
+      <h1>Let's connect</h1>
       <FormKit type="form" @submit="submit" :value="formData">
         <div class="flex flex-col space-y-5">
           <div class="flex flex-col md:flex-row space-y-5 md:space-y-0">

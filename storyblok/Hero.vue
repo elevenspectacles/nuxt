@@ -15,8 +15,8 @@ defineProps({
         Shop now
       </nuxt-link>
     </div> -->
-    <!-- <img src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" /> -->
-    <!-- <img
+    <!-- <NuxtImg src="/img.png" :alt="blok.image?.alt" class="jumbotron__image" /> -->
+    <!-- <NuxtImg
       :src="blok.image?.filename"
       :alt="blok.image?.alt"
       class="jumbotron__image"
@@ -40,7 +40,7 @@ defineProps({
         "
         media="(min-width: 1px)"
       />
-      <img
+      <NuxtImg
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         alt=""
         data-pin-nopin="true"

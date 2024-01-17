@@ -10,7 +10,7 @@ defineProps({
     <p class="text-white">
       {{ blok.subheading }}
     </p>
-    <!-- <img
+    <!-- <NuxtImg
       src="/"
       :alt="blok.image?.alt"
       class="cover__image"

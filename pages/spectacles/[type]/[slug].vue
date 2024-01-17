@@ -1,17 +1,10 @@
 <script setup>
 const route = useRoute();
 const { locale } = useI18n();
-// const story = await useAsyncStoryblok(
-//   `${route.params.type}/${route.params.slug}`,
-//   {
-//     version: route.query._storyblok ? "draft" : "published",
-//     language: locale.value,
-//   }
-// );
 
 const { findOne } = useStrapi();
 
-const response = await findOne("products", {
+const product = await findOne("products", {
   filters: {
     type: {
       $eq: route.params.type,
@@ -28,6 +21,7 @@ const test = () => {};
 
 <template>
   <VSection>
+    {{ product }}
     {{ route.params.slug }}
     <UButton @click="test">Add to Cart</UButton>
   </VSection>

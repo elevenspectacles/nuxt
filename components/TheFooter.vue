@@ -9,7 +9,7 @@ const { t } = useI18n();
       <VSection class="block xl:flex xl:justify-between px-6 py-12">
         <div class="flex-1 flex flex-col items-center md:block">
           <nuxt-link :to="localePath({ name: 'index' })">
-            <img
+            <NuxtImg
               src="/images/logo-white.svg"
               alt="Eleven Spectacles logo"
               width="168"
@@ -42,7 +42,7 @@ const { t } = useI18n();
           &#169; {{ new Date().getFullYear() }} Eleven spectacles - All rights
           reserved.
         </p>
-        <img src="/images/cards.png" alt="" class="footer__cards-img h-7" />
+        <NuxtImg src="/images/cards.png" alt="" class="footer__cards-img h-7" />
       </section>
     </UContainer>
   </footer>

@@ -3,7 +3,7 @@
     <section class="wrapper">
       <div class="container">
         <h1 class="logo">
-          <img
+          <NuxtImg
             src="/images/logo.svg"
             alt="Eleven Spectacles logo"
             width="200"

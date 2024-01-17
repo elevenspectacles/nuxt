@@ -15,7 +15,11 @@ const navStore = useNavStore();
         :to="localePath({ name: 'index' })"
         class="justify-self-center lg:justify-self-start"
       >
-        <img src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
+        <NuxtImg
+          src="/images/logo.svg"
+          alt="Eleven Spectacles logo"
+          width="128"
+        />
       </nuxt-link>
 
       <TheNavbar :isOpen="navStore.isOpen" @change-route="navStore.close" />
