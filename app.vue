@@ -15,9 +15,10 @@ onMounted(() => {
 <template>
   <client-only>
     <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
-    <UnderConstruction v-if="isProd" />
-    <NuxtLayout v-else>
-      <NuxtPage />
+
+    <NuxtLayout>
+      <NuxtPage v-if="!isProd" />
+      <UnderConstruction v-else />
     </NuxtLayout>
   </client-only>
 </template>

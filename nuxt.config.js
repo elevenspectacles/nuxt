@@ -101,7 +101,6 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: { exclude: ["fsevents", "ohash"] },
   },
-  devtools: { enabled: true },
   colorMode: {
     preference: "light",
   },

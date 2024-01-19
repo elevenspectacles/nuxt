@@ -1,28 +1,22 @@
-<script setup>
+<script setup lang="ts">
+import useNav from "@/composables/nav.js";
+const { isOpen, toggle, close } = useNav();
 const localePath = useLocalePath();
-
-const navStore = useNavStore();
 </script>
 
 <template>
   <header class="header header--homepage">
-    <section
-      class="flex justify-between items-center px-6 py-2 bg-white border-b"
-    >
+    <section class="flex justify-between items-center px-6 py-2 bg-white border-b">
       <LanguageSelect class="-ml-3 block lg:hidden" />
 
       <nuxt-link
         :to="localePath({ name: 'index' })"
         class="justify-self-center lg:justify-self-start"
       >
-        <NuxtImg
-          src="/images/logo.svg"
-          alt="Eleven Spectacles logo"
-          width="128"
-        />
+        <NuxtImg src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
       </nuxt-link>
 
-      <TheNavbar :isOpen="navStore.isOpen" @change-route="navStore.close" />
+      <TheNavbar :isOpen="isOpen" @change-route="close" />
 
       <div class="flex items-center">
         <ColorModeButton />
@@ -33,8 +27,8 @@ const navStore = useNavStore();
         </div>
 
         <button
-          @click="navStore.toggle"
-          @keyup.space="navStore.toggle"
+          @click="toggle"
+          @keyup.space="toggle"
           class="text-gray-500 -ml-4 w-12 h-12 relative bg-white block lg:hidden"
         >
           <span class="sr-only">Open main menu</span>
@@ -45,31 +39,28 @@ const navStore = useNavStore();
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
               :class="{
-                'rotate-45': navStore.isOpen,
-                ' -translate-y-1.5': !navStore.isOpen,
+                'rotate-45': isOpen,
+                ' -translate-y-1.5': !isOpen,
               }"
             ></span>
             <span
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-800 ease-in-out"
-              :class="{ 'opacity-0': navStore.isOpen }"
+              :class="{ 'opacity-0': isOpen }"
             ></span>
             <span
               aria-hidden="true"
               class="block absolute h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
               :class="{
-                '-rotate-45': navStore.isOpen,
-                ' translate-y-1.5': !navStore.isOpen,
+                '-rotate-45': isOpen,
+                ' translate-y-1.5': !isOpen,
               }"
             ></span>
           </div>
         </button>
       </div>
     </section>
-    <div
-      :class="['overlay', { 'overlay--show': navStore.isOpen }]"
-      @click="navStore.toggle"
-    ></div>
+    <div :class="['overlay', { 'overlay--show': isOpen }]" @click="toggle"></div>
   </header>
 </template>
 

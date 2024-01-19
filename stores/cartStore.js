@@ -7,10 +7,10 @@ export const useCartStore = defineStore("cartStore", {
   }),
 
   getters: {
-    items: (cartStore) => [...cartStore.cart],
+    items: (cartStore) => [...cartStore.cart.values()],
     count: (cartStore) => cartStore.cart.size,
     total: (cartStore) =>
-      cartStore.items.reduce((a, c) => a + Number(c.price), 0),
+      cartStore.items.reduce((a, c) => a + c.quantity * c.attributes.price, 0),
   },
 
   actions: {

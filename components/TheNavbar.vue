@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
+import useNav from "@/composables/nav.js";
 const localePath = useLocalePath();
 const { t } = useI18n();
-
-const navStore = useNavStore();
+const { isOpen } = useNav();
 
 const links = computed(() => [
   {
@@ -25,10 +25,7 @@ const links = computed(() => [
 </script>
 
 <template>
-  <nav
-    :class="['navbar', { 'navbar--visible': navStore.isOpen }]"
-    role="navigation"
-  >
+  <nav :class="['navbar', { 'navbar--visible': isOpen }]" role="navigation">
     <ul class="navbar__list">
       <li v-for="link in links" :key="link.label" class="navbar__item">
         <nuxt-link

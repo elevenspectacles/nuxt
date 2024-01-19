@@ -1,7 +1,7 @@
 <script setup>
+const cartStore = useCartStore();
 const route = useRoute();
 const { locale } = useI18n();
-
 const { findOne } = useStrapi();
 
 const product = await findOne("products", {
@@ -15,14 +15,12 @@ const product = await findOne("products", {
   },
   locale: locale?.value || "en",
 });
-
-const test = () => {};
 </script>
 
 <template>
   <VSection>
-    {{ product }}
-    {{ route.params.slug }}
-    <UButton @click="test">Add to Cart</UButton>
+    <pre>{{ route.params }}</pre>
+    <pre>{{ product.data[0] }}</pre>
+    <UButton @click="cartStore.add(product.data[0])"> Add to Cart </UButton>
   </VSection>
 </template>

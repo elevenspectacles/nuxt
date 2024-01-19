@@ -1,8 +1,7 @@
-<script setup>
-import { storeToRefs } from "pinia";
+<script setup lang="ts">
+import useNav from "@/composables/nav.js";
 const { locale } = useI18n();
-const navStore = useNavStore();
-const { isOpen } = storeToRefs(navStore);
+const { isOpen } = useNav();
 const pageWrapper = ref(null);
 const toggleHeader = ref("");
 const isLocked = useScrollLock(pageWrapper);
@@ -43,10 +42,7 @@ useHead({
         },
       ]"
     />
-    <div
-      class="block lg:hidden fixed right-6 bottom-6 z-40"
-      v-if="!navStore.isOpen"
-    >
+    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!isOpen">
       <CartButton />
     </div>
 
