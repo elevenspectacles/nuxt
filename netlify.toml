@@ -1,6 +1,0 @@
-# We can put redirects 
-[[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
-
