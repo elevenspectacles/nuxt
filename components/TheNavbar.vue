@@ -9,10 +9,10 @@ const links = computed(() => [
     value: { name: "spectacles-type", params: { type: "sunglasses" } },
     label: t("sunglasses"),
   },
-  // {
-  //   value: { name: "spectacles-type", params: { type: "optical" } },
-  //   label: t("optical"),
-  // },
+  {
+    value: { name: "spectacles-type", params: { type: "optical" } },
+    label: t("optical"),
+  },
   {
     value: { name: "about-us" },
     label: t("aboutUs"),
