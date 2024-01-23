@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import posthog from "posthog-js";
 const config = useRuntimeConfig();
-const isProd = process.env.NODE_ENV === "production";
 
 onMounted(() => {
-  if (isProd) {
+  if (process.env.NODE_ENV === "production") {
     posthog.init(config.public.posthogKey, {
       api_host: config.public.posthogURL,
     });
@@ -17,8 +16,7 @@ onMounted(() => {
     <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
 
     <NuxtLayout>
-      <NuxtPage v-if="!isProd" />
-      <UnderConstruction v-else />
+      <NuxtPage />
     </NuxtLayout>
   </client-only>
 </template>
