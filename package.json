@@ -43,7 +43,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@splidejs/vue-splide": "^0.6.12",
     "@vueuse/components": "^10.7.2",
-    "nuxt": "^3.9.2",
+    "nuxt": "^3.9.3",
     "pinia": "^2.1.6"
   },
   "overrides": {
