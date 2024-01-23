@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  layout: "empty",
+});
+</script>
 
 <template>
   <div>
@@ -7,7 +11,7 @@
         <h1 class="logo">
           <NuxtImg src="/images/logo.svg" alt="Eleven Spectacles logo" width="200" />
         </h1>
-        <div class="">
+        <div class="mt-4">
           <p>Coming in 2024</p>
         </div>
       </div>

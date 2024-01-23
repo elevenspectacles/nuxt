@@ -114,6 +114,7 @@ export default defineNuxtConfig({
     public: {
       posthogURL: process.env.NUXT_POSTHOG_URL,
       posthogKey: process.env.NUXT_POSTHOG_KEY,
+      nodeEnv: process.env.NODE_ENV,
     },
   },
   site: {
