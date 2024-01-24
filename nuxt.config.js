@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "nuxt-purgecss",
-    "@nuxtjs/seo",
+    // "@nuxtjs/seo",
     "@nuxt/image",
     // "@nuxtjs/tailwindcss",
     "nuxt-icon",
