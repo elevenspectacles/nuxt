@@ -13,7 +13,7 @@ definePageMeta({
             src="/images/logo.svg"
             alt="Eleven Spectacles logo"
             width="200"
-            class="dark:hidden"
+            class="block dark:hidden"
           />
 
           <NuxtImg
