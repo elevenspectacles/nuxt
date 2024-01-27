@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
   },
   modules: [
-    "nuxt-purgecss",
+    // "nuxt-purgecss",
     "@nuxtjs/seo",
     "@nuxt/image",
     "nuxt-icon",
