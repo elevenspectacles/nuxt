@@ -13,7 +13,7 @@ const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
   </VSection>
 </template>
 
-<style lang="postcss">
+<style>
 .static-page {
   max-width: 768px;
   margin: 0 auto;

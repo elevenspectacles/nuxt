@@ -123,7 +123,6 @@ export default defineNuxtConfig({
       "Welcome to Eleven Spectacles, your go-to place for high-quality frames, spectacles, and glasses. We are committed to enhancing your vision with style. Explore our collections today!",
   },
   image: {
-    provider: "netlify",
     format: ["webp"],
   },
 });

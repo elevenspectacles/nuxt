@@ -18,10 +18,11 @@ export default {
     sitemap: "Sitemap",
     followUs: "Follow us",
     copyright: "Eleven spectacles - All rights reserved.",
+    contact: {},
     error: {
       title: "Page not found",
       subtitle: "Sorry, we couldn’t find the page you’re looking for.",
       goBack: "Go back home",
     },
   },
-}
+};

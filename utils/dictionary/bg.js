@@ -18,11 +18,11 @@ export default {
     sitemap: "Карта на сайта",
     followUs: "Последвайте ни",
     copyright: "Eleven spectacles - All rights reserved.",
+    contact: {},
     error: {
       title: "Страницата не е намерена",
-      subtitle:
-        "За съжаление не можахме да намерим страницата която търсите.",
+      subtitle: "За съжаление не можахме да намерим страницата която търсите.",
       goBack: "Отиди на началната страница",
     },
   },
-}
+};
