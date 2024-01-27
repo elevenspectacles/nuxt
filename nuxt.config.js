@@ -41,7 +41,6 @@ export default defineNuxtConfig({
     "nuxt-purgecss",
     "@nuxtjs/seo",
     "@nuxt/image",
-    "@nuxtjs/tailwindcss",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
