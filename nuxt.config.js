@@ -125,4 +125,12 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
   },
+  nitro: {
+    prerender: {
+      routes: [
+        "/_ipx/w_400/images/logo-white.svg",
+        "/_ipx/w_400/images/logo.svg",
+      ],
+    },
+  },
 });
