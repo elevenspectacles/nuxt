@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/ui",
     "@formkit/nuxt",
+    "@unlok-co/nuxt-stripe",
     [
       "@pinia/nuxt",
       {
@@ -131,6 +132,13 @@ export default defineNuxtConfig({
         "/_ipx/w_400/images/logo-white.svg",
         "/_ipx/w_400/images/logo.svg",
       ],
+    },
+  },
+  stripe: {
+    client: {
+      key: process.env.NUXT_STRIPE_PUBLIC_KEY,
+      // your api options override for stripe client side
+      options: {},
     },
   },
 });

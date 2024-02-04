@@ -18,7 +18,7 @@ defineProps({
   </section>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .cover {
   @apply relative flex items-center justify-center flex-col h-52 bg-gray-800;
 }

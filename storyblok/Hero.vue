@@ -49,7 +49,7 @@ defineProps({
   </section>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .jumbotron {
   @apply relative  flex items-center;
   background: #0c0c0c;

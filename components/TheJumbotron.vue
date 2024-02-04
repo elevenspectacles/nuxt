@@ -43,7 +43,7 @@ const localePath = useLocalePath();
   </section>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .jumbotron {
   @apply relative bg-c-black flex items-center;
   height: calc(100vh - 96px);
