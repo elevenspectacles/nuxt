@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@formkit/addons": "^1.5.3",
-    "@formkit/nuxt": "^1.5.3",
+    "@formkit/nuxt": "^1.5.5",
     "@formkit/themes": "^1.5.1",
     "@nuxt/devtools": "^1.0.0-beta.0",
     "@nuxtjs/i18n": "^8.0.0",
