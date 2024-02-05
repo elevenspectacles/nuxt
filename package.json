@@ -37,7 +37,7 @@
     "@nuxt/devtools": "^1.0.0-beta.0",
     "@nuxtjs/i18n": "^8.0.1",
     "@nuxtjs/seo": "^2.0.0-rc.5",
-    "@nuxtjs/sitemap": "^5.0.5",
+    "@nuxtjs/sitemap": "^5.1.0",
     "@nuxtjs/strapi": "^1.11.0",
     "@pinia/nuxt": "^0.5.1",
     "@splidejs/vue-splide": "^0.6.12",
