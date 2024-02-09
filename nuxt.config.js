@@ -33,6 +33,7 @@ export default defineNuxtConfig({
           color: "#000000",
         },
       ],
+      script: [{ id: "mcjs", src: "./utils/mailchimp.js" }],
     },
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
@@ -89,14 +90,6 @@ export default defineNuxtConfig({
       redirectOn: "root",
     },
     vueI18n: "./utils/dictionary/i18n.config.ts",
-    stapi: {
-      url: process.env.NUXT_STRAPI_URL || "http://localhost:1337",
-      prefix: "/api",
-      version: "v4",
-      cookie: {},
-      cookieName: "strapi_jwt",
-      devtools: true,
-    },
   },
   vite: {
     optimizeDeps: { exclude: ["fsevents", "ohash"] },
@@ -140,5 +133,11 @@ export default defineNuxtConfig({
       // your api options override for stripe client side
       options: {},
     },
+  },
+  stapi: {
+    url: process.env.NUXT_STRAPI_URL || "http://localhost:1337/",
+    prefix: "/api",
+    version: "v4",
+    devtools: true,
   },
 });
