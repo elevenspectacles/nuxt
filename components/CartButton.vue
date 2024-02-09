@@ -13,7 +13,7 @@ const localePath = useLocalePath();
 <style lang="postcss">
 .cart-button {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  @apply w-14 h-14 lg:w-10 lg:h-10 flex items-center justify-center relative rounded-full bg-c-black hover:bg-c-gray;
+  @apply w-14 h-14 lg:w-10 lg:h-10 flex items-center justify-center relative rounded-full bg-black hover:bg-gray-400;
 }
 
 .cart-button:hover .cart-button__icon {
@@ -34,7 +34,7 @@ const localePath = useLocalePath();
   right: 0px;
   font-weight: 500;
   border: 1px solid;
-  @apply flex items-center justify-center text-accent absolute rounded-full
-    bg-white border-c-black;
+  @apply flex items-center justify-center  absolute rounded-full
+    bg-white;
 }
 </style>

@@ -33,13 +33,6 @@ export default defineNuxtConfig({
           color: "#000000",
         },
       ],
-      script: [
-        {
-          id: "mcjs",
-          innerHTML:
-            "!(function (c, h, i, m, p) {(m = c.createElement(h)),(p = c.getElementsByTagName(h)[0]),(m.async = 1),(m.src = i),p.parentNode.insertBefore(m, p);})(document,'script','https://chimpstatic.com/mcjs-connected/js/users/41e28ddf826df39751b6cc77a/2502488f8d97b5484dc5c2fdd.js');",
-        },
-      ],
     },
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
@@ -52,7 +45,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@nuxt/ui",
-    "@formkit/nuxt",
     "@unlok-co/nuxt-stripe",
     [
       "@pinia/nuxt",
@@ -104,7 +96,6 @@ export default defineNuxtConfig({
     preference: "light",
   },
   ui: {
-    primary: "red",
     container: {
       constrained: "max-w-5xl",
     },

@@ -39,8 +39,8 @@ defineProps({
             <h2>Featured products</h2>
 
             <p class="mt-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas rerum quam
-              amet provident nulla error!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+              rerum quam amet provident nulla error!
             </p>
           </header>
 
@@ -75,7 +75,7 @@ defineProps({
   transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
-  @apply transition-colors bg-gray-100 flex items-center justify-center border  hover:bg-c-black hover:border-c-black;
+  @apply transition-colors bg-gray-100 flex items-center justify-center border  hover:bg-black hover:border-black;
 }
 
 .c-featured-products .splide__arrow svg {

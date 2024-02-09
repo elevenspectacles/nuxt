@@ -50,11 +50,11 @@ const links = computed(() => [
 }
 
 .navbar__link {
-  @apply block py-1 px-5 cursor-pointer uppercase text-c-gray hover:text-c-black no-underline relative transition-all ease-in-out duration-200;
+  @apply block py-1 px-5 cursor-pointer uppercase text-gray-400 hover:text-black no-underline relative transition-all ease-in-out duration-200;
 }
 
 .navbar__link.router-link-active {
-  @apply text-c-black;
+  @apply text-black;
 }
 
 .navbar__link span {
@@ -65,7 +65,7 @@ const links = computed(() => [
   content: "";
   height: 2px;
   bottom: -4px;
-  @apply absolute left-0 right-0 block bg-accent w-0 transition-all ease-in-out duration-200;
+  @apply absolute left-0 right-0 block w-0 transition-all ease-in-out duration-200;
 }
 
 .navbar__link.router-link-active span:before {

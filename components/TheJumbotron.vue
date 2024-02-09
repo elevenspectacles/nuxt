@@ -45,17 +45,17 @@ const localePath = useLocalePath();
 
 <style lang="postcss">
 .jumbotron {
-  @apply relative bg-c-black flex items-center;
+  @apply relative bg-black flex items-center;
   height: calc(100vh - 96px);
 }
 
 .jumbotron__overlay {
-  @apply relative max-w-xl text-c-black px-6 py-10  mx-6 z-20;
+  @apply relative max-w-xl text-black px-6 py-10  mx-6 z-20;
 }
 
 /* .jumbotron__overlay::before {
   content: "";
-  @apply top-0 right-0 bottom-0 left-0 absolute block bg-c-black opacity-60 -z-10 rounded-md;
+  @apply top-0 right-0 bottom-0 left-0 absolute block bg-black opacity-60 -z-10 rounded-md;
 } */
 
 .jumbotron__image {

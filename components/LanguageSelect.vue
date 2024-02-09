@@ -7,7 +7,9 @@ function changeLang() {
 }
 
 onMounted(() => {
-  activeLang.value = locales.value.filter((item) => item.code === locale.value)[0];
+  activeLang.value = locales.value.filter(
+    (item) => item.code === locale.value
+  )[0];
 });
 </script>
 
@@ -29,6 +31,6 @@ onMounted(() => {
   background: none;
   font-size: 14px;
   padding: 12px 2px 12px 12px;
-  @apply text-c-gray hover:text-c-black hover:cursor-pointer;
+  @apply text-gray-400 hover:text-black hover:cursor-pointer;
 }
 </style>

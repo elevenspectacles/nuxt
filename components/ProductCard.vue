@@ -37,7 +37,7 @@ const lensColors = computed(() => [
 
       <div class="md:pe-2 lg:pe-0 2xl:pe-2 overflow-hidden">
         <p
-          class="text-c-gray text-xs xl:text-sm truncate max-w-[250px]"
+          class="text-gray-400 text-xs xl:text-sm truncate max-w-[250px]"
           v-if="product?.attributes.description"
         >
           {{ product.attributes.description }}

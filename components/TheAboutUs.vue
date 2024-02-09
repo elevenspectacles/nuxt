@@ -34,7 +34,7 @@
               >a lazy dog</span
             >
           </h5>
-          <p class="mb-6 text-gray-900">
+          <p class="mb-6 text-gray-400-900">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit
