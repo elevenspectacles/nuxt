@@ -3,20 +3,18 @@ import posthog from "posthog-js";
 const config = useRuntimeConfig();
 
 onMounted(() => {
-  if (process.env.NODE_ENV === "production") {
-    posthog.init(config.public.posthogKey, {
-      api_host: config.public.posthogURL,
-    });
-  }
+  posthog.init(config.public.posthogKey, {
+    api_host: config.public.posthogURL,
+  });
 });
 </script>
 
 <template>
   <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
   <NuxtLayout>
-    <client-only>
+    <ClientOnly>
       <NuxtPage />
-    </client-only>
+    </ClientOnly>
   </NuxtLayout>
 </template>
 

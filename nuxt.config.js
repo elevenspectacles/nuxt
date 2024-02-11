@@ -7,6 +7,7 @@ export default defineNuxtConfig({
       meta: [
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
+        { property: "og:image", content: "/public/images/logo.svg" },
       ],
       link: [
         {
@@ -110,8 +111,11 @@ export default defineNuxtConfig({
   site: {
     url: "https://elevenspectacles.com",
     name: "Eleven Spectacles",
-    description:
-      "Welcome to Eleven Spectacles, your go-to place for high-quality frames, spectacles, and glasses. We are committed to enhancing your vision with style. Explore our collections today!",
+    description: "Enhance your vision with style",
+  },
+  seo: {
+    redirectToCanonicalSiteUrl: true,
+    debug: true,
   },
   image: {
     format: ["webp"],

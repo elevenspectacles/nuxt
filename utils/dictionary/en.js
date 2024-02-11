@@ -24,5 +24,10 @@ export default {
       subtitle: "Sorry, we couldn’t find the page you’re looking for.",
       goBack: "Go back home",
     },
+    mailchimp: {
+      title: "Newsletter",
+      required: "This field is required",
+      email: "Please, provide a valid email address",
+    },
   },
 };

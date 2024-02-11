@@ -1,5 +1,10 @@
 <script setup>
 const { locale } = useI18n();
+
+definePageMeta({
+  title: "About us",
+});
+
 const story = await useAsyncStoryblok(
   "about-us",
   {

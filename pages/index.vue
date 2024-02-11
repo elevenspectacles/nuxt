@@ -2,6 +2,10 @@
 // import { useAsyncStoryblok } from "storyblok";
 const { locale } = useI18n();
 
+definePageMeta({
+  title: "Welcome",
+});
+
 // const story = await useAsyncStoryblok(
 //   "home",
 //   {

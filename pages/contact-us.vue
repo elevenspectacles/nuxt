@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  title: "Contact us",
+});
+
 const { locale } = useI18n();
 
 const formData = ref({
