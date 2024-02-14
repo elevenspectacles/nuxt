@@ -17,15 +17,15 @@ const { t } = useI18n();
           </nuxt-link>
         </div>
 
-        <!-- <div
+        <div
           class="mt-12 xl:mt-0 flex-1 block text-center md:text-left md:flex md:justify-between"
         >
           <TheFooterCompanyNav class="flex-1" />
 
           <TheFooterHelpNav class="flex-1 px-0 my-12 md:px-12 md:my-0" />
 
-          <TheFooterSocialsNav class="flex-1" />
-        </div> -->
+          <!-- <TheFooterSocialsNav class="flex-1" />-->
+        </div>
       </VSection>
 
       <UDivider />
