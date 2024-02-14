@@ -96,11 +96,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
-  ui: {
-    container: {
-      constrained: "max-w-5xl",
-    },
-  },
   runtimeConfig: {
     public: {
       posthogURL: process.env.NUXT_POSTHOG_URL,

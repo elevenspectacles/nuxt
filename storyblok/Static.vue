@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { renderRichText } from "@storyblok/js";
 const { blok } = defineProps({ blok: Object });
 
 const articleContent = computed(() => {

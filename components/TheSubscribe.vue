@@ -10,13 +10,9 @@
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          target="_self"
-          novalidate=""
+          target="_blank"
         >
           <div id="mc_embed_signup_scroll">
-            <div class="indicates-required">
-              <span class="asterisk">*</span> indicates required
-            </div>
             <div class="mc-field-group">
               <UInput
                 type="email"
@@ -33,9 +29,7 @@
             >
               <div class="content__gdpr">
                 <label>Marketing Permissions</label>
-                <p>
-                  Please select all the ways you would like to hear from us:
-                </p>
+                <p>Please select all the ways you would like to hear from us:</p>
                 <fieldset
                   class="mc_fieldset gdprRequired mc-field-group"
                   name="interestgroup_field"
@@ -47,12 +41,13 @@
                     class="gdpr"
                     value="Y"
                     label="Email"
+                    :required="true"
                   />
                 </fieldset>
                 <p>
-                  You can unsubscribe at any time by clicking the link in the
-                  footer of our emails. For information about our privacy
-                  practices, please visit our
+                  You can unsubscribe at any time by clicking the link in the footer of
+                  our emails. For information about our privacy practices, please visit
+                  our
                   <NuxtLink>privacy policy</NuxtLink>.
                 </p>
               </div>
@@ -63,9 +58,9 @@
                   width="64"
                 />
                 <p>
-                  We use Mailchimp as our marketing platform. By clicking below
-                  to subscribe, you acknowledge that your information will be
-                  transferred to Mailchimp for processing.
+                  We use Mailchimp as our marketing platform. By clicking below to
+                  subscribe, you acknowledge that your information will be transferred to
+                  Mailchimp for processing.
                   <NuxtLink to="https://mailchimp.com/legal/terms" external
                     >Learn more</NuxtLink
                   >
@@ -74,8 +69,8 @@
               </div>
             </div>
             <div aria-hidden="true" style="position: absolute; left: -5000px">
-              /* real people should not fill this in and expect good things - do
-              not remove this or risk form bot signups */
+              /* real people should not fill this in and expect good things - do not
+              remove this or risk form bot signups */
               <input
                 type="text"
                 name="b_41e28ddf826df39751b6cc77a_a033abc061"

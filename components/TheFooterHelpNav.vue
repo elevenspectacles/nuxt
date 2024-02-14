@@ -29,6 +29,7 @@ const links = [
   {
     label: t("sitemap"),
     to: "/sitemap.xml",
+    external: true,
   },
 ];
 </script>
