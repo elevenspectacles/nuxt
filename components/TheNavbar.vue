@@ -5,22 +5,22 @@ const { t } = useI18n();
 const { isOpen } = useNav();
 
 const links = computed(() => [
-  {
-    value: { name: "spectacles-type", params: { type: "sunglasses" } },
-    label: t("sunglasses"),
-  },
-  {
-    value: { name: "spectacles-type", params: { type: "optical" } },
-    label: t("optical"),
-  },
-  {
-    value: { name: "about-us" },
-    label: t("aboutUs"),
-  },
-  {
-    value: { name: "contact-us" },
-    label: t("contactUs"),
-  },
+  // {
+  //   value: { name: "spectacles-type", params: { type: "sunglasses" } },
+  //   label: t("sunglasses"),
+  // },
+  // {
+  //   value: { name: "spectacles-type", params: { type: "optical" } },
+  //   label: t("optical"),
+  // },
+  // {
+  //   value: { name: "about-us" },
+  //   label: t("aboutUs"),
+  // },
+  // {
+  //   value: { name: "contact-us" },
+  //   label: t("contactUs"),
+  // },
 ]);
 </script>
 

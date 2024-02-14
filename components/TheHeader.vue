@@ -22,9 +22,9 @@ const localePath = useLocalePath();
         <ColorModeButton />
         <LanguageSelect class="hidden lg:block" />
 
-        <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">
+        <!-- <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">
           <CartButton />
-        </div>
+        </div> -->
 
         <button
           @click="toggle"

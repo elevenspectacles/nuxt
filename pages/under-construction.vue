@@ -32,7 +32,7 @@ definePageMeta({
 <style scoped>
 .wrapper {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 76px);
 }
 
 h1,

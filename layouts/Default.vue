@@ -35,7 +35,7 @@ useHead({
 
 <template>
   <div class="page-wrapper" ref="pageWrapper">
-    <!-- <TheHeader
+    <TheHeader
       :class="[
         {
           'header--hide': toggleHeader === 'hide',
@@ -44,7 +44,7 @@ useHead({
     />
     <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!isOpen">
       <CartButton />
-    </div> -->
+    </div>
 
     <main>
       <slot />
@@ -54,12 +54,12 @@ useHead({
 </template>
 
 <style>
-/* body {
+body {
   overflow: hidden;
 }
 
 .page-wrapper {
   height: 100vh;
   overflow: auto;
-}*/
+}
 </style>
