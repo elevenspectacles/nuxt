@@ -3,10 +3,10 @@ const localePath = useLocalePath();
 const { t } = useI18n();
 
 const links = [
-  // {
-  //   label: t("aboutUs"),
-  //   to: localePath({ name: "about-us" }),
-  // },
+  {
+    label: t("aboutUs"),
+    to: localePath({ name: "about-us" }),
+  },
   {
     label: t("legal"),
     to: localePath({ name: "st-slug", params: { slug: "legal" } }),
