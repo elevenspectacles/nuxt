@@ -22,12 +22,7 @@ function submit() {}
       <div class="flex flex-col space-y-5">
         <div class="flex flex-col md:flex-row space-y-5 md:space-y-0">
           <div class="w-full md:w-1/2 mr-3">
-            <FormKit
-              type="text"
-              name="name"
-              validation="required"
-              label="Your Name"
-            />
+            <FormKit type="text" name="name" validation="required" label="Your Name" />
           </div>
           <div class="w-full md:w-1/2 ml-3">
             <FormKit
@@ -38,27 +33,15 @@ function submit() {}
             />
           </div>
         </div>
-        <FormKit
-          type="text"
-          name="subject"
-          validation="required"
-          label="Subject"
-        />
-        <FormKit
-          type="textarea"
-          name="message"
-          validation="required"
-          label="Message"
-        />
+        <FormKit type="text" name="subject" validation="required" label="Subject" />
+        <FormKit type="textarea" name="message" validation="required" label="Message" />
 
         <FormKit type="submit" label="Submit" />
       </div>
     </FormKit>
     <address>
       <p>Contact information</p>
-      <a href="mailto:support@elevenspectacles.com"
-        >support@elevenspectacles.com</a
-      >
+      <a href="mailto:support@elevenspectacles.com">support@elevenspectacles.com</a>
       <a>+359 888 777 666</a>
       <a>Varna, Bulgaria</a>
     </address>

@@ -3,13 +3,14 @@ const localePath = useLocalePath();
 const { t } = useI18n();
 
 const links = [
-  {
-    label: "Facebook",
-    to: "https://facebook.com",
-  },
+  // {
+  //   label: "Facebook",
+  //   to: "https://facebook.com",
+  // },
   {
     label: "Instagram",
-    to: "https://facebook.com",
+    to: "https://www.instagram.com/eleven.spectacles/",
+    external: true,
   },
 ];
 </script>

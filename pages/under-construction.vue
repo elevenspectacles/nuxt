@@ -1,9 +1,5 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "empty",
-});
-
-definePageMeta({
   title: "Under construction",
 });
 </script>
@@ -28,10 +24,6 @@ definePageMeta({
       </h1>
       <div class="mt-4">
         <p>Coming in 2024</p>
-      </div>
-
-      <div class="mt-6">
-        <ColorModeButton />
       </div>
     </div>
   </section>

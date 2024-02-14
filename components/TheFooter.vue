@@ -24,7 +24,7 @@ const { t } = useI18n();
 
           <TheFooterHelpNav class="flex-1 px-0 my-12 md:px-12 md:my-0" />
 
-          <!-- <TheFooterSocialsNav class="flex-1" />-->
+          <TheFooterSocialsNav class="flex-1" />
         </div>
       </VSection>
 
@@ -34,8 +34,7 @@ const { t } = useI18n();
         class="flex flex-col-reverse items-center md:flex-row md:justify-between mx-6 py-6"
       >
         <p class="mt-4 md:mt-0 text-white">
-          &#169; {{ new Date().getFullYear() }} Eleven spectacles - All rights
-          reserved.
+          &#169; {{ new Date().getFullYear() }} Eleven spectacles - All rights reserved.
         </p>
         <NuxtImg src="/images/cards.png" alt="" class="footer__cards-img h-7" />
       </section>
