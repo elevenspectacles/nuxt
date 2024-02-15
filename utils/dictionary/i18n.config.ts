@@ -1,10 +1,10 @@
-import en from './en'
-import bg from './bg'
+import en from "./en";
+import bg from "./bg";
 
 export default defineI18nConfig(() => ({
-  legacy: false,
+  lazy: true,
   messages: {
     ...en,
-    ...bg
+    ...bg,
   },
-}))
+}));
