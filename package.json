@@ -40,7 +40,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "@unlok-co/nuxt-stripe": "^2.0.0",
     "@vueuse/components": "^10.7.2",
-    "nuxt": "^3.10.0",
+    "nuxt": "^3.10.2",
     "pinia": "^2.1.6"
   },
   "overrides": {
