@@ -1,21 +1,40 @@
 <script setup>
-const route = useRoute();
 const { locale } = useI18n();
-const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
-  version: route.query._storyblok ? "draft" : "published",
-  language: locale.value,
-});
+
+const route = useRoute();
+const { findOne } = useStrapi();
+
+// TODO add error state
+// const { data, pending, error } = await useAsyncData("static-pages", () =>
+//   findOne("static-pages", route.params.slug)
+// );
+
+const { data, error } = await findOne("static-pages", route.params.slug);
+
+// definePageMeta({
+//   ...data.meta,
+// });
 </script>
 
 <template>
   <VSection class="static-page">
-    <StoryblokComponent v-if="story" :blok="story.content" />
+    <!-- <div v-if="pending">
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+      <USkeleton class="h-4 w-full" />
+    </div> -->
+    {{ data }}
+    <!-- <article v-html="data.story" v-else></article> -->
   </VSection>
 </template>
 
 <style>
 .static-page {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 
   h1,
@@ -37,6 +56,7 @@ const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
 
   h1 {
     font-size: 2rem;
+    margin-bottom: 24px;
   }
 
   h2 {
@@ -74,7 +94,9 @@ const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
   }
 
   li + li,
-  ul + p {
+  ul + p,
+  p + ol,
+  ol + p {
     @apply mt-4;
   }
 
@@ -100,6 +122,7 @@ const story = await useAsyncStoryblok(`st/${route.params.slug}`, {
     color: #084c61;
     font-size: 1rem;
     font-weight: bold;
+    left: 4px;
   }
 }
 </style>

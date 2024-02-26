@@ -17,7 +17,7 @@ export default {
     faq: "Често задавани въпроси",
     sitemap: "Карта на сайта",
     followUs: "Последвайте ни",
-    copyright: "Eleven spectacles - All rights reserved.",
+    copyright: "Eleven spectacles",
     contact: {},
     error: {
       title: "Страницата не е намерена",

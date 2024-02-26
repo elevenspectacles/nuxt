@@ -7,5 +7,5 @@ const articleContent = computed(() => {
 </script>
 
 <template>
-  <div v-html="articleContent" class="st"></div>
+  <article v-html="articleContent"></article>
 </template>

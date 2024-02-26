@@ -6,27 +6,30 @@ const localePath = useLocalePath();
 
 <template>
   <header class="header header--homepage">
-    <section class="flex justify-between items-center px-6 py-2 bg-white border-b">
+    <UContainer class="flex justify-between items-center py-2 bg-white">
       <LanguageSelect class="-ml-3 block lg:hidden" />
 
       <nuxt-link
         :to="localePath({ name: 'index' })"
         class="justify-self-center lg:justify-self-start"
       >
-        <NuxtImg src="/images/logo.svg" alt="Eleven Spectacles logo" width="128" />
+        <NuxtImg
+          src="/images/logo.svg"
+          alt="Eleven Spectacles logo"
+          width="128"
+        />
       </nuxt-link>
 
       <TheNavbar :isOpen="isOpen" @change-route="close" />
 
       <div class="flex items-center">
-        <ColorModeButton />
         <LanguageSelect class="hidden lg:block" />
 
         <!-- <div class="hidden lg:block lg:ml-4 lg:pl-4 lg:border-l">
           <CartButton />
         </div> -->
 
-        <button
+        <!-- <button
           @click="toggle"
           @keyup.space="toggle"
           class="text-gray-400-500 -ml-4 w-12 h-12 relative bg-white block lg:hidden"
@@ -57,10 +60,13 @@ const localePath = useLocalePath();
               }"
             ></span>
           </div>
-        </button>
+        </button> -->
       </div>
-    </section>
-    <div :class="['overlay', { 'overlay--show': isOpen }]" @click="toggle"></div>
+    </UContainer>
+    <div
+      :class="['overlay', { 'overlay--show': isOpen }]"
+      @click="toggle"
+    ></div>
   </header>
 </template>
 

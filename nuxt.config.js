@@ -53,12 +53,6 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate"],
       },
     ],
-    [
-      "@storyblok/nuxt",
-      {
-        accessToken: process.env.NUXT_STORY_BLOK,
-      },
-    ],
     "@nuxtjs/strapi",
   ],
   imports: {
@@ -71,8 +65,10 @@ export default defineNuxtConfig({
         code: "en",
         name: "English",
         iso: "en",
+        shortName: "EN",
       },
       {
+        shortName: "BG",
         code: "bg",
         name: "Български",
         iso: "bg",
@@ -134,6 +130,5 @@ export default defineNuxtConfig({
     url: process.env.NUXT_STRAPI_URL || "http://localhost:1337/",
     prefix: "/api",
     version: "v4",
-    devtools: true,
   },
 });
