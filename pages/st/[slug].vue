@@ -9,7 +9,7 @@ const { findOne } = useStrapi();
 //   findOne("static-pages", route.params.slug)
 // );
 
-const { data, error } = await findOne("static-pages", route.params.slug);
+const { data } = await findOne("static-pages", route.params.slug);
 
 // definePageMeta({
 //   ...data.meta,
@@ -18,6 +18,7 @@ const { data, error } = await findOne("static-pages", route.params.slug);
 
 <template>
   <VSection class="static-page">
+    {{ data }}
     <!-- <div v-if="pending">
       <USkeleton class="h-4 w-full" />
       <USkeleton class="h-4 w-full" />
@@ -27,7 +28,7 @@ const { data, error } = await findOne("static-pages", route.params.slug);
       <USkeleton class="h-4 w-full" />
       <USkeleton class="h-4 w-full" />
     </div> -->
-    {{ data }}
+    <!-- {{ data }} -->
     <!-- <article v-html="data.story" v-else></article> -->
   </VSection>
 </template>

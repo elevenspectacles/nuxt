@@ -12,11 +12,11 @@ onMounted(() => {
 <template>
   <NuxtLoadingIndicator color="rgba(0,0,0,0.63)" />
 
-  <ClientOnly>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </ClientOnly>
+  <NuxtLayout>
+    <!-- <ClientOnly> -->
+    <NuxtPage />
+    <!-- </ClientOnly> -->
+  </NuxtLayout>
 </template>
 
 <style>

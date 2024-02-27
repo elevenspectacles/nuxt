@@ -102,7 +102,6 @@ export default defineNuxtConfig({
   site: {
     url: "https://elevenspectacles.com",
     name: "Eleven Spectacles",
-    description: "Enhance your vision with style",
   },
   seo: {
     redirectToCanonicalSiteUrl: true,
@@ -125,10 +124,5 @@ export default defineNuxtConfig({
       // your api options override for stripe client side
       options: {},
     },
-  },
-  stapi: {
-    url: process.env.NUXT_STRAPI_URL || "http://localhost:1337/",
-    prefix: "/api",
-    version: "v4",
   },
 });
