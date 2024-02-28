@@ -1,15 +1,33 @@
 <script setup>
-const { locale } = useI18n();
+import { marked } from "marked";
 
+const result = reactive({
+  loading: true,
+  data: [],
+  error: null,
+});
+const { locale } = useI18n();
 const route = useRoute();
 const { findOne } = useStrapi();
 
-// TODO add error state
-// const { data, pending, error } = await useAsyncData("static-pages", () =>
-//   findOne("static-pages", route.params.slug)
-// );
+watch(
+  [route, locale],
+  async ([newRoute, newLocale]) => {
+    result.loading = true;
+    const { data, error } = await findOne("static-pages", {
+      filters: {
+        slug: { $eq: newRoute.params.slug },
+        locale: { $eq: newLocale },
+      },
+    });
+    result.loading = false;
+    result.data = data;
+    result.error = error;
+  },
+  { immediate: true }
+);
 
-const { data } = await findOne("static-pages", route.params.slug);
+const parsedMD = computed(() => marked(result.data[0].attributes.content));
 
 // definePageMeta({
 //   ...data.meta,
@@ -18,18 +36,10 @@ const { data } = await findOne("static-pages", route.params.slug);
 
 <template>
   <VSection class="static-page">
-    {{ data }}
-    <!-- <div v-if="pending">
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-      <USkeleton class="h-4 w-full" />
-    </div> -->
-    <!-- {{ data }} -->
-    <!-- <article v-html="data.story" v-else></article> -->
+    <div v-if="result.loading">
+      <USkeleton class="h-2.5 w-full mb-4" v-for="i in 30" />
+    </div>
+    <article v-else v-html="parsedMD"></article>
   </VSection>
 </template>
 
