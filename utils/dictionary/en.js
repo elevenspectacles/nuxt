@@ -23,6 +23,7 @@ export default {
       title: "Page not found",
       subtitle: "Sorry, we couldn’t find the page you’re looking for.",
       goBack: "Go back home",
+      required: "This field is required",
     },
     mailchimp: {
       title: "Newsletter",

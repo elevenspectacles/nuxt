@@ -18,11 +18,18 @@ export default {
     sitemap: "Карта на сайта",
     followUs: "Последвайте ни",
     copyright: "Eleven spectacles",
-    contact: {},
+    contact: {
+      name: "Вашите имена",
+      email: "Имейл за обратна връзка",
+      subject: "Относно",
+      message: "Съобщение",
+      submit: "Изпрати",
+    },
     error: {
       title: "Страницата не е намерена",
       subtitle: "За съжаление не можахме да намерим страницата която търсите.",
       goBack: "Отиди на началната страница",
+      required: "Това поле е задължително",
     },
     mailchimp: {
       required: "Полето е задължително.",

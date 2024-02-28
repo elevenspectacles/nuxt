@@ -29,7 +29,9 @@
             >
               <div class="content__gdpr">
                 <label>Marketing Permissions</label>
-                <p>Please select all the ways you would like to hear from us:</p>
+                <p>
+                  Please select all the ways you would like to hear from us:
+                </p>
                 <fieldset
                   class="mc_fieldset gdprRequired mc-field-group"
                   name="interestgroup_field"
@@ -45,22 +47,23 @@
                   />
                 </fieldset>
                 <p>
-                  You can unsubscribe at any time by clicking the link in the footer of
-                  our emails. For information about our privacy practices, please visit
-                  our
+                  You can unsubscribe at any time by clicking the link in the
+                  footer of our emails. For information about our privacy
+                  practices, please visit our
                   <NuxtLink>privacy policy</NuxtLink>.
                 </p>
               </div>
               <div class="content__gdprLegal">
                 <NuxtImg
+                  loading="lazy"
                   src="https://cdn-images.mailchimp.com/icons/mailchimp-gdpr.svg"
                   alt="Eleven Spectacles logo"
                   width="64"
                 />
                 <p>
-                  We use Mailchimp as our marketing platform. By clicking below to
-                  subscribe, you acknowledge that your information will be transferred to
-                  Mailchimp for processing.
+                  We use Mailchimp as our marketing platform. By clicking below
+                  to subscribe, you acknowledge that your information will be
+                  transferred to Mailchimp for processing.
                   <NuxtLink to="https://mailchimp.com/legal/terms" external
                     >Learn more</NuxtLink
                   >
@@ -69,8 +72,8 @@
               </div>
             </div>
             <div aria-hidden="true" style="position: absolute; left: -5000px">
-              /* real people should not fill this in and expect good things - do not
-              remove this or risk form bot signups */
+              /* real people should not fill this in and expect good things - do
+              not remove this or risk form bot signups */
               <input
                 type="text"
                 name="b_41e28ddf826df39751b6cc77a_a033abc061"

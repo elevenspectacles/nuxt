@@ -9,6 +9,7 @@ definePageMeta({
     <div class="container">
       <h1 class="logo">
         <NuxtImg
+          loading="lazy"
           src="/images/logo.svg"
           alt="Eleven Spectacles logo"
           width="200"
@@ -16,6 +17,7 @@ definePageMeta({
         />
 
         <NuxtImg
+          loading="lazy"
           src="/images/logo-white.svg"
           alt="Eleven Spectacles logo"
           width="200"

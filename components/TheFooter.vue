@@ -76,6 +76,7 @@ const socialLinks = computed(() => [
         <div class="mb-8 xl:mb-0">
           <nuxt-link :to="localePath({ name: 'index' })">
             <NuxtImg
+              loading="lazy"
               src="/images/logo.svg"
               alt="Eleven Spectacles logo"
               width="168"
@@ -83,6 +84,7 @@ const socialLinks = computed(() => [
             />
 
             <NuxtImg
+              loading="lazy"
               src="/images/logo-white.svg"
               alt="Eleven Spectacles logo"
               width="168"

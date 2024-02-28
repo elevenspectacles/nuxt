@@ -12,6 +12,7 @@ const items = 6;
       target="_blank"
     >
       <NuxtImg
+        loading="lazy"
         alt=""
         decoding="async"
         data-nimg="intrinsic"

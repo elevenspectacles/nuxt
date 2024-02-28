@@ -14,6 +14,7 @@ const localePath = useLocalePath();
         class="justify-self-center lg:justify-self-start"
       >
         <NuxtImg
+          loading="lazy"
           src="/images/logo.svg"
           alt="Eleven Spectacles logo"
           width="128"
@@ -63,10 +64,10 @@ const localePath = useLocalePath();
         </button> -->
       </div>
     </UContainer>
-    <div
+    <!-- <div
       :class="['overlay', { 'overlay--show': isOpen }]"
       @click="toggle"
-    ></div>
+    ></div> -->
   </header>
 </template>
 
