@@ -17,17 +17,20 @@ watch(
     const { data, error } = await findOne("static-pages", {
       filters: {
         slug: { $eq: newRoute.params.slug },
-        locale: { $eq: newLocale },
       },
+      locale: newLocale,
     });
     result.loading = false;
     result.data = data;
+    console.log(data);
     result.error = error;
   },
   { immediate: true }
 );
 
-const parsedMD = computed(() => marked(result.data[0].attributes.content));
+const parsedMD = computed(() =>
+  marked(result.data.length ? result.data[0]?.attributes.content : "")
+);
 
 // definePageMeta({
 //   ...data.meta,

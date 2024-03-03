@@ -7,7 +7,7 @@ export default {
     aboutUs: "About us",
     contactUs: "Contact us",
     ourCompany: "Our company",
-    legal: "Legal",
+    termsOfUse: "Terms of use",
     privacy: "Privacy & Policy",
     cookies: "Cookies",
     needHelp: "Need help",

@@ -8,8 +8,8 @@ const companyLinks = computed(() => [
     to: localePath({ name: "about-us" }),
   },
   {
-    label: t("legal"),
-    to: localePath({ name: "st-slug", params: { slug: "legal" } }),
+    label: t("termsOfUse"),
+    to: localePath({ name: "st-slug", params: { slug: "terms-of-use" } }),
   },
   {
     label: t("privacy"),

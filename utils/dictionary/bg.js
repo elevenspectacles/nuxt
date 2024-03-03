@@ -7,7 +7,7 @@ export default {
     aboutUs: "За нас",
     ourCompany: "За нас",
     contactUs: "Контакти",
-    legal: "Условия за ползване",
+    termsOfUse: "Условия за ползване",
     privacy: "Политика за поверителност",
     cookies: "Бисквитки",
     needHelp: "Нужда от помощ",
