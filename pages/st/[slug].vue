@@ -25,11 +25,11 @@ watch(
     console.log(data);
     result.error = error;
   },
-  { immediate: true }
+  { immediate: true },
 );
 
 const parsedMD = computed(() =>
-  marked(result.data.length ? result.data[0]?.attributes.content : "")
+  marked(result.data.length ? result.data[0]?.attributes.content : ""),
 );
 
 // definePageMeta({

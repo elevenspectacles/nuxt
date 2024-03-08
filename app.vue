@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import posthog from "posthog-js";
+
 const config = useRuntimeConfig();
 
 onMounted(() => {
@@ -23,6 +24,7 @@ onMounted(() => {
 .layout-leave-active {
   transition: all 0.4s;
 }
+
 .layout-enter-from,
 .layout-leave-to {
   filter: grayscale(1);
@@ -32,6 +34,7 @@ onMounted(() => {
 .page-leave-active {
   transition: all 0.4s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;

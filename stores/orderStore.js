@@ -1,14 +1,12 @@
 import { defineStore } from "pinia";
-import { useStorage } from '@vueuse/core'
+import { useStorage } from "@vueuse/core";
 
-export const useOrderStore = defineStore('orderStore', {
+export const useOrderStore = defineStore("orderStore", {
   state: () => ({
-    order: useStorage('eleven-order', [])
+    order: useStorage("eleven-order", []),
   }),
 
-  getters: {
-  },
+  getters: {},
 
-  actions: {
-  }
-})
+  actions: {},
+});

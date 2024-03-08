@@ -8,7 +8,7 @@ function changeLang() {
 
 onMounted(() => {
   activeLang.value = locales.value.filter(
-    (item) => item.code === locale.value
+    (item) => item.code === locale.value,
   )[0];
 });
 </script>
