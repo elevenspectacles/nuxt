@@ -7,14 +7,13 @@ export default defineNuxtConfig({
       meta: [
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
-        { property: "og:image", content: "/public/images/logo.svg" },
-        { hid: "og-type", property: "og:type", content: "website" },
         {
           hid: "og-image",
           property: "og:image",
           content: "https://elevenspectacles.com/public/images/socials.webp",
         },
         { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
+        { hid: "og-type", property: "og:type", content: "website" },
       ],
       link: [
         {
