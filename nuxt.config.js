@@ -10,11 +10,11 @@ export default defineNuxtConfig({
         { name: "theme-color", content: "#ffffff" },
         {
           property: "og:image",
-          content: "https://elevenspectacles.com/public/images/socials.jpg",
+          content: "https://elevenspectacles.com/images/socials.jpg",
         },
         {
           property: "og:image:secure_url",
-          content: "https://elevenspectacles.com/public/images/socials.jpg",
+          content: "https://elevenspectacles.com/images/socials.jpg",
         },
         {
           property: "og:image:width",
