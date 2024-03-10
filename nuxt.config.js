@@ -28,7 +28,14 @@ export default defineNuxtConfig({
           property: "og:image:alt",
           content: "Eleven Spectacles Black logo on a white background",
         },
-        { name: "twitter:card", content: "summary_large_image" },
+        // Twitter
+        // {name: "twitter:card", content: "summary"},
+        // {name: "twitter:title", content: "Your Page Title"},
+        // {name: "twitter:description", content: "Your Page Description"},
+        {
+          name: "twitter:image",
+          content: "https://elevenspectacles.com/images/socials.jpg",
+        },
       ],
       link: [
         {
