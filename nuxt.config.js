@@ -5,10 +5,15 @@ export default defineNuxtConfig({
       charset: "utf-16",
       viewport: "width=device-width, initial-scale=1",
       meta: [
+        { property: "og:type", content: "website" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
         {
           property: "og:image",
+          content: "https://elevenspectacles.com/public/images/socials.jpg",
+        },
+        {
+          property: "og:image:secure_url",
           content: "https://elevenspectacles.com/public/images/socials.jpg",
         },
         {
@@ -24,7 +29,6 @@ export default defineNuxtConfig({
           content: "Eleven Spectacles Black logo on a white background",
         },
         { name: "twitter:card", content: "summary_large_image" },
-        { property: "og:type", content: "website" },
       ],
       link: [
         {
