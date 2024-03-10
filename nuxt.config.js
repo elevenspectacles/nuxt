@@ -75,7 +75,6 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: "bg",
-    defaultLocale: "bg",
     strategy: "prefix_except_default",
     // https://i18n.nuxtjs.org/browser-language-detection
     detectBrowserLanguage: {
@@ -102,6 +101,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://elevenspectacles.com",
     name: "Eleven Spectacles",
+    description: "TODO - add description!",
   },
   seo: {
     redirectToCanonicalSiteUrl: true,
@@ -128,5 +128,8 @@ export default defineNuxtConfig({
       // your api options override for stripe client side
       options: {},
     },
+  },
+  strapi: {
+    url: process.env.STRAPI_URL || "http://localhost:1337",
   },
 });

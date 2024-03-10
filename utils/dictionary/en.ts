@@ -31,4 +31,8 @@ export default {
       email: "Please, provide a valid email address",
     },
   },
+  seo: {
+    home: "Home",
+    homeDescription: "Sample text",
+  },
 };

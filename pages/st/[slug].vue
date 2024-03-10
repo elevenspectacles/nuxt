@@ -1,46 +1,58 @@
-<script setup>
+<script setup lang="ts">
 import { marked } from "marked";
 
-const result = reactive({
-  loading: true,
-  data: [],
-  error: null,
-});
+const { findOne } = useStrapi();
 const { locale } = useI18n();
 const route = useRoute();
-const { findOne } = useStrapi();
+
+const routeSlug = computed(() => route.params.slug);
+
+const {
+  data: result,
+  pending,
+  error,
+} = await useAsyncData(
+  "static-pages",
+  () =>
+    findOne("static-pages", {
+      filters: {
+        slug: { $eq: routeSlug.value },
+      },
+      populate: ["seo"],
+      locale: locale.value,
+    }),
+  {
+    watch: [routeSlug, locale],
+  },
+);
 
 watch(
-  [route, locale],
-  async ([newRoute, newLocale]) => {
-    result.loading = true;
-    const { data, error } = await findOne("static-pages", {
-      filters: {
-        slug: { $eq: newRoute.params.slug },
-      },
-      locale: newLocale,
-    });
-    result.loading = false;
-    result.data = data;
-    console.log(data);
-    result.error = error;
+  result,
+  (newVal) => {
+    if (newVal?.length > 0) {
+      useSeoMeta({
+        title: newVal.data[0].attributes?.seo.metaTitle,
+        ogTitle: newVal.data[0].attributes?.seo.metaTitle,
+        description: newVal.data[0].attributes?.seo.metaDescription,
+        ogDescription: newVal.data[0].attributes?.seo.metaDescription,
+      });
+    }
   },
   { immediate: true },
 );
 
 const parsedMD = computed(() =>
-  marked(result.data.length ? result.data[0]?.attributes.content : ""),
+  marked(
+    result.value?.data.length ? result.value.data[0]?.attributes.content : "",
+  ),
 );
-
-// definePageMeta({
-//   ...data.meta,
-// });
 </script>
 
 <template>
   <VSection class="static-page">
-    <div v-if="result.loading">
-      <USkeleton class="h-2.5 w-full mb-4" v-for="i in 30" />
+    <div v-if="error">{{ error }}</div>
+    <div v-if="pending">
+      <USkeleton class="h-2.5 w-full mb-4" v-for="i in 30" :key="i" />
     </div>
     <article v-else v-html="parsedMD"></article>
   </VSection>

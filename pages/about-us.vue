@@ -1,8 +1,11 @@
 <script setup>
-const { locale } = useI18n();
+const { t } = useI18n();
 
-definePageMeta({
-  title: "About us",
+useSeoMeta({
+  title: t("aboutUs"),
+  ogTitle: t("aboutUs"),
+  description: t("seo.homeDescription"),
+  ogDescription: t("seo.homeDescription"),
 });
 </script>
 

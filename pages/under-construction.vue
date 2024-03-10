@@ -1,6 +1,9 @@
 <script setup lang="ts">
-definePageMeta({
+useSeoMeta({
   title: "Under construction",
+  ogTitle: "Under construction",
+  description: t("seo.homeDescription"),
+  ogDescription: t("seo.homeDescription"),
 });
 </script>
 

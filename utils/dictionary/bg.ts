@@ -1,6 +1,5 @@
 export default {
   bg: {
-    home: "Начало",
     store: "Колекции",
     sunglasses: "Слънчеви очила",
     optical: "Диоптрични очила",
@@ -34,6 +33,10 @@ export default {
     mailchimp: {
       required: "Полето е задължително.",
       email: "Моля, въведете валиден email.",
+    },
+    seo: {
+      home: "Начало",
+      homeDescription: "Sample text",
     },
   },
 };
