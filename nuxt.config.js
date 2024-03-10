@@ -8,12 +8,23 @@ export default defineNuxtConfig({
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "theme-color", content: "#ffffff" },
         {
-          hid: "og-image",
           property: "og:image",
-          content: "https://elevenspectacles.com/public/images/socials.webp",
+          content: "https://elevenspectacles.com/public/images/socials.jpg",
         },
-        { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
-        { hid: "og-type", property: "og:type", content: "website" },
+        {
+          property: "og:image:width",
+          content: "400",
+        },
+        {
+          property: "og:image:height",
+          content: "180",
+        },
+        {
+          property: "og:image:alt",
+          content: "Eleven Spectacles Black logo on a white background",
+        },
+        { name: "twitter:card", content: "summary_large_image" },
+        { property: "og:type", content: "website" },
       ],
       link: [
         {
