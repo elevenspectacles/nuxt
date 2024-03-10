@@ -18,11 +18,11 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image:width",
-          content: "400",
+          content: "200",
         },
         {
           property: "og:image:height",
-          content: "180",
+          content: "90",
         },
         {
           property: "og:image:alt",
