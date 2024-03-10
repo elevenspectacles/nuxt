@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         {
           hid: "og-image",
           property: "og:image",
-          content: "https://elevenspectacles.com/socials.webp",
+          content: "https://elevenspectacles.com/public/images/socials.webp",
         },
         { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
       ],
