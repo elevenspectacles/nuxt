@@ -2,8 +2,8 @@
 const { t } = useI18n();
 
 useSeoMeta({
-  title: "Under construction",
-  ogTitle: "Under construction",
+  title: "Under Construction",
+  ogTitle: "Under Construction",
   description: t("seo.homeDescription"),
   ogDescription: t("seo.homeDescription"),
 });
