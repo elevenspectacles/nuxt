@@ -29,7 +29,7 @@
     "nuxt-icon": "^0.6.9",
     "nuxt-purgecss": "^2.0.0",
     "postcss": "^8.4.38",
-    "posthog-js": "^1.116.6",
+    "posthog-js": "^1.118.1",
     "prettier": "^3.2.5"
   },
   "devDependencies": {
