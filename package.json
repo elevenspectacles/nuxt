@@ -18,7 +18,7 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
-    "@nuxt/image": "1.5.0",
+    "@nuxt/image": "1.6.0",
     "@nuxt/ui": "^2.15.2",
     "@storyblok/nuxt": "^6.0.10",
     "@vueuse/core": "^10.9.0",
