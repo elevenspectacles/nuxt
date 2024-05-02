@@ -29,10 +29,10 @@ const helpLinks = computed(() => [
     label: t("contactUs"),
     to: localePath({ name: "contact-us" }),
   },
-  // {
-  //   label: t("shipping"),
-  //   to: localePath({ name: "st-slug", params: { slug: "shipping" } }),
-  // },
+  {
+    label: t("shipping"),
+    to: localePath({ name: "st-slug", params: { slug: "shipping" } }),
+  },
   {
     label: t("payment"),
     to: localePath({
@@ -40,14 +40,14 @@ const helpLinks = computed(() => [
       params: { slug: "payments" },
     }),
   },
-  // {
-  //   label: t("returnAndExchange"),
-  //   to: localePath({ name: "st-slug", params: { slug: "returnAndExchange" } }),
-  // },
-  // {
-  //   label: t("faq"),
-  //   to: localePath({ name: "st-slug", params: { slug: "faq" } }),
-  // },
+  {
+    label: t("returnAndExchange"),
+    to: localePath({ name: "st-slug", params: { slug: "returnAndExchange" } }),
+  },
+  {
+    label: t("faq"),
+    to: localePath({ name: "st-slug", params: { slug: "faq" } }),
+  },
   {
     label: t("sitemap"),
     to: "/sitemap.xml",

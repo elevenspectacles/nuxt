@@ -1,101 +1,69 @@
 <script></script>
 
 <template>
-  <VSection>
-    <div id="mc_embed_shell">
-      <div id="mc_embed_signup">
+  <VSection class="sib-form">
+    <div id="sib-form-container" class="sib-form-container">
+      <div
+        id="sib-container"
+        class="sib-container--large sib-container--vertical"
+      >
         <form
-          class="grid space-y-4 validate"
-          action="https://elevenspectacles.us21.list-manage.com/subscribe/post?u=41e28ddf826df39751b6cc77a&amp;id=a033abc061&amp;v_id=251&amp;f_id=000df1e6f0"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          target="_blank"
+          id="sib-form"
+          method="POST"
+          action="https://7ddd14d5.sibforms.com/serve/MUIFAKoSBjEaRO6AncVpFgD99Gfk23Sl4lgs4_KoYwyk8so-UIQkaH1XGXIn8IeICWGZUb5RopR1kiEnxB2HC9Pxwh0146pirPeBNdrt3zgKb2T20aB1YApYILJhYjG3h0xiofF5_6be8Wyb2YN2ZT6yumRS7Gb3qdGifVHsObLRqOblWuuA1V2Al4qMMUrDq_3OGoavbyc2AC1m"
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 lg:max-w-none lg:grid-cols-2"
         >
-          <div id="mc_embed_signup_scroll">
-            <div class="mc-field-group">
-              <UInput
-                type="email"
-                name="EMAIL"
-                class="required email"
-                id="mce-EMAIL"
-                :required="true"
-                value=""
-              />
-            </div>
-            <div
-              id="mergeRow-gdpr"
-              class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group"
-            >
-              <div class="content__gdpr">
-                <label>Marketing Permissions</label>
-                <p>
-                  Please select all the ways you would like to hear from us:
-                </p>
-                <fieldset
-                  class="mc_fieldset gdprRequired mc-field-group"
-                  name="interestgroup_field"
-                >
-                  <label class="checkbox subfield" for="gdpr97770"></label>
-                  <UCheckbox
-                    id="gdpr_97770"
-                    name="gdpr[97770]"
-                    class="gdpr"
-                    value="Y"
-                    label="Email"
-                    :required="true"
-                  />
-                </fieldset>
-                <p>
-                  You can unsubscribe at any time by clicking the link in the
-                  footer of our emails. For information about our privacy
-                  practices, please visit our
-                  <NuxtLink>privacy policy</NuxtLink>.
-                </p>
-              </div>
-              <div class="content__gdprLegal">
-                <NuxtImg
-                  loading="lazy"
-                  src="https://cdn-images.mailchimp.com/icons/mailchimp-gdpr.svg"
-                  alt="Eleven Spectacles logo"
-                  width="64"
-                />
-                <p>
-                  We use Mailchimp as our marketing platform. By clicking below
-                  to subscribe, you acknowledge that your information will be
-                  transferred to Mailchimp for processing.
-                  <NuxtLink to="https://mailchimp.com/legal/terms" external
-                    >Learn more</NuxtLink
-                  >
-                  about Mailchimp's privacy practices.
-                </p>
-              </div>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px">
-              /* real people should not fill this in and expect good things - do
-              not remove this or risk form bot signups */
-              <input
-                type="text"
-                name="b_41e28ddf826df39751b6cc77a_a033abc061"
-                tabindex="-1"
-                value=""
-              />
-            </div>
-            <div class="optionalParent">
-              <div class="clear foot">
-                <UButton
-                  type="submit"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  color="primary"
-                  variant="solid"
-                  size="lg"
-                >
-                  Subscribe
-                </UButton>
-              </div>
-            </div>
+          <div class="max-w-xl lg:max-w-lg">
+            <h3 class="text-2xl font-bold text-black leading-8">
+              Искате да получавате новини и информация за нашите продукти?
+              Абонирайте се за нашия бюлетин.
+            </h3>
           </div>
+          <div>
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <div class="flex gap-2">
+                    <UInput
+                      size="lg"
+                      class="input grow"
+                      type="text"
+                      id="EMAIL"
+                      name="EMAIL"
+                      autocomplete="off"
+                      placeholder="E-mail"
+                      data-required="true"
+                      required
+                    />
+                    <UButton form="sib-form" type="submit" size="lg">
+                      Абонирам се
+                    </UButton>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm mt-2">
+              Използваме Brevo като нашата маркетингова платформа. С изпращането
+              на тази форма вие се съгласяте, че личните данни, които сте
+              предоставили, ще бъдат прехвърлени към Brevo за обработка в
+              съответствие с
+              <ULink
+                to="https://www.brevo.com/en/legal/privacypolicy/"
+                active-class="text-primary"
+                inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+              >
+                Политика за поверителност</ULink
+              >.
+            </p>
+          </div>
+          <input
+            type="text"
+            name="email_address_check"
+            value=""
+            class="invisible w-0 h-0"
+          />
+          <input type="hidden" name="locale" value="bg" />
+          <input type="hidden" name="html_type" value="simple" />
         </form>
       </div>
     </div>
