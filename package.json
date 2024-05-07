@@ -10,7 +10,8 @@
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "knip": "knip"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --cache",
@@ -20,7 +21,6 @@
   "dependencies": {
     "@nuxt/image": "1.6.0",
     "@nuxt/ui": "^2.15.2",
-    "@storyblok/nuxt": "^6.0.10",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "autoprefixer": "^10.4.19",
@@ -40,10 +40,13 @@
     "@nuxtjs/strapi": "^1.12.0",
     "@pinia/nuxt": "^0.5.1",
     "@splidejs/vue-splide": "^0.6.12",
+    "@types/node": "^20.12.10",
     "@unlok-co/nuxt-stripe": "^2.0.0",
     "@vueuse/components": "^10.8.0",
+    "knip": "^5.13.0",
     "nuxt": "^3.11.2",
-    "pinia": "^2.1.6"
+    "pinia": "^2.1.6",
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "vue": "latest"
