@@ -26,7 +26,8 @@
     "nuxt-icon": "^0.6.9",
     "postcss": "^8.4.38",
     "posthog-js": "^1.135.2",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "@nuxtjs/seo": "^2.0.0-rc.10"
   },
   "devDependencies": {
     "nuxt-purgecss": "^2.0.0",
@@ -34,7 +35,6 @@
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/fonts": "^0.7.0",
     "@nuxtjs/i18n": "^8.3.1",
-    "@nuxtjs/seo": "^2.0.0-rc.10",
     "@nuxtjs/strapi": "^1.12.0",
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/components": "^10.10.0",
