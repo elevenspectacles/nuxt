@@ -1,54 +1,54 @@
 <script setup lang="ts">
-import type { FormError } from "#ui/types";
+import type { FormError } from '#ui/types'
 
-const { t } = useI18n();
-const { create } = useStrapi();
+const { t } = useI18n()
+const { create } = useStrapi()
+
 useSeoMeta({
-  title: t("contactUs"),
-  ogTitle: t("contactUs"),
-  description: t("seo.homeDescription"),
-  ogDescription: t("seo.homeDescription"),
-});
+  title: t('contactUs'),
+  ogTitle: t('contactUs'),
+  description: t('seo.homeDescription'),
+  ogDescription: t('seo.homeDescription')
+})
 
 const state = reactive({
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-  loading: false,
-});
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+  loading: false
+})
 
 const validate = (state: any): FormError[] => {
-  const errors = [];
-  if (!state.name) errors.push({ path: "name", message: t("error.required") });
-  if (!state.email)
-    errors.push({ path: "email", message: t("error.required") });
+  const errors = []
+  if (!state.name) errors.push({ path: 'name', message: t('error.required') })
+  if (!state.email) errors.push({ path: 'email', message: t('error.required') })
   if (!state.subject)
-    errors.push({ path: "subject", message: t("error.required") });
+    errors.push({ path: 'subject', message: t('error.required') })
   if (!state.message)
-    errors.push({ path: "message", message: t("error.required") });
-  return errors;
-};
+    errors.push({ path: 'message', message: t('error.required') })
+  return errors
+}
 
 async function onSubmit() {
   try {
-    state.loading = true;
+    state.loading = true
     const { data, pending, error, refresh } = await useAsyncData(
-      "mountains",
-      () => $fetch("https://api.nuxtjs.dev/mountains"),
-    );
-    await create("contacts", {
-      ...state,
+      'mountains',
+      () => $fetch('https://api.nuxtjs.dev/mountains')
+    )
+    await create('contacts', {
+      ...state
     }).then(() => {
-      state.name = "";
-      state.email = "";
-      state.subject = "";
-      state.message = "";
-    });
+      state.name = ''
+      state.email = ''
+      state.subject = ''
+      state.message = ''
+    })
   } catch (error) {
-    console.log(error);
+    console.log(error)
   } finally {
-    state.loading = false;
+    state.loading = false
   }
 }
 </script>
@@ -56,13 +56,13 @@ async function onSubmit() {
 <template>
   <VSection>
     <UContainer>
-      <UAlert
-        class="mb-4"
-        color="primary"
-        variant="solid"
-        title="Success"
-        :description="'sd'"
-      />
+      <!--      <UAlert-->
+      <!--        class="mb-4"-->
+      <!--        color="primary"-->
+      <!--        variant="solid"-->
+      <!--        title="Success"-->
+      <!--        :description="'sd'"-->
+      <!--      />-->
 
       <UForm
         :validate="validate"
@@ -87,7 +87,7 @@ async function onSubmit() {
         </UFormGroup>
 
         <UButton type="submit" :loading="state.loading">
-          {{ t("contact.submit") }}
+          {{ t('contact.submit') }}
         </UButton>
       </UForm>
     </UContainer>

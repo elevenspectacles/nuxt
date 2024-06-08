@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { marked } from 'marked'
 
 const { findOne } = useStrapi()
@@ -26,20 +26,12 @@ const {
   }
 )
 
-watch(
-  result,
-  (newVal) => {
-    if (newVal?.length > 0) {
-      useSeoMeta({
-        title: newVal.data[0].attributes?.seo.metaTitle,
-        ogTitle: newVal.data[0].attributes?.seo.metaTitle,
-        description: newVal.data[0].attributes?.seo.metaDescription,
-        ogDescription: newVal.data[0].attributes?.seo.metaDescription
-      })
-    }
-  },
-  { immediate: true }
-)
+useServerSeoMeta({
+  ogTitle: () => result.value.data[0].attributes?.seo.metaTitle,
+  title: () => result.value.data[0].attributes?.seo.metaTitle,
+  description: () => result.value.data[0].attributes?.seo.metaDescription,
+  ogDescription: () => result.value.data[0].attributes?.seo.metaDescription
+})
 
 const parsedMD = computed(() =>
   marked(
@@ -60,14 +52,18 @@ const parsedMD = computed(() =>
 
 <style>
 .static-page {
-  @apply mx-auto max-w-screen-md;
+  @apply mx-auto max-w-screen-md text-gray-900;
+
+  h1 {
+    @apply mb-4;
+  }
 
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply font-bold leading-7;
+    @apply leading-7;
   }
 
   h1 {
@@ -119,7 +115,7 @@ const parsedMD = computed(() =>
 
   ul li::before {
     content: '';
-    @apply absolute left-1 top-2 bg-black block w-2 h-2 rounded-full;
+    @apply absolute left-1 top-2 bg-gray-900 block w-2 h-2 rounded-full;
   }
 
   ol li {
@@ -128,7 +124,7 @@ const parsedMD = computed(() =>
 
   ol li::before {
     content: counter(step-counter) '.';
-    @apply absolute block bg-black font-bold text-base left-0;
+    @apply absolute block text-gray-900 font-bold text-base left-0;
   }
 
   img {
