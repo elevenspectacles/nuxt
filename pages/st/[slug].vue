@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import { marked } from "marked";
+import { marked } from 'marked'
 
-const { findOne } = useStrapi();
-const { locale } = useI18n();
-const route = useRoute();
+const { findOne } = useStrapi()
+const { locale } = useI18n()
+const route = useRoute()
 
-const routeSlug = computed(() => route.params.slug);
+const routeSlug = computed(() => route.params.slug)
 
 const {
   data: result,
   pending,
-  error,
+  error
 } = await useAsyncData(
-  "static-pages",
+  'static-pages',
   () =>
-    findOne("static-pages", {
+    findOne('static-pages', {
       filters: {
-        slug: { $eq: routeSlug.value },
+        slug: { $eq: routeSlug.value }
       },
-      populate: ["seo"],
-      locale: locale.value,
+      populate: ['seo'],
+      locale: locale.value
     }),
   {
-    watch: [routeSlug, locale],
-  },
-);
+    watch: [routeSlug, locale]
+  }
+)
 
 watch(
   result,
@@ -34,18 +34,18 @@ watch(
         title: newVal.data[0].attributes?.seo.metaTitle,
         ogTitle: newVal.data[0].attributes?.seo.metaTitle,
         description: newVal.data[0].attributes?.seo.metaDescription,
-        ogDescription: newVal.data[0].attributes?.seo.metaDescription,
-      });
+        ogDescription: newVal.data[0].attributes?.seo.metaDescription
+      })
     }
   },
-  { immediate: true },
-);
+  { immediate: true }
+)
 
 const parsedMD = computed(() =>
   marked(
-    result.value?.data.length ? result.value.data[0]?.attributes.content : "",
-  ),
-);
+    result.value?.data.length ? result.value.data[0]?.attributes.content : ''
+  )
+)
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const parsedMD = computed(() =>
     <div v-if="pending">
       <USkeleton v-for="i in 30" :key="i" class="h-2.5 w-full mb-4" />
     </div>
-    <article v-else v-html="parsedMD"/>
+    <article v-else v-html="parsedMD" />
   </VSection>
 </template>
 
@@ -70,24 +70,28 @@ const parsedMD = computed(() =>
     @apply font-bold leading-7;
   }
 
-  h2 {
+  h1 {
     @apply text-4xl;
   }
 
-  h3 {
+  h2 {
     @apply text-3xl;
   }
 
-  h4 {
+  h3 {
     @apply text-2xl;
   }
 
-  h5 {
+  h4 {
     @apply text-xl;
   }
 
+  h5 {
+    @apply text-lg;
+  }
+
   p {
-    @apply text-lg leading-7;
+    @apply text-base leading-7;
   }
 
   p + *,
@@ -114,8 +118,8 @@ const parsedMD = computed(() =>
   }
 
   ul li::before {
-    content: "";
-    @apply absolute left-1 top-2 bg-primary-600 block w-2 h-2 rounded-full;
+    content: '';
+    @apply absolute left-1 top-2 bg-black block w-2 h-2 rounded-full;
   }
 
   ol li {
@@ -123,8 +127,8 @@ const parsedMD = computed(() =>
   }
 
   ol li::before {
-    content: counter(step-counter) ".";
-    @apply absolute block text-primary-600 font-bold text-base left-0;
+    content: counter(step-counter) '.';
+    @apply absolute block bg-black font-bold text-base left-0;
   }
 
   img {

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import posthog from "posthog-js";
+import posthog from 'posthog-js'
 
-const config = useRuntimeConfig();
+const config = useRuntimeConfig()
 
 onMounted(() => {
   posthog.init(config.public.posthogKey, {
-    api_host: config.public.posthogURL,
-  });
-});
+    api_host: config.public.posthogURL
+  })
+})
 </script>
 
 <template>
@@ -20,6 +20,10 @@ onMounted(() => {
 </template>
 
 <style>
+body {
+  font-family: Montserrat, sans-serif;
+}
+
 .layout-enter-active,
 .layout-leave-active {
   transition: all 0.4s;

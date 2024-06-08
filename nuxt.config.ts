@@ -77,12 +77,12 @@ export default defineNuxtConfig({
       }
     ],
     '@nuxtjs/strapi',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    '@nuxt/fonts'
   ],
   imports: {
     dirs: ['stores']
   },
-  css: ['~/assets/css/main.css'],
   i18n: {
     locales: [
       {
