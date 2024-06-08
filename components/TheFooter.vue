@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const localePath = useLocalePath();
 const { t } = useI18n();
 
@@ -6,6 +6,14 @@ const companyLinks = computed(() => [
   {
     label: t("aboutUs"),
     to: localePath({ name: "about-us" }),
+  },
+  {
+    label: t("contactUs"),
+    to: localePath({ name: "contact-us" }),
+  },
+  {
+    label: t("faq"),
+    to: localePath({ name: "st-slug", params: { slug: "faq" } }),
   },
   {
     label: t("termsOfUse"),
@@ -18,17 +26,9 @@ const companyLinks = computed(() => [
       params: { slug: "privacy-policy" },
     }),
   },
-  {
-    label: t("cookies"),
-    to: localePath({ name: "st-slug", params: { slug: "cookies" } }),
-  },
 ]);
 
 const helpLinks = computed(() => [
-  {
-    label: t("contactUs"),
-    to: localePath({ name: "contact-us" }),
-  },
   {
     label: t("shipping"),
     to: localePath({ name: "st-slug", params: { slug: "shipping" } }),
@@ -44,9 +44,10 @@ const helpLinks = computed(() => [
     label: t("returnAndExchange"),
     to: localePath({ name: "st-slug", params: { slug: "returnAndExchange" } }),
   },
+
   {
-    label: t("faq"),
-    to: localePath({ name: "st-slug", params: { slug: "faq" } }),
+    label: t("cookies"),
+    to: localePath({ name: "st-slug", params: { slug: "cookies" } }),
   },
   {
     label: t("sitemap"),
@@ -55,14 +56,14 @@ const helpLinks = computed(() => [
   },
 ]);
 const socialLinks = computed(() => [
-  // {
-  //   label: "Facebook",
-  //   to: "https://facebook.com",
-  // },
   {
     label: "Instagram",
     to: "https://www.instagram.com/eleven.spectacles/",
     external: true,
+  },
+  {
+    label: "Facebook",
+    to: "https://www.facebook.com/profile.php?id=100083817911330",
   },
 ]);
 </script>
