@@ -23,7 +23,7 @@ const handleError = () => clearError({ redirect: "/" });
         {{ t("error.subtitle") }}
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <VButton @click="handleError" class="button--primary">
+        <VButton class="button--primary" @click="handleError">
           {{ t("error.goBack") }}
         </VButton>
 

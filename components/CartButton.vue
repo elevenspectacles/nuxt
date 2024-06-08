@@ -5,7 +5,7 @@ const localePath = useLocalePath();
 
 <template>
   <nuxt-link :to="localePath('cart')" class="cart-button">
-    <Icon name="ic:outline-shopping-bag" class="cart-button__icon"></Icon>
+    <Icon name="ic:outline-shopping-bag" class="cart-button__icon"/>
     <span class="cart-button__count">{{ cartStore.count }}</span>
   </nuxt-link>
 </template>

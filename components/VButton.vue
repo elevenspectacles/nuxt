@@ -6,7 +6,7 @@
     <span
       class="absolute inset-0 translate-x-0 translate-y-0 bg-black transition-transform group-hover:translate-y-1 group-hover:translate-x-1"
       aria-hidden="true"
-    ></span>
+    />
     <span
       class="relative block border border-current bg-white px-8 h-[50px] uppercase leading-[50px]"
     >

@@ -37,8 +37,8 @@ const lensColors = computed(() => [
 
       <div class="md:pe-2 lg:pe-0 2xl:pe-2 overflow-hidden">
         <p
-          class="text-gray-400 text-xs xl:text-sm truncate max-w-[250px]"
           v-if="product?.attributes.description"
+          class="text-gray-400 text-xs xl:text-sm truncate max-w-[250px]"
         >
           {{ product.attributes.description }}
         </p>
@@ -51,8 +51,8 @@ const lensColors = computed(() => [
 
       <template #footer>
         <p
-          class="mt-2.5 font-semibold text-lg"
           v-if="product?.attributes.price"
+          class="mt-2.5 font-semibold text-lg"
         >
           {{ product?.attributes.price }}<span class="text-sm">BGN</span>
         </p>

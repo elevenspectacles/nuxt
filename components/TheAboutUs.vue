@@ -23,12 +23,12 @@
                   stroke-linejoin="round"
                   fill="none"
                   points="29 13 14 29 25 29 23 39 38 23 27 23"
-                ></polygon>
+                />
               </svg>
             </div>
           </a>
           <h5 class="mb-4 text-4xl font-extrabold leading-none">
-            The quick, brown fox<br class="hidden md:block" />
+            The quick, brown fox<br class="hidden md:block" >
             jumps over
             <span class="inline-block text-deep-purple-accent-400"
               >a lazy dog</span
@@ -40,7 +40,7 @@
             quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit
             voluptatem totam rem aperiam, eaque ipsa quae explicabo.
           </p>
-          <hr class="mb-5 border-gray-300" />
+          <hr class="mb-5 border-gray-300" >
 
           <VButton>Read more</VButton>
         </div>

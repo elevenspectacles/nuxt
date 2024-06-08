@@ -34,7 +34,7 @@ useHead({
 </script>
 
 <template>
-  <div class="page-wrapper" ref="pageWrapper">
+  <div ref="pageWrapper" class="page-wrapper">
     <TheHeader
       :class="[
         {
@@ -42,7 +42,7 @@ useHead({
         },
       ]"
     />
-    <div class="block lg:hidden fixed right-6 bottom-6 z-40" v-if="!isOpen">
+    <div v-if="!isOpen" class="block lg:hidden fixed right-6 bottom-6 z-40">
       <CartButton />
     </div>
 

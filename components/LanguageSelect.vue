@@ -14,11 +14,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <select v-model="activeLang" @change="changeLang" name="lang" class="lang">
+  <select v-model="activeLang" name="lang" class="lang" @change="changeLang">
     <option
-      :selected="localeItem.code === activeLang"
       v-for="localeItem in locales"
       :key="localeItem.code"
+      :selected="localeItem.code === activeLang"
       :value="localeItem"
     >
       {{ localeItem.code.toUpperCase() }}

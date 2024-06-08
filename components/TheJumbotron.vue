@@ -21,19 +21,19 @@ const localePath = useLocalePath();
           https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 1200px)"
-      />
+      >
       <source
         srcset="
           https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 640px)"
-      />
+      >
       <source
         srcset="
           https://media.ray-ban.com/cms/resource/image/627086/landscape_ratio720x233/2592/839/a9f35372af8b0f39047231506a81a488/0EF6174533483FCFB14FE25E72761070/rb-hp-hero-vday-polar-promo-d.jpg
         "
         media="(min-width: 1px)"
-      />
+      >
       <NuxtImg
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         alt=""

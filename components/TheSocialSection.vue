@@ -20,7 +20,7 @@ const items = 6;
       />
       <div
         class="absolute top left bg-black w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-50"
-      ></div>
+      />
       <div
         class="absolute top left h-full w-full flex items-center justify-center"
       >

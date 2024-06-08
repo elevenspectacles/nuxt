@@ -25,10 +25,10 @@
                 <div class="form__label-row">
                   <div class="flex gap-2">
                     <UInput
+                      id="EMAIL"
                       size="lg"
                       class="input grow"
                       type="text"
-                      id="EMAIL"
                       name="EMAIL"
                       autocomplete="off"
                       placeholder="E-mail"
@@ -61,9 +61,9 @@
             name="email_address_check"
             value=""
             class="invisible w-0 h-0"
-          />
-          <input type="hidden" name="locale" value="bg" />
-          <input type="hidden" name="html_type" value="simple" />
+          >
+          <input type="hidden" name="locale" value="bg" >
+          <input type="hidden" name="html_type" value="simple" >
         </form>
       </div>
     </div>

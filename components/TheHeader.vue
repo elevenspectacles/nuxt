@@ -21,7 +21,7 @@ const localePath = useLocalePath();
         />
       </nuxt-link>
 
-      <TheNavbar :isOpen="isOpen" @change-route="close" />
+      <TheNavbar :is-open="isOpen" @change-route="close" />
 
       <div class="flex items-center">
         <LanguageSelect class="hidden lg:block" />

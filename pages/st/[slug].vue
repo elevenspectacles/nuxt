@@ -52,9 +52,9 @@ const parsedMD = computed(() =>
   <VSection class="static-page">
     <div v-if="error">{{ error }}</div>
     <div v-if="pending">
-      <USkeleton class="h-2.5 w-full mb-4" v-for="i in 30" :key="i" />
+      <USkeleton v-for="i in 30" :key="i" class="h-2.5 w-full mb-4" />
     </div>
-    <article v-else v-html="parsedMD"></article>
+    <article v-else v-html="parsedMD"/>
   </VSection>
 </template>
 
