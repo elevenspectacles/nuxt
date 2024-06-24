@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@nuxt/image": "1.7.0",
-    "@nuxt/ui": "^2.16.0",
+    "@nuxt/ui": "^2.17.0",
     "@storyblok/nuxt": "^6.0.10",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
