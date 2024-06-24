@@ -39,7 +39,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/components": "^10.11.0",
     "eslint": "^9.5.0",
-    "nuxt": "^3.11.2",
+    "nuxt": "^3.12.2",
     "pinia": "^2.1.6"
   },
   "overrides": {
