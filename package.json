@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "nuxt-purgecss": "^2.0.0",
-    "@nuxt/devtools": "^1.3.2",
+    "@nuxt/devtools": "^1.3.6",
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/fonts": "^0.7.0",
     "@nuxtjs/i18n": "^8.3.1",
