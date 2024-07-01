@@ -27,7 +27,7 @@
     "postcss": "^8.4.38",
     "posthog-js": "^1.140.1",
     "prettier": "^3.3.2",
-    "@nuxtjs/seo": "^2.0.0-rc.10"
+    "@nuxtjs/seo": "^2.0.0-rc.11"
   },
   "devDependencies": {
     "nuxt-purgecss": "^2.0.0",
